@@ -1,0 +1,61 @@
+.main {
+    background-image: cover;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+}
+
+.section > div {
+    
+}
+
+.mainbox img {
+    width: 800px;
+    height: 650px;
+}
+
+.thema_name {
+    margin-top: -100px;
+}
+
+.box {
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.recomand_list_wrap {
+    margin: 40px 0 0 24px;
+}
+
+li > .image {
+    width: 100%;
+}
+
+li > .image > img {
+    width: 100%;
+    height: 500px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    width: 33%;
+    height: 80%;
+    list-style: none;
+    border: 1px solid #e5e5e5;
+}
