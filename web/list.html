@@ -9,7 +9,7 @@
             
         }
         body{
-            margin: 0;
+            
             width: 100%;
             height: 100%;
             /* background-color: #00C4FF; */
@@ -20,7 +20,7 @@
             width: 150px;
             margin-top: 5%;
             margin-left: 5%;
-            
+            padding-left: 0;
         }
         .sideMenu ul{
             display: flex;
@@ -42,14 +42,19 @@
 
         .gamR{
             width: 60%;
-            height: 700px;
+            height: 80%;
             margin-left: 15%;
             margin-top: 6.3%;
         }
 
         .gamR >li{
             list-style: none;
+            display: flex;
             border:1px solid black;
+        }
+
+        .gamR > li > div .block{
+            display: inline-block;
         }
 
         img{
@@ -62,6 +67,7 @@
         }
 
         .gamModal{
+            overflow: auto;
             position: fixed;
             top: 50%;
             left: 50%;        
@@ -69,7 +75,18 @@
             height: 80%;
             transform: translate(-50%, -50%);
             display: none;
-            background-color: black;
+            background-color: gray;
+            
+            align-content: flex-end;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .gamModalDetail{
+            display: flex;
+            width: 30%;
+            height: 60%;
+            background-color: white;
         }
 
         .closeButton{
@@ -100,42 +117,49 @@
 
     <div class="rList">
         <ul class="gamR">
-            <li class ="gamR_young"><img src="./image/gamR_young.jpg" onclick="gamRClick('.gamR_young')" >영의루에 대한 정보</li>
-            <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')">거인통닭에 대한 정보</li>
-            <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')">커피잇집에 대한 정보</li>
-            <li class="gamR_Plate"><img src="./image/gamR_Plate.jpg" onclick="gamRClick('.gamR_Plate')">더플레이트에 대한 정보</li>
-            <li class="gamR_Darae"><img src="./image/gamR_Darae.jpg" onclick="gamRClick('gamR_Darae')">다래밀면에 대한 정보</li>
+            <li class ="gamR_young">
+                <img src="./image/gamR_young.jpg" onclick="gamRClick('.gamR_young')" >
+                <div class="block">영의루<br>
+                    주소: 부산 서구 구덕로 203
+                </div>
+                
+            </li>
+            <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')"><div>거인통닭에 대한 정보</div></li>
+            <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')"><div>커피잇집에 대한 정보</div></li>
+            <li class="gamR_Plate"><img src="./image/gamR_Plate.jpg" onclick="gamRClick('.gamR_Plate')"><div>더플레이트에 대한 정보</div></li>
+            <li class="gamR_Darae"><img src="./image/gamR_Darae.jpg" onclick="gamRClick('gamR_Darae')"><div>다래밀면에 대한 정보</div></li>
         </ul>
     </div>
 
     <div class="modal">
         <div class="gamModal gamModalY">
             <img src="./image/gamR_young.jpg" >
-            <button onclick="close(0)" class="closeButton" style="background-color: red;">x</button>
+            <button onclick="closeBtn(0)" class="closeButton" style="background-color: red;">x</button>
+            <div class="gamModalDetail"></div>
+            <div class="gamModalDetail"></div>
+            <div class="gamModalDetail"></div>
         </div>
         <div class="gamModal gamModalG">
             <img src="./image/gamR_giant.jpg" >
-            <button onclick="close(1)" class="closeButton" style="background-color: red; ">x</button>
+            <button onclick="closeBtn(1)" class="closeButton" style="background-color: red; ">x</button>
         </div>
         <div class="gamModal gamModalI">
             <img src="./image/gamR_it.jpg" >
-            <button onclick="close(2)" class="closeButton" style="background-color: red;">x</button>
+            <button onclick="closeBtn(2)" class="closeButton" style="background-color: red;">x</button>
         </div>
         <div class="gamModal gamModalP">
             <img src="./image/gamR_Plate.jpg" >
-            <button onclick="close(3)" class="closeButton" style="background-color: red;">x</button>
+            <button onclick="closeBtn(3)" class="closeButton" style="background-color: red;">x</button>
         </div>
         <div class="gamModal gamModalD">
             <img src="./image/gamR_Darae.jpg" >
-            <button onclick="close(4)" class="closeButton" style="background-color: red;">x</button>
+            <button onclick="closeBtn(4)" class="closeButton" style="background-color: red;">x</button>
         </div>
     </div>
     
 
     <script>
-        
         let gamModal 
-        let mod
         function gamRClick(mo){
             let gamRS = document.querySelector(mo)
             if(mo == '.gamR_young'){
@@ -153,24 +177,18 @@
             else if(mo == '.gamR_Darae'){
                 gamModal = document.querySelector('.gamModalD')
             }
-            console.log(mo)
+            
             gamRS.addEventListener('click',()=>{
                 gamModal.style.display = 'block'
             })
         }
 
-        function close(index){
-            
-            let Gmodal = document.querySelector('.gamModal')
+        function closeBtn(index){
+            // console.log(index)
+            let Gmodal = document.querySelectorAll('.gamModal')
             let closeBtn = document.querySelectorAll(".closeButton")
-            
-            closeBtn[index].addEventListener("click",function(){
-                Gmodal[index].style.display = 'none'
-                
-            })
-        
-        }
-        
+            Gmodal[index].style.display = 'none'
+        }   
     </script>
 
 </body>
