@@ -3,45 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <title>Document</title>
+    <title>LEBU</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <style>
-        html{
-            width: 100%;
-            height: 100%;
-        }
-        body{
-            width: 100%;
-            height: 100%;
-        }
-        section{
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <header id="header"></header>
+    <div class="main">
+        <h2>부산 구역 구석구석</h2>
+        <hr>
+        <img id="busan" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20161003_287%2Fwoolovery_1475474395488Gh59u_PNG%2F%25BA%25CE%25BB%25EA_%25B3%25D7%25C6%25AE%25BF%25F6%25C5%25B7%25B8%25CA.png&type=sc960_832" alt="부산지역지도" />
+        <!-- <div>날씨정보</div> -->
+        <hr>
+    </div>
 
-    <section>
+    <div class="section">
+        
+        <!-- <button>옆으로 넘기는 버튼</button> -->
 
+        <div class="mainbox">
+            <div>
+                <img src="./image/index_main.jpg" alt="테마메인"> 
+                <div class="thema_name">
+                    <strong class="tit">
+                        헤어지자
+                        <br>
+                        더위야!🌈
+                    </strong> 
+                </div>
 
-    </section>
+                <div class="text">
+                    <span>#바다</span>
+                    <span>#야경투어</span>
+                    <span>#막창</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="box">
+            <div class="recomand_list_wrap">
+                <ul class="type">
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="./image/index_광안리.png" alt="추천지1">
+                        </div>
+                        <div class="htl">
+                            <span>
+                                <span class="tage_group">청량한 바다</span>
+                            </span>
+                            <div class="name_wrap">
+                                <strong class="item_title">광안리🌊</strong>
+                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="./image/index_다대포.jpg" alt="추천지2">
+                        </div>
+                        <div class="htl">
+                            <span>
+                                <span class="tage_group">들어봤니?</span>
+                            </span>
+                            <div class="name_wrap">
+                                <strong class="item_title">다대포🏊‍♀</strong>
+                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="./image/index_해상케이블.png" alt="추천지3">
+                        </div>
+                        <div class="htl">
+                            <span>
+                                <span class="tage_group">다양한 즐길거리</span>
+                            </span>
+                            <div class="name_wrap">
+                                <strong class="item_title">케이블카🚠</strong>
+                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!-- <button>옆으로 넘기는 버튼</button> -->
+    </div>
 
-    <footer id="footer"></footer>
-
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-            $("#header").load("header.html", function () {
-            });
-            $("#footer").load("footer.html", function () {
-            });
-        })
-    </script>
+    <div>
+        <hr>
+        <!-- <div>footer</div> -->
+    </div>
 </body>
 </html>
