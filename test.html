@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+        var url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst'; /*URL*/
+        var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'eNu0V97akqslnjT2GhE%2B6QoXw2G8Vu54veHTb9eO6ptz3t2akQjcxBPZXD7lEA89iaUIwiCjdTdnCGpRdF76Og%3D%3D'; /*Service Key*/
+        queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+        queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('1000'); /**/
+        queryParams += '&' + encodeURIComponent('dataType') + '=' + encodeURIComponent('XML'); /**/
+        queryParams += '&' + encodeURIComponent('base_date') + '=' + encodeURIComponent('20230718'); /**/
+        queryParams += '&' + encodeURIComponent('base_time') + '=' + encodeURIComponent('0100'); /**/
+        queryParams += '&' + encodeURIComponent('nx') + '=' + encodeURIComponent('55'); /**/
+        queryParams += '&' + encodeURIComponent('ny') + '=' + encodeURIComponent('127'); /**/
+        xhr.open('GET', url + queryParams);
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+            }
+        };
+
+        xhr.send('');
+    </script>
+</body>
+</html>
