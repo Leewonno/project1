@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    
+    <style>
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        section{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <header id="header"></header>
+
+    <section>
+
+        
+    </section>
+
+
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>
