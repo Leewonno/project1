@@ -64,3 +64,8 @@ header .lang_box .hidden_box{
     margin-left: 10px;
     margin-right: 5px;
 }
+
+.hidden_box a{
+    color: black;
+    text-decoration: none;
+}
