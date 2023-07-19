@@ -12,6 +12,7 @@ header{
     box-shadow: 0px -3px 10px black;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 header .logo_box{
