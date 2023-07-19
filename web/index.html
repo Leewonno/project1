@@ -13,11 +13,22 @@
     <header id="header"></header>
 
     <div class="main">
-        <h2>부산 구역 구석구석</h2>
-        <hr>
-        <img id="busan" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20161003_287%2Fwoolovery_1475474395488Gh59u_PNG%2F%25BA%25CE%25BB%25EA_%25B3%25D7%25C6%25AE%25BF%25F6%25C5%25B7%25B8%25CA.png&type=sc960_832" alt="부산지역지도" />
+        
+        <!-- <hr> -->
+        <div>
+            <span><img src="./image/location.svg"><h2>부산 지역 구석구석</h2></span>
+            <img id="busan" src="./image/부산지도.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+        </div>
+        
+        <map name="image-map">
+            <area target="" alt="다대포" title="다대포" href="#" coords="336,377,307,378,299,383,299,437,306,440,413,441,421,436,417,397,380,394,376,379,370,351,350,351,344,362" shape="poly">
+            <area target="" alt="" title="감천문화마을" href="#" coords="427,301,450,304,450,325,466,330,468,343,490,345,493,394,381,392,377,331,415,327" shape="poly">
+            <area target="" alt="광안리" title="광안리" href="#" coords="509,252,531,254,533,274,566,280,568,332,556,345,466,343,470,280,501,276" shape="poly">
+            <area target="" alt="" title="영도해상케이블카" href="#" coords="558,361,525,362,517,397,522,426,616,427,626,416,622,365,606,358,576,335,555,341" shape="poly">
+            <area target="" alt="" title="청사포" href="#" coords="653,244,629,243,623,219,595,219,596,247,570,246,571,326,654,327,654,289,653,279" shape="poly">
+        </map>
         <!-- <div>날씨정보</div> -->
-        <hr>
+        <!-- <hr> -->
     </div>
 
     <div class="section">
@@ -103,6 +114,13 @@
     <footer id="footer"></footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('img[usemap]').rwdImageMaps();
+    });
+    </script>
 
     <script>
         $(document).ready(function () {
