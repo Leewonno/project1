@@ -8,8 +8,6 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -19,8 +17,8 @@
         <!-- <hr> -->
         <div>
             <span><img src="./image/location.svg"><h2>부산 지역 구석구석</h2></span>
-            <div>
-                <div>
+            <div class="main_element_box">
+                <div class="cl_box">
                     <div id="currtime2" class="clock2"></div>
                 </div>
                 <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
@@ -38,7 +36,7 @@
         <!-- <div>날씨정보</div> -->
         <!-- <hr> -->
 
-        <script type="text/javascript">
+        <script>
             function getTime() {
                 var date = new Date();
                 var y = date.getFullYear();
@@ -69,7 +67,6 @@
     
             window.onload = function() {
                 getTime();
-    
             }
         </script>
     </div>
@@ -148,13 +145,16 @@
     <div>
         <hr>
         <!-- <div>footer</div> -->
-    <!-- </div>
+    </div>
 
     <footer id="footer"></footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    
     <script>
     $(document).ready(function() {
         $('img[usemap]').rwdImageMaps();
@@ -168,6 +168,6 @@
             $("#footer").load("footer.html", function () {
             });
         })
-    </script> -->
+    </script>
 </body>
 </html>
