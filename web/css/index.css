@@ -24,10 +24,10 @@
 }
 
 .main .map_img{
-    width: 50%;
+    width: 100%;
     margin-bottom: 30px;
     filter: drop-shadow(2px 4px 6px black);
-    margin-right: -;
+    /* margin-right: -; */
 }
 
 .main span{
@@ -53,50 +53,41 @@
     position: relative;
     justify-content: center;
     align-content: center;
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    top: 100px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
+.section > div {
+    transition: transform 0.5s ;
+}
 
 .section > .mainbox {
-    width: 60%;
+    width: 90%;
+    height: 500px;
     position: absolute;
-    left: 0px;
 }
 
 .section > .box {
-    position: absolute;
-    right: 0px;
-    min-height: 460px;
-    min-width: 360px;
+    /* position: relative; */
+    /* right: 0px; */
+    /* min-height: 460px;
+    min-width: 360px; */
     flex-grow: 1;
-    box-sizing: border-box;
-}
-
-.section > button {
-    position: absolute;
-    z-index: 99;
-}
-
-.button1 {
-    left: 0;
-}
-
-.button2 {
-    right: 0;
+    /* box-sizing: border-box; */
 }
 
 .mainbox img {
-    width: 100%;
+    width: 800px;
 }
 
 .thema_name {
-    margin-top: -600px;
-    margin-left: 90px;
-}
-
-.recomand_list_wrap {
-    /* margin: 40px 0 0 24px; */
+    position: absolute;
+    top: 50px;
+    /* margin-top: -600px;
+    margin-left: 90px; */
 }
 
 li > .image {
@@ -111,22 +102,21 @@ li > .image > img {
 .text {
     display: flex;
     flex-direction: column;
-    margin-top: 380px;
-    margin-left: 160px;
+    /* margin-top: 380px;
+    margin-left: 160px; */
     border-bottom: 10cm;
     font-size: 16px;
     font-weight: 550;
     color: rgb(11, 2, 2);
+    margin-top: 60px;
 }
 
 ul {
+    position: absolute;
     display: flex;
+    left: 400px;
+    top: 50px;
     flex-direction: row;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 
 .box .recomand_list_wrap ul {
@@ -151,8 +141,8 @@ li {
     font-size: 50px;
     color: white;
     position: relative;
-    top: 350px;
-    left: 8px;
+    /* top: 350px; */
+    left: 15px;
 }
 
 .text > span {
@@ -182,3 +172,36 @@ li {
     margin-top: 5px;
     color: #333;
 }
+
+.section > button {
+    position:absolute;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    color: white;
+    background: rgb(234, 234, 234);
+    z-index: 99;
+    opacity: 0.7;
+    border-radius: 100%;
+    font-size: 35px;
+    border-color: antiquewhite;
+}
+
+button:active {
+    background: #3e3e3e;
+}
+
+button:disabled {
+    background: #cbcaca;
+}
+
+.back {
+    bottom: 50%;
+    left: 17px;
+}
+
+.next {
+    bottom: 50%;
+    right: 5px;
+}
+

@@ -75,26 +75,23 @@
     </div>
 
     <div class="section">
-        <button class="button1" onclick="slider1_movePre()">옆으로 넘기는 버튼</button>
         <div class="mainbox">
             <div>
-                <img src="./image/index_main.jpg" alt="테마메인"> 
+                <img src="../web/image/index_main.jpg" alt="테마메인"> 
                 <div class="thema_name">
                     <strong class="tit">
                         Summer
                         <br>
                         Fantasy🌈
                     </strong> 
-                </div>
-
-                <div class="text">
-                    <span>여름을 만끽할 수 있는 부산바다🚢</span>
-                    <span>푸르른 바다뷰를 기차 안에서🏝️</span>
-                    <span>즐거움이 가득한 써핑🏄‍♀</span>
+                    <div class="text">
+                        <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                        <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                        <span>즐거움이 가득한 써핑🏄‍♀</span>
+                    </div>
                 </div>
             </div>
         </div>
-
         <div class="box">
             <div class="recomand_list_wrap">
                 <ul class="type">
@@ -141,14 +138,56 @@
                     </li>
                 </ul>
             </div>
+            
         </div>
-        <button class="button2" onclick="slider2_moveNext()">옆으로 넘기는 버튼</button>
+        <button class="back" style="cursor: pointer;">❮</button>
+        <button class="next" style="cursor: pointer;">❯</button>
+
+        <script>
+            let pages = 0;
+            let positionValue = 0;
+            const IMAGE_WIDTH = 250;
+            const backBtn = document.querySelector(".back")
+            const nextBtn = document.querySelector(".next")
+            const section = document.querySelector(".img") 
+
+            function next() {
+                if (pages< 2) {
+                    backBtn.removeAttribute('disabled')
+                    positionValue -= IMAGE_WIDTH;
+                    images.style.transform = `translateX(${positionValue}px)`;
+                    pages += 1; 
+                  }
+                if (pages == 2) {
+                    nextBtn.setAttribute('disabled', 'true')
+                }
+            }
+
+            function back() {
+                if (pages > 0) {
+                    nextBtn.removeAttribute('disabled')
+                    positionValue += IMAGE_WIDTH;
+                    images.style.transform = `translateX(${positionValue}px)`;
+                    pages -= 1;
+                 }
+            if (pages === 0) {
+                     backBtn.setAttribute('disabled', 'true')
+                 }
+            }
+
+            function init() {
+                backBtn.setAttribute('disabled', 'true');
+                backBtn.addEventListener("click", back); 
+                nextBtn.addEventListener("click", next);
+                }
+            init();
+        </script>
     </div>
 
-    <div>
+     <!-- <div>
         <hr>
-        <!-- <div>footer</div> -->
-    <!-- </div>
+        <div>footer</div> 
+    </div>
 
     <footer id="footer"></footer>
 
