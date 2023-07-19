@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
     <title>Document</title>
     <style>
         .header{
@@ -114,6 +117,63 @@
             
         }
 
+        .menu li{
+            list-style: none;
+            float: left;
+            margin:20px 40px 0 40px;
+            
+        }
+
+        .gamModalDetailMenu {
+            width: 33%;
+            height: 100%;   
+            background-color: white;
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+            
+        }
+
+        .menu{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            transition: left 0.5s ease-out;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .menu li:first-child{
+            margin-left:0;
+        }
+
+        .menu li:not(:last-child){
+            float: left;
+            margin-right: 0;
+        }
+
+        .controller span{
+            position:absolute;
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            border-radius: 50%;
+            padding: 10px 20px;
+            top: 50%;
+            font-size: 1.3em;
+            cursor: pointer;
+        }
+
+        .prev{
+            left: 5%;
+        }
+
+        .next{
+            right: 5%;
+        }
+
+
         @media screen and (max-width:650px) {
             .main{
                 width: 100%;
@@ -130,7 +190,7 @@
                 width: 100%;
                 height: 100%;
                 margin-top:10%;
-                flex-direction: row;
+                flex-direction: row-reverse;
             }
             .sideMenu ul li {
                 width: 20%;
@@ -147,13 +207,14 @@
                 margin-left: -10%;
             }
         }
+
+        
     </style>
 </head>
 <body>
-    <div class="header">
-        <h2 class="home">LEBU</h2>
+    <header id="header"></header>
 
-    </div>
+    
     <div class="main">
         <div class="sideMenu">
             <ul class="category"> 
@@ -171,8 +232,7 @@
                     <img src="./image/gamR_young.jpg" onclick="gamRClick('.gamR_young')" >
                     <div class="block">영의루<br>
                         주소: 부산 서구 구덕로 203
-                    </div>
-                    
+                    </div>   
                 </li>
                 <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')"><div>거인통닭에 대한 정보</div></li>
                 <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')"><div>커피잇집에 대한 정보</div></li>
@@ -186,8 +246,20 @@
             <img src="./image/gamR_young.jpg" class="gamR_img" >
             <div class="gamModalDe">
                 <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.53/5</p></div>
-                <div class="gamModalDetail"><p class="detail">Menu</p>
-                    <img src="./image/gamY_menu.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)">
+                <div class="gamModalDetailMenu"><p class="detail">Menu</p>
+                    <!-- <img src="./image/gamY_menu.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
+                    <img src="./image/gamY_menu2.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
+                    <img src="./image/gamY_menu3.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
+                    <button class="changeGamImg" onclick="">></button> -->
+                    <ul class="menu">
+                        <li><img src="./image/gamY_menu.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
+                        <li><img src="./image/gamY_menu2.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
+                        <li><img src="./image/gamY_menu3.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
+                    </ul>
+                    <p class="controller">
+                        <span class="prev">&lang;</span>  
+                        <span class="next">&rang;</span>
+                    </p>
                 </div>
                 <div class="gamModalDetail"><p class="map">Maps</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.15750309735!2d129.0175335152431!3d35.10277778033319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9a2da5a6927%3A0xfa586f17a6549c99!2z7JiB7J2Y66Oo!5e0!3m2!1sko!2skr!4v1689755960197!5m2!1sko!2skr" width="50%" height="50%" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <p>Adress: 부산 서구 구덕로 203</p>
@@ -268,8 +340,64 @@
             let Gmodal = document.querySelectorAll('.gamModal')
             let closeBtn = document.querySelectorAll(".closeButton")
             Gmodal[index].style.display = 'none'
-        }   
+        }
+        let cnt = 0
+        // function changeImg(){
+        //     let gamRImg = document.querySelectorAll('gamRImg')
+        //     if(cnt > length.gamRImg){
+        //         cnt = 0
+        //     }
+            
+        //     cnt+=1
+        // }
+
+        const slides = document.querySelector('.menu'); //전체 슬라이드 컨테이너
+        const slideImg = document.querySelectorAll('.menu li'); //모든 슬라이드들
+        let currentIdx = 0; //현재 슬라이드 index
+        const slideCount = slideImg.length; // 슬라이드 개수
+        const prev = document.querySelector('.prev'); //이전 버튼
+        const next = document.querySelector('.next'); //다음 버튼
+        const slideWidth = 400; //한개의 슬라이드 넓이
+        const slideMargin = 10; //슬라이드간의 margin 값
+        
+        //전체 슬라이드 컨테이너 넓이 설정
+        slides.style.width = 100 + '%';
+
+        function moveSlide(num) {
+            slides.style.left = -num * 240 + 'px';
+            currentIdx = num;
+            console.log(currentIdx)
+        }
+
+            prev.addEventListener('click', function () {
+        /*첫 번째 슬라이드로 표시 됐을때는 
+        이전 버튼 눌러도 아무런 반응 없게 하기 위해 
+        currentIdx !==0일때만 moveSlide 함수 불러옴 */
+
+                if (currentIdx !== 0) moveSlide(currentIdx - 1);
+            });
+
+            next.addEventListener('click', function () {
+        /* 마지막 슬라이드로 표시 됐을때는 
+        다음 버튼 눌러도 아무런 반응 없게 하기 위해
+        currentIdx !==slideCount - 1 일때만 
+        moveSlide 함수 불러옴 */
+            if (currentIdx !== slideCount - 1) {
+                moveSlide(currentIdx + 1);
+            }
+        });
     </script>
 
+
+    <footer id="footer"></footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>

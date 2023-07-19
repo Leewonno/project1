@@ -19,6 +19,7 @@ main {
     padding: 0 16px;
     max-width: 1024px;
     margin: 0 auto;
+    background-color: rgb(217, 235, 235);
 }
 
 .mainInfor1 > img {
@@ -45,12 +46,10 @@ main {
 .title2 > h2 {
     width: 400px;
     position: relative;
-    animation: mySlide 1s ease-out;
 }
 .title2 > p {
     width: 400px;
     position: relative;
-    animation: mySlide 1s ease-out;
 }
 
 .mainThird {
@@ -67,11 +66,11 @@ main {
 }
 .title3 > h2 {
     width: 400px;
-    animation: mySlide2 1s ease-out;
+    position: relative;
 }
 .title3 > p {
     width: 400px;
-    animation: mySlide2 1s ease-out;
+    position: relative;
 }
 .mainFourth {
     display: flex;
@@ -87,9 +86,11 @@ main {
 }
 .title4 > h2 {
     width:400px;
+    position: relative;
 }
 .title4 > p {
     width:400px;
+    position: relative;
 }
 .map {
     display: flex;
@@ -116,7 +117,7 @@ main {
       opacity: 1;
     }
   }
-  @keyframes disappear {
+@keyframes disappear {
     from {
       right: 0px;
       opacity: 1;
@@ -127,23 +128,44 @@ main {
     }
   }
 
-  @keyframes mySlide2 {
+ @keyframes mySlide2 {
     from {
       left: -100px;
       opacity: 0;
     }
     to {
-      left: 0px;
+      left: -0px;
       opacity: 1;
     }
   }
-  @keyframes disappear2 {
+@keyframes disappear2 {
     from {
       left: 0px;
       opacity: 1;
     }
     to {
       left: -100px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes mySlide3 {
+    from {
+      right: -100px;
+      opacity: 0;
+    }
+    to {
+      right: 0px;
+      opacity: 1;
+    }
+  }
+@keyframes disappear3 {
+    from {
+      right: 0px;
+      opacity: 1;
+    }
+    to {
+      right: -100px;
       opacity: 0;
     }
   }

@@ -9,6 +9,8 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header id="header"></header>
+
     <main>
         <section class="mainFirst">
             <div class="mainInfor1">
@@ -36,7 +38,7 @@
                 <img src="./image/감천어린왕자1.jpg">
             </div>
             <div class="title2">
-                <h2>감천 문화마을의 상징 어린왕자</h2>
+                <h2>감천문화마을의 상징 어린왕자</h2>
                 <br>
                 <p>감천문화마을의 가장 핫한 포토존인 어린왕자동상
                     <br><br>어린왕자의 순수한 삶과 우정을 기리기 위해 사람들은
@@ -102,5 +104,16 @@
         </section>
     </main>
     <script src="./infor.js"></script>
+
+    <footer id="footer"></footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>
