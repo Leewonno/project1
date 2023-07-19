@@ -7,17 +7,14 @@
     flex-direction: row;
 }
 
-.section > div {
-    
-}
-
 .mainbox img {
     width: 800px;
     height: 650px;
 }
 
 .thema_name {
-    margin-top: -100px;
+    margin-top: -600px;
+    margin-left: 90px;
 }
 
 .box {
@@ -58,4 +55,10 @@ li {
     height: 80%;
     list-style: none;
     border: 1px solid #e5e5e5;
+}
+
+.tit {
+    font-size: 100px;
+    color: white;
+    /* margin-top: -800px; */
 }
