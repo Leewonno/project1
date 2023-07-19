@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEBU</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
 </head>
 <body>
+    <header id="header"></header>
+
     <div class="main">
         <h2>부산 구역 구석구석</h2>
         <hr>
@@ -94,5 +99,18 @@
         <hr>
         <!-- <div>footer</div> -->
     </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>
