@@ -9,6 +9,8 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header id="header"></header>
+
     <main>
         <section class="mainFirst">
             <div class="mainInfor1">
@@ -102,5 +104,16 @@
         </section>
     </main>
     <script src="./infor.js"></script>
+
+    <footer id="footer"></footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>

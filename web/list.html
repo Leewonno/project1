@@ -150,10 +150,9 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h2 class="home">LEBU</h2>
+    <header id="header"></header>
 
-    </div>
+    
     <div class="main">
         <div class="sideMenu">
             <ul class="category"> 
@@ -271,5 +270,16 @@
         }   
     </script>
 
+
+    <footer id="footer"></footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>
