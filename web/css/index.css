@@ -5,11 +5,44 @@
 .section {
     display: flex;
     flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+
+.section > .mainbox {
+    width: 60%;
+    position: absolute;
+    left: 0px;
+}
+
+.section > .box {
+    position: absolute;
+    right: 0px;
+    min-height: 460px;
+    min-width: 360px;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.section > button {
+    position: absolute;
+    z-index: 99;
+}
+
+.button1 {
+    left: 0;
+}
+
+.button2 {
+    right: 0;
 }
 
 .mainbox img {
-    width: 800px;
-    height: 650px;
+    width: 100%;
 }
 
 .thema_name {
@@ -17,13 +50,8 @@
     margin-left: 90px;
 }
 
-.box {
-    flex-grow: 1;
-    box-sizing: border-box;
-}
-
 .recomand_list_wrap {
-    margin: 40px 0 0 24px;
+    /* margin: 40px 0 0 24px; */
 }
 
 li > .image {
@@ -32,12 +60,18 @@ li > .image {
 
 li > .image > img {
     width: 100%;
-    height: 500px;
+    height: 215px;
 }
 
 .text {
     display: flex;
     flex-direction: column;
+    margin-top: 380px;
+    margin-left: 160px;
+    border-bottom: 10cm;
+    font-size: 16px;
+    font-weight: 550;
+    color: rgb(11, 2, 2);
 }
 
 ul {
@@ -50,15 +84,56 @@ ul {
     padding-inline-start: 40px;
 }
 
+.box .recomand_list_wrap ul {
+    margin: -40px 0 0 -24px;
+}
+
+.box .recomand_list_wrap li {
+    width: 282px;
+    margin: 40px 0 0 24px;
+}
+
 li {
     width: 33%;
     height: 80%;
     list-style: none;
-    border: 1px solid #e5e5e5;
+    background-color: white;
+    box-shadow: 0px 1px 10px 0px;
+    border: 1px solid rgb(234, 234, 234);
 }
 
-.tit {
-    font-size: 100px;
+.thema_name > .tit {
+    font-size: 50px;
     color: white;
-    /* margin-top: -800px; */
+    position: relative;
+    top: 350px;
+    left: 8px;
+}
+
+.text > span {
+    width: 600px;
+    /* background-color: rgb(231, 240, 241);
+    border-radius: 8%; */
+    text-align: left;
+    margin-left: 15px;
+}
+
+.tage_group {
+    font-size: 13px;
+    padding: 0;
+    border: none;
+    color: #6672a4;
+}
+
+.item_title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.item_text {
+    font-size: 13px;
+    max-height: 45px;
+    margin-top: 5px;
+    color: #333;
 }
