@@ -14,13 +14,20 @@
             height: 100%;
             /* background-color: #00C4FF; */
         }
+        .main{
+            width: 1000px;
+            min-height: 500px;
+            /* position:absolute; */
+            overflow: auto;
+            /* margin: 5%; */
+        }
         .sideMenu{
             background-color: #FFE7A0;
             position:fixed;
-            width: 150px;
-            margin-top: 5%;
+            width: 10%;
             margin-left: 5%;
-            padding-left: 0;
+            margin-top: 5%;
+            
         }
         .sideMenu ul{
             display: flex;
@@ -41,10 +48,15 @@
         }
 
         .gamR{
-            width: 60%;
+            width: 70%;
             height: 80%;
-            margin-left: 15%;
-            margin-top: 6.3%;
+            /* margin-left: 10%; */
+            
+            
+        }
+        .rList{
+            margin-top: 5%;
+            margin-left: 20%;
         }
 
         .gamR >li{
@@ -76,16 +88,14 @@
             transform: translate(-50%, -50%);
             display: none;
             background-color: gray;
-            
-            align-content: flex-end;
-            justify-content: space-between;
-            flex-direction: row;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
 
         .gamModalDetail{
-            display: flex;
-            width: 30%;
-            height: 60%;
+            width: 33%;
+            height: 100%;
             background-color: white;
         }
 
@@ -95,8 +105,48 @@
             right: 17px;    
             cursor: pointer;
         }
-        
 
+        .gamModalDe{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            justify-content: space-between;
+            
+        }
+
+        @media screen and (max-width:650px) {
+            .main{
+                width: 100%;
+            }
+            .sideMenu{
+                width: 105%;
+                height: 100px;
+                overflow: auto;
+                margin-left: -5%;
+                display: flex;
+                align-items: flex-end;
+            }
+            .sideMenu ul{
+                width: 100%;
+                height: 100%;
+                margin-top:10%;
+                flex-direction: row;
+            }
+            .sideMenu ul li {
+                width: 20%;
+                height: 100%;
+                margin-top: 2%;
+            }
+
+            .gamR{
+                margin-top: 25%;
+                width: 100%;
+            }
+            .rList{
+                width: 100%;
+                margin-left: -10%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,58 +154,88 @@
         <h2 class="home">LEBU</h2>
 
     </div>
+    <div class="main">
+        <div class="sideMenu">
+            <ul class="category"> 
+                <li class="gam">감천 문화 마을</li>
+                <li class="gwang">광안리</li>
+                <li class="Da">다대포</li>
+                <li class="cable">영도 해상 케이블카</li>
+                <li class="chung">청사포</li>
+            </ul>
+        </div>
+    
+        <div class="rList">
+            <ul class="gamR">
+                <li class ="gamR_young">
+                    <img src="./image/gamR_young.jpg" onclick="gamRClick('.gamR_young')" >
+                    <div class="block">영의루<br>
+                        주소: 부산 서구 구덕로 203
+                    </div>
+                    
+                </li>
+                <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')"><div>거인통닭에 대한 정보</div></li>
+                <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')"><div>커피잇집에 대한 정보</div></li>
+                <li class="gamR_Plate"><img src="./image/gamR_Plate.jpg" onclick="gamRClick('.gamR_Plate')"><div>더플레이트에 대한 정보</div></li>
+                <li class="gamR_Darae"><img src="./image/gamR_Darae.jpg" onclick="gamRClick('gamR_Darae')"><div>다래밀면에 대한 정보</div></li>
+            </ul>
+        </div>
 
-    <div class="sideMenu">
-        <ul class="category"> 
-            <li class="gam">감천 문화 마을</li>
-            <li class="gwang">광안리</li>
-            <li class="Da">다대포</li>
-            <li class="cable">영도 해상 케이블카</li>
-            <li class="chung">청사포</li>
-        </ul>
-    </div>
-
-    <div class="rList">
-        <ul class="gamR">
-            <li class ="gamR_young">
-                <img src="./image/gamR_young.jpg" onclick="gamRClick('.gamR_young')" >
-                <div class="block">영의루<br>
-                    주소: 부산 서구 구덕로 203
-                </div>
-                
-            </li>
-            <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')"><div>거인통닭에 대한 정보</div></li>
-            <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')"><div>커피잇집에 대한 정보</div></li>
-            <li class="gamR_Plate"><img src="./image/gamR_Plate.jpg" onclick="gamRClick('.gamR_Plate')"><div>더플레이트에 대한 정보</div></li>
-            <li class="gamR_Darae"><img src="./image/gamR_Darae.jpg" onclick="gamRClick('gamR_Darae')"><div>다래밀면에 대한 정보</div></li>
-        </ul>
-    </div>
-
-    <div class="modal">
+        <div class="modal">
         <div class="gamModal gamModalY">
-            <img src="./image/gamR_young.jpg" >
+            <img src="./image/gamR_young.jpg" class="gamR_img" >
+            <div class="gamModalDe">
+                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.53/5</p></div>
+                <div class="gamModalDetail"><p class="detail">Menu</p>
+                    <img src="./image/gamY_menu.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)">
+                </div>
+                <div class="gamModalDetail"><p class="map">Maps</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.15750309735!2d129.0175335152431!3d35.10277778033319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9a2da5a6927%3A0xfa586f17a6549c99!2z7JiB7J2Y66Oo!5e0!3m2!1sko!2skr!4v1689755960197!5m2!1sko!2skr" width="50%" height="50%" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>Adress: 부산 서구 구덕로 203</p>
+                </div>
+            </div>
             <button onclick="closeBtn(0)" class="closeButton" style="background-color: red;">x</button>
-            <div class="gamModalDetail"></div>
-            <div class="gamModalDetail"></div>
-            <div class="gamModalDetail"></div>
         </div>
         <div class="gamModal gamModalG">
             <img src="./image/gamR_giant.jpg" >
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+            </div>
             <button onclick="closeBtn(1)" class="closeButton" style="background-color: red; ">x</button>
         </div>
         <div class="gamModal gamModalI">
             <img src="./image/gamR_it.jpg" >
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+            </div>
             <button onclick="closeBtn(2)" class="closeButton" style="background-color: red;">x</button>
         </div>
         <div class="gamModal gamModalP">
             <img src="./image/gamR_Plate.jpg" >
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+            </div>
             <button onclick="closeBtn(3)" class="closeButton" style="background-color: red;">x</button>
         </div>
         <div class="gamModal gamModalD">
             <img src="./image/gamR_Darae.jpg" >
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"></div>
+            </div>
             <button onclick="closeBtn(4)" class="closeButton" style="background-color: red;">x</button>
         </div>
     </div>
+    </div>
+    
+
+    
     
 
     <script>
@@ -179,7 +259,7 @@
             }
             
             gamRS.addEventListener('click',()=>{
-                gamModal.style.display = 'block'
+                gamModal.style.display = 'flex'
             })
         }
 
