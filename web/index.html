@@ -8,6 +8,8 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -73,9 +75,7 @@
     </div>
 
     <div class="section">
-        
-        <!-- <button>옆으로 넘기는 버튼</button> -->
-
+        <button class="button1" onclick="slider1_movePre()">옆으로 넘기는 버튼</button>
         <div class="mainbox">
             <div>
                 <img src="./image/index_main.jpg" alt="테마메인"> 
@@ -88,9 +88,9 @@
                 </div>
 
                 <div class="text">
-                    <span>#바다</span>
-                    <span>#야경투어</span>
-                    <span>#막창</span>
+                    <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                    <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                    <span>즐거움이 가득한 써핑🏄‍♀</span>
                 </div>
             </div>
         </div>
@@ -105,7 +105,6 @@
                         <div class="htl">
                             <span>
                                 <span class="tage_group">청량한 바다</span>
-                            </span>
                             <div class="name_wrap">
                                 <strong class="item_title">광안리🌊</strong>
                                 <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
@@ -128,14 +127,14 @@
                     </li>
                     <li style="cursor: pointer;">
                         <div class="image">
-                            <img src="./image/index_해상케이블.png" alt="추천지3">
+                            <img src="./image/csp3.jpg" alt="추천지3">
                         </div>
                         <div class="htl">
                             <span>
                                 <span class="tage_group">다양한 즐길거리</span>
                             </span>
                             <div class="name_wrap">
-                                <strong class="item_title">케이블카🚠</strong>
+                                <strong class="item_title">해변열차🚠</strong>
                                 <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
                             </div>
                         </div>
@@ -143,14 +142,13 @@
                 </ul>
             </div>
         </div>
-    </div>
-        <!-- <button>옆으로 넘기는 버튼</button> -->
+        <button class="button2" onclick="slider2_moveNext()">옆으로 넘기는 버튼</button>
     </div>
 
     <div>
         <hr>
         <!-- <div>footer</div> -->
-    </div>
+    <!-- </div>
 
     <footer id="footer"></footer>
 
@@ -170,6 +168,6 @@
             $("#footer").load("footer.html", function () {
             });
         })
-    </script>
+    </script> -->
 </body>
 </html>
