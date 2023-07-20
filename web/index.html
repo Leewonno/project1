@@ -22,7 +22,7 @@
                 <div class="cl_box">
                     <div class="ct_wt">
                         <img src="image/weather/wi-day-rain.svg">
-                        <span>22.5</span>
+                        <span id="wt_tp">22.5</span>
                     </div>
                     <div id="currtime2" class="clock2"></div>
                 </div>
@@ -74,6 +74,8 @@
                 getTime();
             }
         </script>
+
+        
     </div>
 
     <div class="section">
@@ -242,6 +244,8 @@
     <script>
     $(document).ready(function() {
         $('img[usemap]').rwdImageMaps();
+        console.log(wt_tp);
+        $('#wt_tp').text(wt_tp);
     });
     </script>
 
@@ -252,6 +256,10 @@
             $("#footer").load("footer.html", function () {
             });
         })
+    </script>
+
+    <script>
+        
     </script>
 </body>
 </html>

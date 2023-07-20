@@ -25,6 +25,12 @@ else{
     date = date.toString();
 }
 
+let wt_lightning;
+let wt_rain;
+let wt_rain_hour;
+let wt_sky;
+let wt_tp;
+
 var xhr = new XMLHttpRequest();
 var url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst'; /*URL*/
 var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'eNu0V97akqslnjT2GhE%2B6QoXw2G8Vu54veHTb9eO6ptz3t2akQjcxBPZXD7lEA89iaUIwiCjdTdnCGpRdF76Og%3D%3D'; /*Service Key*/
@@ -49,6 +55,17 @@ xhr.onreadystatechange = function () {
         console.log("VEC 풍향 deg : ", JSON.parse(this.responseText).response.body.items.item[48].fcstValue)
         console.log("WSD 풍속 m/s : ", JSON.parse(this.responseText).response.body.items.item[54].fcstValue)
         // alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+
+        wt_lightning = JSON.parse(this.responseText).response.body.items.item[0].fcstValue;
+        wt_rain = JSON.parse(this.responseText).response.body.items.item[6].fcstValue;
+        wt_rain_hour = JSON.parse(this.responseText).response.body.items.item[12].fcstValue;
+        wt_sky = JSON.parse(this.responseText).response.body.items.item[18].fcstValue;
+        wt_tp = JSON.parse(this.responseText).response.body.items.item[24].fcstValue;
+
+        // // 번개가친다.
+        // if(wt_lightning>0){
+
+        // }
     }
 };
 
