@@ -138,12 +138,19 @@ aside > .btn {
     top: 180px; 
     margin-right: -750px;
     text-align:center;
+    padding: 32px 14px;
+    background-color: rgb(196, 215, 225);
+}
+.first_Btn, .second_Btn, .third_Btn, .fourth_Btn{
+    background-color: rgb(217, 235, 235);
+    border-radius: 5%;
+    margin-bottom: 3px;
     width: 200px;
-    border-radius: 20%;
+    border-radius: 10%;
 }
 .first_Btn > a, .second_Btn > a, .third_Btn > a, .fourth_Btn > a {
     text-decoration: none;
-    color: sandybrown;
+    color: rgb(rgb(125, 113, 215), green, blue);
     font-size: 30px;
 }
 
@@ -223,6 +230,7 @@ aside > .btn {
     .mainInfor1 > img, .mainInfor2 > img, .mainInfor3 > img, .mainInfor4 > img  {
         width: 500px;
         height: 400px;
+        object-fit: cover;
     }
     .introduce {
         align-items: center;
@@ -235,9 +243,15 @@ aside > .btn {
         text-align: center;
         width:400px;
     }
-    .mainSecond, .mainThird, .mainFourth{
-        display: inline;
+    .mainSecond, .mainFourth{
+        display: flex;
+        flex-direction: column;
         height:100%;
+        text-align: center;
+    }
+    .mainThird {
+        display: flex;
+        flex-direction: column-reverse;
         text-align: center;
     }
     .mainInfor2, .mainInfor3, .mainInfor4{
