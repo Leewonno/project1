@@ -30,7 +30,7 @@ window.addEventListener("scroll", function () {
     } else {
         mainText2.style.animation = "disapear2 1s ease-out";
         subT2.style.animation = "disapear2 1s ease-out";
-        mainImg2.style.animation = "disapear2 3s ease-out";
+        mainImg2.style.animation = "disapear2 3s ease-out"; 
     }
 });
 
