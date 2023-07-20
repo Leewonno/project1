@@ -74,34 +74,33 @@
     overflow: hidden;
 }
 
-.section > div {
-    transition: transform 0.5s ;
-}
-
-.section > .mainbox {
+.section .mainbox {
     width: 90%;
     height: 500px;
     position: absolute;
 }
 
-.section > .box {
-    /* position: relative; */
-    /* right: 0px; */
-    /* min-height: 460px;
-    min-width: 360px; */
-    flex-grow: 1;
-    /* box-sizing: border-box; */
+.section .mainbox2 {
+    width: 90%;
+    height: 500px;
+    position: absolute;
 }
 
 .mainbox img {
     width: 800px;
+    height: 500px;
+    margin: 0;
+}
+
+.mainbox2 img {
+    width: 800px;
+    height: 500px;
+    margin: 0;
 }
 
 .thema_name {
     position: absolute;
     top: 50px;
-    /* margin-top: -600px;
-    margin-left: 90px; */
 }
 
 li > .image {
@@ -138,6 +137,15 @@ ul {
 }
 
 .box .recomand_list_wrap li {
+    width: 282px;
+    margin: 40px 0 0 24px;
+}
+
+.box2 .recomand_list_wrap ul {
+    margin: -40px 0 0 -24px;
+}
+
+.box2 .recomand_list_wrap li {
     width: 282px;
     margin: 40px 0 0 24px;
 }
@@ -187,7 +195,7 @@ li {
     color: #333;
 }
 
-.section > button {
+.section button {
     position:absolute;
     margin: auto;
     width: 80px;
@@ -211,11 +219,11 @@ button:disabled {
 
 .back {
     bottom: 50%;
-    left: 17px;
+    left: 5%;
 }
 
 .next {
     bottom: 50%;
-    right: 5px;
+    right: 5%;
 }
 
