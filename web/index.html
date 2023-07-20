@@ -78,7 +78,6 @@
 
     <div class="section">
         <div class="mainbox">
-            <div>
                 <img src="../web/image/index_main.jpg" alt="테마메인"> 
                 <div class="thema_name">
                     <strong class="tit">
@@ -91,7 +90,6 @@
                         <span>푸르른 바다뷰를 기차 안에서🏝️</span>
                         <span>즐거움이 가득한 써핑🏄‍♀</span>
                     </div>
-                </div>
             </div>
         </div>
         <div class="box">
@@ -140,56 +138,88 @@
                     </li>
                 </ul>
             </div>
-            
         </div>
-        <button class="back" style="cursor: pointer;">❮</button>
-        <button class="next" style="cursor: pointer;">❯</button>
+    <!-- 두번째 테마 -->
+        <div class="mainbox">
+                <img src="../web/image/음식테마_main.png" alt="테마메인"> 
+                <div class="thema_name">
+                    <strong class="tit">
+                        Food
+                        <br>
+                        Fantasy🌈
+                    </strong> 
+                <div class="text">
+                        <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                        <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                        <span>즐거움이 가득한 써핑🏄‍♀</span>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="recomand_list_wrap">
+                <ul class="type">
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/조개구이.jpg" alt="제이제이가리비">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">조개 구이</span>
+                            <div class="name_wrap">
+                                <strong class="item_title">광안리🌊</strong>
+                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/할매집.png" alt="할매집">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">열대야 안녕</span>
+                            </span>
+                        <div class="name_wrap">
+                            <strong class="item_title">포장마차🏊‍♀</strong>
+                            <p class="item_text"> #시원한 파도소리 #야경 #낙지탕탕이 </p>
+                        </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/돼지국밥.png" alt="묵촌돼지국밥">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">다양한 즐길거리</span>
+                            </span>
+                        <div class="name_wrap">
+                            <strong class="item_title">해변열차🚠</strong>
+                            <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">❮</button>
+    <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">❯</button>
+</div>
 
-        <script>
-            let pages = 0;
-            let positionValue = 0;
-            const IMAGE_WIDTH = 250;
-            const backBtn = document.querySelector(".back")
-            const nextBtn = document.querySelector(".next")
-            const section = document.querySelector(".img") 
-
-            function next() {
-                if (pages< 2) {
-                    backBtn.removeAttribute('disabled')
-                    positionValue -= IMAGE_WIDTH;
-                    images.style.transform = `translateX(${positionValue}px)`;
-                    pages += 1; 
-                  }
-                if (pages == 2) {
-                    nextBtn.setAttribute('disabled', 'true')
-                }
-            }
-
-            function back() {
-                if (pages > 0) {
-                    nextBtn.removeAttribute('disabled')
-                    positionValue += IMAGE_WIDTH;
-                    images.style.transform = `translateX(${positionValue}px)`;
-                    pages -= 1;
-                 }
-            if (pages === 0) {
-                     backBtn.setAttribute('disabled', 'true')
-                 }
-            }
-
-            function init() {
-                backBtn.setAttribute('disabled', 'true');
-                backBtn.addEventListener("click", back); 
-                nextBtn.addEventListener("click", next);
-                }
-            init();
-        </script>
-    </div>
-
-     <!-- <div>
-        <hr>
-        <!-- <div>footer</div> -->
-    </div>
+<script>
+    let count=0;
+    function back() {
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if( count==0 ) {
+            count+=1 
+            mainbox[0].style.display="none"
+        }
+        else {
+            count==0 }
+    }
+</script>
+ 
 
     <footer id="footer"></footer>
 
