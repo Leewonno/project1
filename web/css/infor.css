@@ -10,6 +10,7 @@ body {
 section{
     width: 100%;
     height: 100%; 
+
 }
 main {
     display: flex;
@@ -22,9 +23,18 @@ main {
     background-color: rgb(217, 235, 235);
 }
 
-.mainInfor1 > img {
+.mainInfor1 {
     width: 100%;
-    height: 500px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    border: solid rgb(104, 170, 228);
+}
+#mainInfor1 > img {
+    position:relative;
+    width:100%;
+    height: 450px;
 }
 .introduce {
     display: flex;
@@ -92,9 +102,11 @@ main {
     width:400px;
     position: relative;
 }
+
 .map {
     display: flex;
     justify-content:space-between;
+    position: relative;
     margin: 0;
 }
 .route > h2{
@@ -105,9 +117,38 @@ main {
     height: 450px;
     border: solid black;
 }
+.road > img:hover {
+    width:700px;
+    height:500px;
+}
+
+aside > .btn {
+    /* display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 200px;
+    top:30px;
+    left:50%;
+    height: 200px;
+    margin-left: 550px; */
+    display: flex;
+    flex-direction: column;
+    position: fixed; 
+    right: 50%; 
+    top: 180px; 
+    margin-right: -750px;
+    text-align:center;
+    width: 200px;
+    border-radius: 20%;
+}
+.first_Btn > a, .second_Btn > a, .third_Btn > a, .fourth_Btn > a {
+    text-decoration: none;
+    color: sandybrown;
+    font-size: 30px;
+}
 
 /* 효과 */
-@keyframes mySlide {
+@keyframes mySlide1 {
     from {
       right: -100px;
       opacity: 0;
@@ -117,7 +158,7 @@ main {
       opacity: 1;
     }
   }
-@keyframes disappear {
+@keyframes disapear1 {
     from {
       right: 0px;
       opacity: 1;
@@ -138,7 +179,7 @@ main {
       opacity: 1;
     }
   }
-@keyframes disappear2 {
+@keyframes disapear2 {
     from {
       left: 0px;
       opacity: 1;
@@ -151,21 +192,63 @@ main {
 
   @keyframes mySlide3 {
     from {
-      right: -100px;
+      bottom: -100px;
       opacity: 0;
     }
     to {
-      right: 0px;
+      bottom: 0px;
       opacity: 1;
     }
   }
-@keyframes disappear3 {
+@keyframes disapear3 {
     from {
-      right: 0px;
+      bottom: 0px;
       opacity: 1;
     }
     to {
-      right: -100px;
+      bottom: -100px;
       opacity: 0;
+    }
+  }
+  @keyframes imageMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .mainInfor1 > img, .mainInfor2 > img, .mainInfor3 > img, .mainInfor4 > img  {
+        width: 500px;
+        height: 400px;
+    }
+    .introduce {
+        align-items: center;
+    }
+    .introduce > .title {
+        text-align: center;
+    }
+    .informOne, .informTwo {
+        margin-bottom: 30px;
+        text-align: center;
+        width:400px;
+    }
+    .mainSecond, .mainThird, .mainFourth{
+        display: inline;
+        height:100%;
+        text-align: center;
+    }
+    .mainInfor2, .mainInfor3, .mainInfor4{
+        align-items: center;
+    }
+    .title2 > h2, .title3 > h2, .title4 > h2{
+        text-align: center;
+        width: auto;
+    }
+    .title2 > p, .title3 > p, .title4 > p{
+        text-align: center;
+        width: auto;
     }
   }

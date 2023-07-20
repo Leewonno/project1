@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="infor.css">
+    <link rel="stylesheet" href="./css/infor.css">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
         <section class="mainFirst">
-            <div class="mainInfor1">
-                <img src="./image/감천main.jpg">
-            </div> 
+            <div class="imageBox" id="imageBox">
+            <div class="mainInfor1" id="mainInfor1">
+                <img class="gcMain" src="./image/감천main.jpg">
+                <img class="gc1" src="./image/gc2.jpg">
+                <img class="gc2" src="./image/gc3.jpg">
+                <img class="gc3" src="./image/gc.jpg">
+            </div>
+            </div>
+            <br>
+            <br>
             <div class="introduce">
                 <h1 class="title">감천문화마을 소개</h1>
                 <p class="informOne">✨감천문화마을은 1950년대 6.25 피난민의 힘겨운 삶의 터전으로 시작되어 현재에
@@ -31,8 +38,8 @@
         <br>
         <br>
         <br>
-        <section class="mainSecond">
-            <div class="mainInfor2">
+        <section class="mainSecond" id="mainSecond">
+            <div class="mainInfor2" >
                 <img src="./image/감천어린왕자1.jpg">
             </div>
             <div class="title2">
@@ -50,7 +57,7 @@
         <br>
         <br>
         <br>
-        <section class="mainThird">
+        <section class="mainThird" id="mainThird">
             <div class="title3">
                 <h2>문화마을이 내려다 보이는 하늘마루</h2>
                 <br>
@@ -69,9 +76,9 @@
         <br>
         <br>
         <br>
-        <section class="mainFourth">
+        <section class="mainFourth" id="mainFourth">
             <div class="mainInfor4">
-                <img src="./image/감내어울터.PNG">
+                <img src="./image/감천감내어울터.jpg">
             </div>
             <div class="title4">
                 <h2>마을의 갤러리 공방 감내어울터</h2>
@@ -91,7 +98,7 @@
         <section class="route">
             <h2>오시는길</h2>
                 <br>
-            <div class="map">
+            <div class="map" id="map">
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.3732194341164!2d129.0080174756915!3d35.09739037278134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9b7a3113a51%3A0x977e01d7224cf6a3!2z6rCQ7LKc66y47ZmU66eI7J2E!5e0!3m2!1sko!2skr!4v1689680063492!5m2!1sko!2skr" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
                 </div>
@@ -101,6 +108,22 @@
             </div>
         </section>
     </main>
+    <aside>
+        <div class="btn">
+            <button class="first_Btn">
+                <a href="#mainSecond">어린왕자</a>
+            </button>
+            <button class="second_Btn">
+                <a href="#mainThird">하늘마루</a>
+            </button>
+            <button class="third_Btn">
+                <a href="#mainFourth">감내어울터</a>
+            </button>
+            <button class="fourth_Btn">
+                <a href="#map">오시는길</a>
+            </button>
+        </div>
+    </aside>
     <script src="./infor.js"></script>
 </body>
 </html>
