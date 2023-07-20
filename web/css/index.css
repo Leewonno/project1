@@ -24,10 +24,11 @@
 }
 
 .main .map_img{
-    width: 100%;
+    width: 50%;
     margin-bottom: 30px;
     filter: drop-shadow(2px 4px 6px black);
     margin-right: -5%;
+}
 
 .main span{
     display: flex;
