@@ -69,32 +69,41 @@
     align-content: center;
     width: 90%;
     top: 100px;
-    height: 500px;
+    height: 400px;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 300px;
 }
 
 .section .mainbox {
     width: 90%;
-    height: 500px;
+    height: 400px;
     position: absolute;
 }
 
 .section .mainbox2 {
     width: 90%;
-    height: 500px;
+    height: 400px;
     position: absolute;
+}
+
+.section #ocean {
+    z-index: 0;
+}
+
+.section #food {
+    z-index: -1;
 }
 
 .mainbox img {
     width: 800px;
-    height: 500px;
+    height: 400px;
     margin: 0;
 }
 
 .mainbox2 img {
     width: 800px;
-    height: 500px;
+    height: 400px;
     margin: 0;
 }
 
@@ -134,20 +143,24 @@ ul {
 
 .box .recomand_list_wrap ul {
     margin: -40px 0 0 -24px;
+    z-index: 0;
 }
 
 .box .recomand_list_wrap li {
     width: 282px;
     margin: 40px 0 0 24px;
+    z-index: 0;
 }
 
 .box2 .recomand_list_wrap ul {
     margin: -40px 0 0 -24px;
+    z-index: -1;
 }
 
 .box2 .recomand_list_wrap li {
     width: 282px;
     margin: 40px 0 0 24px;
+    z-index: -1;
 }
 
 li {
