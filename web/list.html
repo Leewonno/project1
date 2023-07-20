@@ -20,18 +20,21 @@
             /* background-color: #00C4FF; */
         }
         .main{
-            width: 1000px;
+            width: 1150px;
             min-height: 500px;
-            /* position:absolute; */
             overflow: auto;
-            /* margin: 5%; */
+            /* margin: auto; */
+            margin-top: 150px;
         }
         .sideMenu{
-            background-color: #FFE7A0;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            background-color: white;
             position:fixed;
             width: 10%;
-            margin-left: 5%;
-            margin-top: 5%;
+            width: 200px;
+            top: 150px;
+            left: 50px;
             
         }
         .sideMenu ul{
@@ -41,33 +44,43 @@
             padding-left: 0;
         }
         .sideMenu ul li{
+            width: 200px;
+            height: 50px;
             list-style: none;
-            line-height:100px;
-            text-align:center;     
-            
-            font-size: 5px;
-            
+            text-align:center;
+            font-size: 16px;
+            line-height: 50px;
+            cursor: pointer;
         }
         .category li:hover{
-            background-color: white;
+            background-color: #fffbd5;
         }
 
         .gamR{
-            width: 70%;
-            height: 80%;
+            padding-left: 0;
+            /* width: 70%;
+            height: 80%; */
             /* margin-left: 10%; */
             
             
         }
         .rList{
-            margin-top: 5%;
-            margin-left: 20%;
+            margin-top: -16px;
+            margin-left: 300px;
+            margin-bottom: 50px;
+        }
+
+        .rList .block{
+            width: calc(100% - 230px);
+            padding: 15px;
         }
 
         .gamR >li{
             list-style: none;
             display: flex;
-            border:1px solid black;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         .gamR > li > div .block{
@@ -77,6 +90,7 @@
         img{
             width: 200px;
             height: 200px;
+            border-radius: 10px;
         }
 
         .gamR img:hover{
@@ -236,10 +250,10 @@
                         주소: 부산 서구 구덕로 203
                     </div>   
                 </li>
-                <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')"><div>거인통닭에 대한 정보</div></li>
-                <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')"><div>커피잇집에 대한 정보</div></li>
-                <li class="gamR_Plate"><img src="./image/gamR_Plate.jpg" onclick="gamRClick('.gamR_Plate')"><div>더플레이트에 대한 정보</div></li>
-                <li class="gamR_Darae"><img src="./image/gamR_Darae.jpg" onclick="gamRClick('gamR_Darae')"><div>다래밀면에 대한 정보</div></li>
+                <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')"><div class="block">거인통닭에 대한 정보</div></li>
+                <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')"><div class="block">커피잇집에 대한 정보</div></li>
+                <li class="gamR_Plate"><img src="./image/gamR_Plate.jpg" onclick="gamRClick('.gamR_Plate')"><div class="block">더플레이트에 대한 정보</div></li>
+                <li class="gamR_Darae"><img src="./image/gamR_Darae.jpg" onclick="gamRClick('gamR_Darae')"><div class="block">다래밀면에 대한 정보</div></li>
             </ul>
         </div>
 
@@ -393,11 +407,12 @@
 
     <footer id="footer"></footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $("#header").load("header.html", function () {
+            $("#header").load("./header.html", function () {
             });
-            $("#footer").load("footer.html", function () {
+            $("#footer").load("./footer.html", function () {
             });
         })
     </script>

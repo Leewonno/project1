@@ -58,12 +58,13 @@ header .lang_box .hidden_box{
     border-radius: 15px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .hidden_box img{
     width: 20px;
     height: 15px;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-right: 5px;
 }
 
