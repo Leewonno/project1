@@ -77,7 +77,7 @@
     </div>
 
     <div class="section">
-        <div class="mainbox">
+        <div class="mainbox" id="ocean">
                 <img src="../web/image/index_main.jpg" alt="테마메인"> 
                 <div class="thema_name">
                     <strong class="tit">
@@ -140,7 +140,7 @@
             </div>
         </div>
     <!-- 두번째 테마 -->
-        <div class="mainbox">
+        <div class="mainbox" id="food">
                 <img src="../web/image/음식테마_main.png" alt="테마메인"> 
                 <div class="thema_name">
                     <strong class="tit">
@@ -208,6 +208,7 @@
 
 <script>
     let count = 0;
+
     function back() {
         console.log(count)
         let mainbox = document.querySelectorAll(".mainbox");
@@ -225,6 +226,28 @@
             mainbox[count].style.display="none"
             document.getElementsByClassName("box")[0].style.display = "block";
             document.getElementsByClassName("box2")[0].style.display = "none"
+            count=0;
+        }
+    }
+
+    function next() {
+        console.log(count)
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if(count==0) {
+            count+=1
+            console.log(mainbox[0])
+            console.log(count-1)
+            mainbox[count-1].style.display="none";    
+            mainbox[count].style.display="block";
+            document.getElementsByClassName("box")[0].style.display="none"
+            document.getElementsByClassName("box2")[0].style.display="block";
+        }
+        else {
+            mainbox[count-1].style.display="block";
+            mainbox[count].style.display="none";
+            document.getElementsByClassName("box")[0].style.display="block"
+            document.getElementsByClassName("box2")[0].style.display="none";
             count=0;
         }
     }
