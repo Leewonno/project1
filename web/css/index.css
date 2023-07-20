@@ -15,7 +15,7 @@
 }
 
 .main > div{
-    width: 80%;
+    width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
