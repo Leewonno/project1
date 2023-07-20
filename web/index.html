@@ -207,16 +207,26 @@
 </div>
 
 <script>
-    let count=0;
+    let count = 0;
     function back() {
+        console.log(count)
         let mainbox = document.querySelectorAll(".mainbox");
         console.log(mainbox)
-        if( count==0 ) {
+        if(count==0)  {
             count+=1 
-            mainbox[0].style.display="none"
+            console.log(mainbox[0])
+            mainbox[count-1].style.display="none"
+            mainbox[count].style.display="block"
+            document.getElementsByClassName("box")[0].style.display = "none";
+            document.getElementsByClassName("box2")[0].style.display = "block"
         }
         else {
-            count==0 }
+            mainbox[count-1].style.display="block"
+            mainbox[count].style.display="none"
+            document.getElementsByClassName("box")[0].style.display = "block";
+            document.getElementsByClassName("box2")[0].style.display = "none"
+            count=0;
+        }
     }
 </script>
  
