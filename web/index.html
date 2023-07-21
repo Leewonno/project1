@@ -9,7 +9,7 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
-    <script src="./js/weather.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <header id="header"></header>
@@ -18,16 +18,31 @@
         
         <!-- <hr> -->
         <div>
-            <span><img src="./image/location.svg"><h2>부산 지역 구석구석</h2></span>
+            <div class="top_box">
+                <span><img src="./image/location.svg"><h2 id="bg_name">부산 마린시티</h2></span>
+                <!-- <input type="checkbox" id="main_map"> -->
+                <!-- <label for="main_map"><span class="material-symbols-outlined">expand_more</span></label> -->
+            </div>
+            
             <div class="main_element_box">
                 <div class="cl_box">
+                    <div class="city_name">BUSAN</div>
                     <div class="ct_wt">
                         <img src="image/weather/wi-day-rain.svg">
-                        <span id="wt_tp">22.5</span>
+                        <span id="wt_tp"></span>
                     </div>
                     <div id="currtime2" class="clock2"></div>
                 </div>
-                <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+                <div class="img_box">
+                    <input type="checkbox" id="main_map" checked>
+                    <label for="main_map" onclick="map_on()">
+                        <span class="material-symbols-outlined">public</span>
+                        
+                        <!-- <div class="map_name">MAP</div> -->
+                    </label>
+                    <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+                </div>
+                
             </div>
             
         </div>
@@ -270,11 +285,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
     
+    <script src="./js/weather.js"></script>
+
     <script>
     $(document).ready(function() {
         $('img[usemap]').rwdImageMaps();
         console.log(wt_tp);
-        $('#wt_tp').text(wt_tp);
+        
     });
     </script>
 
@@ -288,7 +305,54 @@
     </script>
 
     <script>
+        let main_map = document.getElementById("busan");
+        function map_on(){
+            if($('input:checkbox[id=main_map]').is(':checked')) {   
+                main_map.style.display = "block";
+            }
+            else{
+                main_map.style.display = "none";
+            }
+        }
         
+        
+    </script>
+    
+    <!-- 이미지 자동 바꾸기 -->
+    <script>
+        var slideCount = 0;
+        showSlides();
+
+        function showSlides() {
+            let bg_img = document.querySelector(".main");
+            let bg_name = document.getElementById("bg_name");
+
+            if(slideCount == 0){
+                bg_img.style.backgroundImage = "url(./image/bg1.jpg)"
+                bg_img.style.animationName = "fade";
+                bg_img.style.animationDuration = "1.5s"
+                bg_name.innerText = "부산 마린시티"
+                slideCount++;
+            }
+            else if(slideCount == 1){
+                bg_img.style.backgroundImage = "url(./image/gc2.jpg)"
+                bg_img.style.animationName = "fade";
+                bg_img.style.animationDuration = "1.5s"
+                bg_name.innerText = "부산 감천문화마을"
+                slideCount++
+            }
+            else if(slideCount == 2){
+                bg_img.style.backgroundImage = "url(./image/dadaepo.jpg)"
+                bg_img.style.animationName = "fade";
+                bg_img.style.animationDuration = "1.5s"
+                bg_name.innerText = "부산 다대포"
+                slideCount = 0;
+            }
+            
+
+        
+            setTimeout(showSlides, 5000); // 2초마다 이미지가 체인지됩니다
+        }
     </script>
 
 </body>
