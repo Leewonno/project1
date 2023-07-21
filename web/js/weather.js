@@ -62,6 +62,8 @@ xhr.onreadystatechange = function () {
         wt_sky = JSON.parse(this.responseText).response.body.items.item[18].fcstValue;
         wt_tp = JSON.parse(this.responseText).response.body.items.item[24].fcstValue;
 
+        $('#wt_tp').text(wt_tp + "℃");
+
         // // 번개가친다.
         // if(wt_lightning>0){
 
