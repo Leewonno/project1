@@ -5,36 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/infor.css">
+
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+    
+    
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="logo_box">
-            <a href="#" class="logo">LEBU</a>
-        </div>
-        <div class="lang_box">
-            <input type="checkbox" id="lang" checked>
-            <div class="lang"><label for="lang" onclick="lang_click()">LANGUAGE</label></div>
-            <div class="hidden_box">
-                <div class="ko">
-                    <img src="image/kor.webp">
-                    <span><a href="#">KOR</a></span>
-                </div>
-                <div class="en">
-                    <img src="image/eng.svg">
-                    <span><a href="#">ENGLISH</a></span>
-                </div>
-                <div class="cn">
-                    <img src="image/chn.svg">
-                    <span><a href="#">CHINESE</a></span>
-                </div>
-            </div>
-        </div>
-    </header>
+
+    <header id="header"></header>
+
+
     <main>
         <section class="mainFirst" id="mainFirst">
             <div class="mainInfor1" id="mainInfor1">
@@ -168,5 +155,16 @@
         }
     </script>
     <script src="./infor.js"></script>
+
+    <footer id="footer"></footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>

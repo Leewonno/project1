@@ -8,8 +8,7 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <header id="header"></header>
@@ -18,12 +17,31 @@
         
         <!-- <hr> -->
         <div>
-            <span><img src="./image/location.svg"><h2>부산 지역 구석구석</h2></span>
-            <div>
-                <div>
+            <div class="top_box">
+                <span><img src="./image/location.svg"><h2 id="bg_name">부산 마린시티</h2></span>
+                <!-- <input type="checkbox" id="main_map"> -->
+                <!-- <label for="main_map"><span class="material-symbols-outlined">expand_more</span></label> -->
+            </div>
+            
+            <div class="main_element_box">
+                <div class="cl_box">
+                    <div class="city_name">BUSAN</div>
+                    <div class="ct_wt">
+                        <img src="image/weather/wi-day-rain.svg">
+                        <span id="wt_tp"></span>
+                    </div>
                     <div id="currtime2" class="clock2"></div>
                 </div>
-                <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+                <div class="img_box">
+                    <input type="checkbox" id="main_map" checked>
+                    <label for="main_map" onclick="map_on()">
+                        <span class="material-symbols-outlined">public</span>
+                        
+                        <!-- <div class="map_name">MAP</div> -->
+                    </label>
+                    <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+                </div>
+                
             </div>
             
         </div>
@@ -38,7 +56,7 @@
         <!-- <div>날씨정보</div> -->
         <!-- <hr> -->
 
-        <script type="text/javascript">
+        <script>
             function getTime() {
                 var date = new Date();
                 var y = date.getFullYear();
@@ -69,32 +87,26 @@
     
             window.onload = function() {
                 getTime();
-    
             }
         </script>
     </div>
 
     <div class="section">
-        <button class="button1" onclick="slider1_movePre()">옆으로 넘기는 버튼</button>
-        <div class="mainbox">
-            <div>
-                <img src="./image/index_main.jpg" alt="테마메인"> 
+        <div class="mainbox" id="ocean">
+                <img src="../web/image/index_main.jpg" alt="테마메인"> 
                 <div class="thema_name">
                     <strong class="tit">
                         Summer
                         <br>
                         Fantasy🌈
                     </strong> 
-                </div>
-
-                <div class="text">
-                    <span>여름을 만끽할 수 있는 부산바다🚢</span>
-                    <span>푸르른 바다뷰를 기차 안에서🏝️</span>
-                    <span>즐거움이 가득한 써핑🏄‍♀</span>
-                </div>
+                    <div class="text">
+                        <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                        <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                        <span>즐거움이 가득한 써핑🏄‍♀</span>
+                    </div>
             </div>
         </div>
-
         <div class="box">
             <div class="recomand_list_wrap">
                 <ul class="type">
@@ -105,9 +117,10 @@
                         <div class="htl">
                             <span>
                                 <span class="tage_group">청량한 바다</span>
+                            </span>
                             <div class="name_wrap">
                                 <strong class="item_title">광안리🌊</strong>
-                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                                <p class="item_text"> #바다 #야경 #써핑 </p>
                             </div>
                         </div>
                     </li>
@@ -121,7 +134,7 @@
                             </span>
                             <div class="name_wrap">
                                 <strong class="item_title">다대포🏊‍♀</strong>
-                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                                <p class="item_text"> #노을맛집 #포장마차 #음악분수 </p>
                             </div>
                         </div>
                     </li>
@@ -131,33 +144,147 @@
                         </div>
                         <div class="htl">
                             <span>
-                                <span class="tage_group">다양한 즐길거리</span>
+                                <span class="tage_group">이색경험</span>
                             </span>
                             <div class="name_wrap">
                                 <strong class="item_title">해변열차🚠</strong>
-                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                                <p class="item_text"> #해변길 #데이트코스 #인생사진 </p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        <button class="button2" onclick="slider2_moveNext()">옆으로 넘기는 버튼</button>
-    </div>
+    <!-- 두번째 테마 -->
+        <div class="mainbox" id="food">
+                <img src="../web/image/음식테마_main.png" alt="테마메인"> 
+                <div class="thema_name">
+                    <strong class="tit">
+                        부산밥
+                        <br>
+                        묵어봤나?👵🏻
+                    </strong> 
+                <div class="text" id="food_text">
+                        <span>파도소리와 함께 조개구이 어떻노😉</span>
+                        <span>야경과 함께 낙지탕탕이는 또 어떤데🤩</span>
+                        <span>그런다음 진한 국밥 한사바리 할래🤨</span>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="recomand_list_wrap">
+                <ul class="type">
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/조개구이.jpg" alt="제이제이가리비">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">조개구이</span>
+                            <div class="name_wrap">
+                                <strong class="item_title">제이제이가리비🐚</strong>
+                                <p class="item_text"> #파도소리 #조개구이 #모닥불 </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/할매집.png" alt="할매집">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">포장마차</span>
+                            </span>
+                        <div class="name_wrap">
+                            <strong class="item_title">할매집🦑</strong>
+                            <p class="item_text"> #바다뷰 #낙지탕탕이 #스트레스해소 </p>
+                        </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/돼지국밥.png" alt="묵촌돼지국밥">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">부산국밥</span>
+                            </span>
+                        <div class="name_wrap">
+                            <strong class="item_title">목촌돼지국밥🍚</strong>
+                            <p class="item_text"> #진한국물 #깊은맛 #푸짐가득 </p>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">❮</button>
+    <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">❯</button>
+</div>
 
-    <div>
-        <hr>
-        <!-- <div>footer</div> -->
-    <!-- </div>
+<script>
+    let count = 0;
+
+    function back() {
+        console.log(count)
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if(count==0)  {
+            count+=1 
+            console.log(mainbox[0])
+            mainbox[count-1].style.display="none"
+            mainbox[count].style.display="block"
+            document.getElementsByClassName("box")[0].style.display = "none";
+            document.getElementsByClassName("box2")[0].style.display = "block";
+        }
+        else {
+            mainbox[count-1].style.display="block"
+            mainbox[count].style.display="none"
+            document.getElementsByClassName("box")[0].style.display = "block";
+            document.getElementsByClassName("box2")[0].style.display = "none"
+            count=0;
+        }
+    }
+
+    function next() {
+        console.log(count)
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if(count==0) {
+            count+=1
+            console.log(mainbox[0])
+            console.log(count-1)
+            mainbox[count-1].style.display="none";    
+            mainbox[count].style.display="block";
+            document.getElementsByClassName("box")[0].style.display="none"
+            document.getElementsByClassName("box2")[0].style.display="block";
+        }
+        else {
+            mainbox[count-1].style.display="block";
+            mainbox[count].style.display="none";
+            document.getElementsByClassName("box")[0].style.display="block"
+            document.getElementsByClassName("box2")[0].style.display="none";
+            count=0;
+        }
+    }
+</script>
+ 
 
     <footer id="footer"></footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    
+    <script src="./js/weather.js"></script>
+
     <script>
     $(document).ready(function() {
         $('img[usemap]').rwdImageMaps();
+        console.log(wt_tp);
+        
     });
     </script>
 
@@ -168,6 +295,68 @@
             $("#footer").load("footer.html", function () {
             });
         })
-    </script> -->
+    </script>
+
+    <script>
+        let main_map = document.getElementById("busan");
+        function map_on(){
+            if($('input:checkbox[id=main_map]').is(':checked')) {   
+                main_map.style.display = "block";
+            }
+            else{
+                main_map.style.display = "none";
+            }
+        }
+        
+        
+    </script>
+    
+    <!-- 이미지 자동 바꾸기 -->
+    <script>
+        var slideCount = 0;
+        var allCount = 0;
+        showSlides();
+
+        function showSlides() {
+            let bg_img = document.querySelector(".main");
+            let bg_name = document.getElementById("bg_name");
+
+            if(slideCount == 0){
+                // bg_img.style.backgroundImage = "url(./image/bg1.jpg)"
+                bg_name.innerText = "부산 송도해상케이블카"
+                slideCount++;
+            }
+            else if(slideCount == 1){
+                // bg_img.style.backgroundImage = "url(./image/gc2.jpg)"
+                bg_name.innerText = "부산 감천문화마을"
+                slideCount++
+            }
+            else if(slideCount == 2){
+                // bg_img.style.backgroundImage = "url(./image/dadaepo.jpg)"
+                bg_name.innerText = "부산 다대포"
+                slideCount++;
+            }
+            else if(slideCount==3){
+                bg_name.innerText = "부산 청사포"
+                slideCount = 0;
+            }
+            
+
+            if(allCount == 0){
+                setTimeout(showSlides, 4000);
+                allCount++;
+            }
+            else{
+                setTimeout(showSlides, 5000);
+            }
+            
+        }
+    </script>
+
+    <script>
+        // $(!".main").click(function(){
+        //    $(".main").stop(); 
+        // })
+    </script>
 </body>
 </html>

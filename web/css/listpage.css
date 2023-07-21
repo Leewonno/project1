@@ -1,0 +1,361 @@
+.rList span{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-top:5%;
+}
+
+.rList span img{
+    width: 5%;
+    height: 5%;
+    margin-top: 10px;
+}
+
+.rList h2{
+    width: calc(100vw - 30px);
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+body{
+    
+    width: 100%;
+    height: 100%;
+    /* background-color: #00C4FF; */
+}
+.main{
+    width: 1150px;
+    min-height: 500px;
+    overflow: auto;
+    /* margin: auto; */
+    margin-top: 150px;
+}
+.sideMenu{
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background-color: white;
+    position:fixed;
+    width: 10%;
+    width: 200px;
+    top: 150px;
+    left: 50px;
+    
+}
+.sideMenu ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0;
+}
+.sideMenu ul li{
+    width: 200px;
+    height: 50px;
+    list-style: none;
+    text-align:center;
+    font-size: 16px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.category li:hover{
+    background-color: #fffbd5;
+}
+
+.gamR{
+    padding-left: 0;            
+}
+.rList{
+    margin-top: -16px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
+
+.rList .block{
+    width: calc(100% - 230px);
+    padding: 15px;
+}
+
+.gamR >li{
+    list-style: none;
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.gamR > li > div .block{
+    display: inline-block;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.gamR img:hover{
+    cursor: pointer;
+}
+
+.gamModal{
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;        
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 300;
+}
+
+.gamR_img1{
+    width: 90%;
+    object-fit: cover;
+    object-position: 0 -50px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.gamR_img2{
+    width: 90%;
+    object-fit: cover;
+    object-position: 0 -150px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.gamR_img3{
+    width: 90%;
+    object-fit: cover;
+    object-position: 0 -600px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.gamR_img4{
+    width: 90%;
+    object-fit: cover;
+    object-position: 0 -250px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.gamR_img5{
+    width: 90%;
+    object-fit: cover;
+    object-position: 0 -400px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.gamModalDetail{
+    width: 33%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.closeButton{
+    position: absolute;
+    top: 20px;
+    right: 17px;    
+    cursor: pointer;
+}
+
+.gamModalDe{
+    display: flex;
+    width: 90%;
+    height: 50%;
+    justify-content: space-between;
+    
+}
+
+.menu li{
+    list-style: none;
+    float: left;
+    margin-top:10%;
+}
+
+.gamModalDetailMenu {
+    width: 33%;
+    height: 100%;   
+    background-color: white;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    
+}
+
+.menu{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s ease-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu li:first-child{
+    margin-left:130%;
+}
+
+.menu li:not(:last-child){
+    float: left;
+    margin-right: 10%;
+}
+
+.controller span{
+    position:absolute;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    top: 40%;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.prev{
+    left: 5%;
+}
+
+.next{
+    right: 5%;
+}
+
+.changeBtn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+}
+#gwangGalMenu{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:650px) {
+    .main{
+        width: 100%;
+        margin-top: 70px;
+    }
+    .sideMenu{
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        display: flex;
+        align-items: flex-end;
+        position: static;
+        margin-top: 0;  
+    }
+    .sideMenu ul{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 0;
+        
+    }
+    .sideMenu ul li {
+        width: 100%;
+        height: 70px;
+        margin-top: 2%;
+    }
+
+
+    .gamR{
+        margin-top: 25%;
+        width: 100%;
+    }
+    .rList{
+        width: 100%;
+        margin-left: -10%;
+    }
+    span{
+        margin-left: 10%;
+    }
+
+    .rList span img{
+        width: 10%;
+        height: 10%;
+        margin-top: 10px;
+    }
+
+    .gamModalDe {
+        display: flex;
+        width: 100%;
+        height: auto;
+        /* justify-content: flex-end; */
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        overflow:auto;
+        
+    }
+    .gamModalDetail{
+        width: 90%;
+        min-height: 300px;
+        margin-top:5% ;
+        
+    }
+
+    .gamModalDetailMenu{
+        width: 90%;
+        min-height: 300px;
+        margin-top:5%;
+        
+    }
+
+    .gamModal{
+        margin-top: 10%;
+        
+    }
+
+    
+    .rList ul{
+        width: 80%;
+        margin-left: 20%;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    .menu li{
+        margin-top:30%;
+    }
+
+    .menu li:first-child{
+        margin-left: 150%;
+    }
+
+    .menu li:not(:first-child){
+        margin-left: 40%;
+    }
+
+    #gwangGalMenu img{
+        width: 90%;
+        height: 80%;
+    }
+
+}
+.modalBg{
+    background-color: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position:fixed;
+    top:0;
+
+}
