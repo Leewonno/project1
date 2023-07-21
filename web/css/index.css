@@ -21,16 +21,46 @@ body{
     background-position-y: 60px;
     /* background-attachment: fixed; */
     height: 100%;
-    animation-name: fade;
-    animation-duration: 1.5s;
+    animation: fade 20s infinite;
 }
 
 @keyframes fade {
-    from {
-        opacity: .4
+    0% {
+        background-image:url(../image/yd2.jpg);
     }
-    to {
-        opacity: 1
+    20%{
+        background-image:url(../image/yd2.jpg);
+    }
+    25% {
+        background-image:url(../image/gc2.jpg);
+    }
+    45%{
+        background-image:url(../image/gc2.jpg);
+    }
+    50%{
+        background-image:url(../image/dadaepo.jpg);
+    }
+    70%{
+        background-image:url(../image/dadaepo.jpg);
+    }
+    75%{
+        background-image:url(../image/csp2.jpg)
+    }
+    95%{
+        background-image:url(../image/csp2.jpg)
+    }
+    100%{
+        background-image:url(../image/yd2.jpg)
+    }
+
+}
+
+@keyframes up {
+    from{
+        margin-bottom: -100px;
+    }
+    to{
+        margin-bottom: 0px;
     }
 }
 
@@ -52,6 +82,7 @@ body{
     position: absolute;
     bottom: 50px;
     right: -90px;
+    animation: up 0.5s;
 }
 
 .main .top_box {
@@ -115,7 +146,6 @@ body{
     display: flex;
     justify-content: space-between;
     position: relative;
-
 }
 
 .city_name{

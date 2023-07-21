@@ -315,6 +315,7 @@
     <!-- 이미지 자동 바꾸기 -->
     <script>
         var slideCount = 0;
+        var allCount = 0;
         showSlides();
 
         function showSlides() {
@@ -322,31 +323,41 @@
             let bg_name = document.getElementById("bg_name");
 
             if(slideCount == 0){
-                bg_img.style.backgroundImage = "url(./image/bg1.jpg)"
-                bg_img.style.animationName = "fade";
-                bg_img.style.animationDuration = "1.5s"
-                bg_name.innerText = "부산 마린시티"
+                // bg_img.style.backgroundImage = "url(./image/bg1.jpg)"
+                bg_name.innerText = "부산 송도해상케이블카"
                 slideCount++;
             }
             else if(slideCount == 1){
-                bg_img.style.backgroundImage = "url(./image/gc2.jpg)"
-                bg_img.style.animationName = "fade";
-                bg_img.style.animationDuration = "1.5s"
+                // bg_img.style.backgroundImage = "url(./image/gc2.jpg)"
                 bg_name.innerText = "부산 감천문화마을"
                 slideCount++
             }
             else if(slideCount == 2){
-                bg_img.style.backgroundImage = "url(./image/dadaepo.jpg)"
-                bg_img.style.animationName = "fade";
-                bg_img.style.animationDuration = "1.5s"
+                // bg_img.style.backgroundImage = "url(./image/dadaepo.jpg)"
                 bg_name.innerText = "부산 다대포"
+                slideCount++;
+            }
+            else if(slideCount==3){
+                bg_name.innerText = "부산 청사포"
                 slideCount = 0;
             }
             
 
-        
-            setTimeout(showSlides, 5000); // 2초마다 이미지가 체인지됩니다
+            if(allCount == 0){
+                setTimeout(showSlides, 4000);
+                allCount++;
+            }
+            else{
+                setTimeout(showSlides, 5000);
+            }
+            
         }
+    </script>
+
+    <script>
+        // $(!".main").click(function(){
+        //    $(".main").stop(); 
+        // })
     </script>
 </body>
 </html>
