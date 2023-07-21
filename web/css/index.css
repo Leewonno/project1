@@ -2,8 +2,16 @@
     font-family: 'SCoreDream';
 }
 
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
 .main {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,26 +19,79 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 60px;
-    
+    background-attachment: fixed;
+    height: 100%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 .main > div{
+    margin-top: 100px;
     width: 1200px;
+    height: 100%;
+    /* height: 600px; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    min-height: 600px;
-    justify-content: space-between;
+    /* min-height: 600px; */
+    /* justify-content: space-between; */
 }
 
 .main .map_img{
-    width: 50%;
-    margin-bottom: 30px;
-    filter: drop-shadow(2px 4px 6px black);
-    margin-right: -5%;
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    right: -90px;
 }
 
-.main span{
+.main .top_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main #main_map{
+    display: none;
+}
+
+.main .map_name{
+    color: white;
+    font-weight: 600;
+}
+
+.main .img_box{
+    width: 500px;
+    height: 100%;
+    position: relative;
+}
+
+.main .img_box label{
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .img_box label span{
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+}
+
+.main > div > div > span{
     display: flex;
     width: 100%;
     border-bottom: 1px solid black;
@@ -42,23 +103,51 @@
 }
 
 .main h2{
-    width: calc(100vw - 30px);
+    width: 1200px;
+    
     margin: 0;
     padding-bottom: 10px;
 }
 
 .main .main_element_box{
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
 }
 
-.main .clock2{
-    font-size: 60px;
+.city_name{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-size: 70px;
     font-weight: 600;
     color: white;
-    filter: drop-shadow(2px 4px 10px gray);
+}
+
+#wt_tp{
+    font-size: 45px;
+    font-weight: 600;
+    color: white;
+    /* filter: drop-shadow(2px 4px 50px gray); */
+}
+
+.ct_wt {
+    display: flex;
+    align-items: flex-end;
+}
+
+.ct_wt img{
+    filter: invert(1);
+    width: 135px;
+}
+
+.main .clock2{
+    font-size: 55px;
+    font-weight: 600;
+    color: white;
+    /* filter: drop-shadow(2px 4px 50px gray); */
 }
 
 .section {
