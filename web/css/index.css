@@ -19,7 +19,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 60px;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     height: 100%;
     animation-name: fade;
     animation-duration: 1.5s;

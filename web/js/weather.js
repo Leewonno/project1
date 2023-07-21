@@ -32,7 +32,7 @@ let wt_sky;
 let wt_tp;
 
 var xhr = new XMLHttpRequest();
-var url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst'; /*URL*/
+var url = 'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst'; /*URL*/
 var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'eNu0V97akqslnjT2GhE%2B6QoXw2G8Vu54veHTb9eO6ptz3t2akQjcxBPZXD7lEA89iaUIwiCjdTdnCGpRdF76Og%3D%3D'; /*Service Key*/
 queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
 queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('1000'); /**/
