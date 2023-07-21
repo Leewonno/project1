@@ -1,0 +1,35 @@
+<div class="logo_box">
+    <a href="index.html" class="logo">LEBU</a>
+</div>
+<div class="lang_box">
+    <input type="checkbox" id="lang" checked>
+    <div class="lang"><label for="lang" onclick="lang_click()">LANGUAGE</label></div>
+    <div class="hidden_box">
+        <div class="ko">
+            <img src="image/kor.webp">
+            <span><a href="#">KOR</a></span>
+        </div>
+        <div class="en">
+            <img src="image/eng.svg">
+            <span><a href="#">ENG</a></span>
+        </div>
+        <div class="cn">
+            <img src="image/chn.svg">
+            <span><a href="#">CHN</a></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const checkbox = document.getElementById('lang');
+    const lang_hd_box = document.getElementsByClassName("hidden_box");
+
+    function lang_click(){
+        if(checkbox.checked){
+            lang_hd_box[0].style.display = "block"
+        }
+        else{
+            lang_hd_box[0].style.display = "none"
+        }
+    }
+</script>

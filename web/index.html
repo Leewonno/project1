@@ -4,37 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEBU</title>
-    <link rel="stylesheet" href="../index.css">
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <script src="./js/weather.js"></script>
 </head>
 <body>
+    <header id="header"></header>
+
     <div class="main">
-        <h2>부산 구역 구석구석</h2>
-        <hr>
-        <img id="busan" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20161003_287%2Fwoolovery_1475474395488Gh59u_PNG%2F%25BA%25CE%25BB%25EA_%25B3%25D7%25C6%25AE%25BF%25F6%25C5%25B7%25B8%25CA.png&type=sc960_832" alt="부산지역지도" />
+        
+        <!-- <hr> -->
+        <div>
+            <span><img src="./image/location.svg"><h2>부산 지역 구석구석</h2></span>
+            <div class="main_element_box">
+                <div class="cl_box">
+                    <div class="ct_wt">
+                        <img src="image/weather/wi-day-rain.svg">
+                        <span id="wt_tp">22.5</span>
+                    </div>
+                    <div id="currtime2" class="clock2"></div>
+                </div>
+                <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+            </div>
+            
+        </div>
+        
+        <map name="image-map">
+            <area target="" alt="다대포" title="다대포" href="#" coords="336,377,307,378,299,383,299,437,306,440,413,441,421,436,417,397,380,394,376,379,370,351,350,351,344,362" shape="poly">
+            <area target="" alt="" title="감천문화마을" href="#" coords="427,301,450,304,450,325,466,330,468,343,490,345,493,394,381,392,377,331,415,327" shape="poly">
+            <area target="" alt="광안리" title="광안리" href="#" coords="509,252,531,254,533,274,566,280,568,332,556,345,466,343,470,280,501,276" shape="poly">
+            <area target="" alt="" title="영도해상케이블카" href="#" coords="558,361,525,362,517,397,522,426,616,427,626,416,622,365,606,358,576,335,555,341" shape="poly">
+            <area target="" alt="" title="청사포" href="#" coords="653,244,629,243,623,219,595,219,596,247,570,246,571,326,654,327,654,289,653,279" shape="poly">
+        </map>
         <!-- <div>날씨정보</div> -->
-        <hr>
+        <!-- <hr> -->
+
+        <script>
+            function getTime() {
+                var date = new Date();
+                var y = date.getFullYear();
+                var i = date.getMonth() + 1;
+                var d = date.getDate();
+                var h = date.getHours();
+    
+                if (h < 10) {
+                    h = "0" + h;
+                }
+    
+                var m = date.getMinutes();
+    
+                if (m < 10) {
+                    m = "0" + m;
+                }
+    
+                var s = date.getSeconds();
+    
+                if (s < 10) {
+                    s = "0" + s;
+                }
+    
+                var ctime2 = h + ":" + m + ":" + s;
+                document.getElementById("currtime2").innerHTML = ctime2;
+                window.setTimeout("getTime();", 1000);
+            }
+    
+            window.onload = function() {
+                getTime();
+            }
+        </script>
+
+        
     </div>
 
     <div class="section">
-        
-        <!-- <button>옆으로 넘기는 버튼</button> -->
-
-        <div class="mainbox">
-            <div>
-                <img src="../index_main.jpg" alt="테마메인"> 
+        <div class="mainbox" id="ocean">
+                <img src="../web/image/index_main.jpg" alt="테마메인"> 
                 <div class="thema_name">
                     <strong class="tit">
-                        헤어지자
+                        Summer
                         <br>
-                        더위야!🌈
+                        Fantasy🌈
                     </strong> 
-                </div>
-
-                <div class="text">
-                    <span>#바다</span>
-                    <span>#야경투어</span>
-                    <span>#막창</span>
-                </div>
+                    <div class="text">
+                        <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                        <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                        <span>즐거움이 가득한 써핑🏄‍♀</span>
+                    </div>
             </div>
         </div>
 
@@ -43,12 +101,13 @@
                 <ul class="type">
                     <li style="cursor: pointer;">
                         <div class="image">
-                            <img src="../index_광안리.png" alt="추천지1">
+                            <img src="./image/index_광안리.png" alt="추천지1">
+
+
                         </div>
                         <div class="htl">
                             <span>
                                 <span class="tage_group">청량한 바다</span>
-                            </span>
                             <div class="name_wrap">
                                 <strong class="item_title">광안리🌊</strong>
                                 <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
@@ -57,7 +116,8 @@
                     </li>
                     <li style="cursor: pointer;">
                         <div class="image">
-                            <img src="../index_다대포.jpg" alt="추천지2">
+                            <img src="./image/index_다대포.jpg" alt="추천지2">
+
                         </div>
                         <div class="htl">
                             <span>
@@ -71,14 +131,15 @@
                     </li>
                     <li style="cursor: pointer;">
                         <div class="image">
-                            <img src="../index_해상케이블.png" alt="추천지3">
+                            <img src="./image/csp3.jpg" alt="추천지3">
                         </div>
                         <div class="htl">
                             <span>
                                 <span class="tage_group">다양한 즐길거리</span>
                             </span>
                             <div class="name_wrap">
-                                <strong class="item_title">케이블카🚠</strong>
+                                <strong class="item_title">해변열차🚠</strong>
+
                                 <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
                             </div>
                         </div>
@@ -86,13 +147,149 @@
                 </ul>
             </div>
         </div>
-    </div>
-        <!-- <button>옆으로 넘기는 버튼</button> -->
-    </div>
+    <!-- 두번째 테마 -->
+        <div class="mainbox" id="food">
+                <img src="../web/image/음식테마_main.png" alt="테마메인"> 
+                <div class="thema_name">
+                    <strong class="tit">
+                        Food
+                        <br>
+                        Fantasy🌈
+                    </strong> 
+                <div class="text">
+                        <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                        <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                        <span>즐거움이 가득한 써핑🏄‍♀</span>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="recomand_list_wrap">
+                <ul class="type">
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/조개구이.jpg" alt="제이제이가리비">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">조개 구이</span>
+                            <div class="name_wrap">
+                                <strong class="item_title">광안리🌊</strong>
+                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/할매집.png" alt="할매집">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">열대야 안녕</span>
+                            </span>
+                        <div class="name_wrap">
+                            <strong class="item_title">포장마차🏊‍♀</strong>
+                            <p class="item_text"> #시원한 파도소리 #야경 #낙지탕탕이 </p>
+                        </div>
+                        </div>
+                    </li>
+                    <li style="cursor: pointer;">
+                        <div class="image">
+                            <img src="../web/image/돼지국밥.png" alt="묵촌돼지국밥">
+                        </div>
+                        <div class="htl">
+                            <span>
+                            <span class="tage_group">다양한 즐길거리</span>
+                            </span>
+                        <div class="name_wrap">
+                            <strong class="item_title">해변열차🚠</strong>
+                            <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">❮</button>
+    <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">❯</button>
+</div>
 
-    <div>
-        <hr>
-        <!-- <div>footer</div> -->
-    </div>
+<script>
+    let count = 0;
+
+    function back() {
+        console.log(count)
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if(count==0)  {
+            count+=1 
+            console.log(mainbox[0])
+            mainbox[count-1].style.display="none"
+            mainbox[count].style.display="block"
+            document.getElementsByClassName("box")[0].style.display = "none";
+            document.getElementsByClassName("box2")[0].style.display = "block"
+        }
+        else {
+            mainbox[count-1].style.display="block"
+            mainbox[count].style.display="none"
+            document.getElementsByClassName("box")[0].style.display = "block";
+            document.getElementsByClassName("box2")[0].style.display = "none"
+            count=0;
+        }
+    }
+
+    function next() {
+        console.log(count)
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if(count==0) {
+            count+=1
+            console.log(mainbox[0])
+            console.log(count-1)
+            mainbox[count-1].style.display="none";    
+            mainbox[count].style.display="block";
+            document.getElementsByClassName("box")[0].style.display="none"
+            document.getElementsByClassName("box2")[0].style.display="block";
+        }
+        else {
+            mainbox[count-1].style.display="block";
+            mainbox[count].style.display="none";
+            document.getElementsByClassName("box")[0].style.display="block"
+            document.getElementsByClassName("box2")[0].style.display="none";
+            count=0;
+        }
+    }
+</script>
+ 
+
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    
+    <script>
+    $(document).ready(function() {
+        $('img[usemap]').rwdImageMaps();
+        console.log(wt_tp);
+        $('#wt_tp').text(wt_tp);
+    });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
+
+    <script>
+        
+    </script>
+
 </body>
 </html>

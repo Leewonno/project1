@@ -1,0 +1,242 @@
+*{
+    font-family: 'SCoreDream';
+}
+
+.main {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../image/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60px;
+    
+}
+
+.main > div{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: 600px;
+    justify-content: space-between;
+}
+
+.main .map_img{
+    width: 50%;
+    margin-bottom: 30px;
+    filter: drop-shadow(2px 4px 6px black);
+    margin-right: -5%;
+}
+
+.main span{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.main span img{
+    width: 30px;
+    margin-top: -10px;
+}
+
+.main h2{
+    width: calc(100vw - 30px);
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.main .main_element_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main .clock2{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    filter: drop-shadow(2px 4px 10px gray);
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    width: 90%;
+    top: 100px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 300px;
+}
+
+.section .mainbox {
+    width: 90%;
+    height: 400px;
+    position: absolute;
+}
+
+.section .mainbox2 {
+    width: 90%;
+    height: 400px;
+    position: absolute;
+}
+
+.section #ocean {
+    z-index: 0;
+}
+
+.section #food {
+    z-index: -1;
+}
+
+.mainbox img {
+    width: 800px;
+    height: 400px;
+    margin: 0;
+}
+
+.mainbox2 img {
+    width: 800px;
+    height: 400px;
+    margin: 0;
+}
+
+.thema_name {
+    position: absolute;
+    top: 50px;
+}
+
+li > .image {
+    width: 100%;
+}
+
+li > .image > img {
+    width: 100%;
+    height: 215px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 380px;
+    margin-left: 160px; */
+    border-bottom: 10cm;
+    font-size: 16px;
+    font-weight: 550;
+    color: rgb(11, 2, 2);
+    margin-top: 60px;
+}
+
+ul {
+    position: absolute;
+    display: flex;
+    left: 400px;
+    top: 50px;
+    flex-direction: row;
+}
+
+.box .recomand_list_wrap ul {
+    margin: -40px 0 0 -24px;
+    z-index: 0;
+}
+
+.box .recomand_list_wrap li {
+    width: 282px;
+    margin: 40px 0 0 24px;
+    z-index: 0;
+}
+
+.box2 .recomand_list_wrap ul {
+    margin: -40px 0 0 -24px;
+    z-index: -1;
+}
+
+.box2 .recomand_list_wrap li {
+    width: 282px;
+    margin: 40px 0 0 24px;
+    z-index: -1;
+}
+
+li {
+    width: 33%;
+    height: 80%;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0px 1px 10px 0px;
+    border: 1px solid rgb(234, 234, 234);
+}
+
+.thema_name > .tit {
+    font-size: 50px;
+    color: white;
+    position: relative;
+    /* top: 350px; */
+    left: 15px;
+}
+
+.text > span {
+    width: 600px;
+    /* background-color: rgb(231, 240, 241);
+    border-radius: 8%; */
+    text-align: left;
+    margin-left: 15px;
+}
+
+.tage_group {
+    font-size: 13px;
+    padding: 0;
+    border: none;
+    color: #6672a4;
+}
+
+.item_title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.item_text {
+    font-size: 13px;
+    max-height: 45px;
+    margin-top: 5px;
+    color: #333;
+}
+
+.section button {
+    position:absolute;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    color: white;
+    background: rgb(234, 234, 234);
+    z-index: 99;
+    opacity: 0.7;
+    border-radius: 100%;
+    font-size: 35px;
+    border-color: antiquewhite;
+}
+
+button:active {
+    background: #3e3e3e;
+}
+
+button:disabled {
+    background: #cbcaca;
+}
+
+.back {
+    bottom: 50%;
+    left: 5%;
+}
+
+.next {
+    bottom: 50%;
+    right: 5%;
+}
+
