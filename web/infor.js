@@ -1,6 +1,7 @@
 let mainText = document.querySelector("h2");
 let subT1 = document.querySelector(".title2 > p");
 let mainImg = document.querySelector(".mainInfor2 > img");
+let mainTable = document.querySelector(".title2 > table")
 
 window.addEventListener("scroll", function () {
     let value = window.scrollY;
@@ -9,16 +10,19 @@ window.addEventListener("scroll", function () {
     mainText.style.animation = "mySlide1 1s ease-out";
     subT1.style.animation = "mySlide1 1s ease-out";
     mainImg.style.animation = "mySlide1 3s ease-out";
+    mainTable.style.animation = "mySlide1 1s ease-out";
     } else {
         mainText.style.animation = "disapear1 1s ease-out";
         subT1.style.animation = "disapear1 1s ease-out";
         mainImg.style.animation = "disapear1 3s ease-out";
+        mainTable.style.animation = "disapear1 1s ease-out";
     }
 });
 
 let mainText2 = document.querySelector(".title3 > h2");
 let subT2 = document.querySelector(".title3 > p");
 let mainImg2 = document.querySelector(".mainInfor3 > img");
+let mainTable2 = document.querySelector(".title3 > table");
 
 window.addEventListener("scroll", function () {
     let value = window.scrollY;
@@ -27,10 +31,12 @@ window.addEventListener("scroll", function () {
     mainText2.style.animation = "mySlide2 1s ease-out";
     subT2.style.animation = "mySlide2 1s ease-out";
     mainImg2.style.animation = "mySlide2 3s ease-out";
+    mainTable2.style.animation = "mySlide2 1s ease-out";
     } else {
         mainText2.style.animation = "disapear2 1s ease-out";
         subT2.style.animation = "disapear2 1s ease-out";
-        mainImg2.style.animation = "disapear2 3s ease-out"; 
+        mainImg2.style.animation = "disapear2 3s ease-out";
+        mainTable2.style.animation = "disapear2 1s ease-out";
     }
 });
 
