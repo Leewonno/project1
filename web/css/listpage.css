@@ -241,10 +241,6 @@ img{
     display: flex;
     align-content: center;
 }
-#gwangGalMenu{
-    display: flex;
-    justify-content: center;
-}
 
 @media screen and (max-width:650px) {
     .main{
@@ -278,6 +274,12 @@ img{
         margin-top: 25%;
         width: 100%;
     }
+    .gamR>li{
+        flex-direction: column;
+    }
+    .gamR_p{
+        font-size: large;
+    }
     .rList{
         width: 100%;
         margin-left: -10%;
@@ -290,6 +292,9 @@ img{
         width: 10%;
         height: 10%;
         margin-top: 10px;
+    }
+    .rList .block{
+        width: 100%;
     }
 
     .gamModalDe {
@@ -343,10 +348,7 @@ img{
         margin-left: 40%;
     }
 
-    #gwangGalMenu img{
-        width: 90%;
-        height: 80%;
-    }
+
 
 }
 .modalBg{
