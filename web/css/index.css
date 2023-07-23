@@ -110,7 +110,7 @@ body{
 
 .main .img_box label{
     position: absolute;
-    bottom: 20px;
+    bottom: -40px;
     right: 0px;
     display: flex;
     flex-direction: column;
@@ -233,6 +233,7 @@ body{
 }
 
 .section {
+    z-index: -2;
     display: flex;
     position: relative;
     justify-content: center;
@@ -240,6 +241,7 @@ body{
     height: 100%;
     margin: 0 auto;
     align-items: center;
+    overflow: hidden;
 }
 
 .section .mainbox {
@@ -270,7 +272,7 @@ body{
 
 .section video{
     position: absolute;
-    z-index: -2;
+    z-index: -3;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -300,11 +302,14 @@ body{
 
 .section #ocean {
     z-index: 0;
-    background-
 }
 
 .section #food {
     z-index: -1;
+}
+
+.section #btn{
+    z-index: -2;
 }
 
 .mainbox img {
@@ -317,6 +322,10 @@ body{
 .thema_name {
     position: absolute;
     top: 50px;
+}
+
+.htl{
+    padding-left: 10px;
 }
 
 .text {
@@ -443,16 +452,81 @@ button:disabled {
 
 .back {
     bottom: 50%;
-    left: 0;
+    left: -60px;
 }
 
 .next {
     bottom: 50%;
-    right: 0;
+    right: -60px;
 }
 
 @media screen and (max-width: 650px) {
+    .main{
+        width: 100%;
+        height: 100vw;
+        background-position-x: 50%;
+    }
+
+    .main .main_box{
+        width: 100%;
+        height: 100vw;
+        align-items: center;
+    }
+
+    .main .top_box {
+        width: 90%;
+    }
+
+    .main h2 {
+        font-size: 20px;
+    }
+    .main span img {
+        width: 25px;
+    }
+
+    .main .main_element_box{
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .city_name {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .ct_wt img {
+        width: 55px;
+    }
+
+    #wt_tp {
+        font-size: 20px;
+    }
+
+    .main .clock2 {
+        font-size: 23px;
+    }
+
+    .main .map_img{
+        bottom: 20px;
+        right: -50px;
+    }
+
+    .main .img_box label span{
+        font-size: 25px;
+    }
+
+    .main .img_box label{
+        bottom: 0;
+    }
+
+    .main .move_icon span{
+        margin-bottom: 0px;
+        font-size: 40px;
+    }
+
     .section {
+        height: auto;
+        min-height: 100%;
         /* flex-direction: column;
         justify-content: start;
         width: 60%;
@@ -461,6 +535,7 @@ button:disabled {
     } 
     .section .mainbox {
         width: 80%;
+        height: 100%;
         min-height: 100%;
         position: relative;
         /* position: absolute; */
@@ -474,6 +549,12 @@ button:disabled {
     .section #food {
         animation: none;
     }
+
+    .section #btn{
+        animation: none;
+        display: none;
+    }
+
     .section .box {
         width: 100%;
         height: auto;
@@ -484,7 +565,7 @@ button:disabled {
     }
     .mainbox img {
         width: 100%;
-        height: 300px;
+        height: 150px;
     }
     .thema_name > .tit {
         font-size: 45px;
@@ -524,6 +605,12 @@ button:disabled {
     .box2 .recomand_list_wrap{
         width: 100%;
         margin: 0;
+    }
+
+    .box2 .recomand_list_wrap li{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
     }
 
     /* .box .recomand_list_wrap ul {
