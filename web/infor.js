@@ -21,7 +21,7 @@ window.addEventListener("scroll", function () {
 
 let mainText2 = document.querySelector(".title3 > h2");
 let subT2 = document.querySelector(".title3 > p");
-let mainImg2 = document.querySelector(".mainInfor3 > img");
+let mainImg2 = document.querySelector("#mainThird >.mainInfor2 > img");
 let mainTable2 = document.querySelector(".title3 > table");
 
 window.addEventListener("scroll", function () {
@@ -40,9 +40,9 @@ window.addEventListener("scroll", function () {
     }
 });
 
-let mainText3 = document.querySelector(".title4 > h2");
-let subT3 = document.querySelector(".title4 > p");
-let mainImg3 = document.querySelector(".mainInfor4 > img");
+let mainText3 = document.querySelector("#mainFourth > .title2 > h2");
+let subT3 = document.querySelector("#mainFourth > .title2 > p");
+let mainImg3 = document.querySelector("#mainFourth > .mainInfor2 > img");
 
 window.addEventListener("scroll", function () {
     let value = window.scrollY;
@@ -64,9 +64,9 @@ window.addEventListener("scroll", function () {
     let value = window.scrollY;
 
     if(value > 1580) {
-        map.style.animation = "mySlide3 2s ease-out";
+        map.style.animation = "mySlide3 1s ease-out";
     } else {
-        map.style.animation = "disapear3 2s ease-out";
+        map.style.animation = "disapear3 1s ease-out";
     }
 });
 
