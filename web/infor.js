@@ -12,7 +12,7 @@ let mainText3 = document.querySelector("#mainFourth > .title2 > h2");
 let subT3 = document.querySelector("#mainFourth > .title2 > p");
 let mainImg3 = document.querySelector("#mainFourth > .mainInfor2 > img");
 
-let map = document.querySelector(".map");
+let map = document.querySelector(".map"); 
 
 let title = document.querySelector(".songdo")
 let title2 = document.querySelector(".gwangan")
