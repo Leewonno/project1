@@ -376,11 +376,13 @@ function prev() {
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
-    
     <script src="./js/weather.js"></script>
+
+    <script>
+        var pagelang = window.location.search.split("?");
+        // console.log(pagelang[1]);
+    </script>
 
     <script>
     $(document).ready(function() {
@@ -395,8 +397,34 @@ function prev() {
             $("#header").load("header.html", function () {
             });
             $("#footer").load("footer.html", function () {
+                lang_change();
             });
         })
+    </script>
+
+    <script>
+        function lang_change() {
+            let header_href = document.getElementById("index_id");
+            let main_string = document.querySelector(".main h2");
+
+            if(pagelang[1]=="en"){
+                var eng_temp = document.createElement("style");
+
+                header_href.href = "index.html?en";
+                eng_temp.innerHTML = `.main h2::after {content: ''; animation: name_eng_change 20s infinite;}`
+                main_string.append(eng_temp);
+
+                
+            }
+            else if(pagelang[1]=="cn"){
+                var cn_temp = document.createElement("style");
+                
+                header_href.href = "index.html?cn";
+                cn_temp.innerHTML = `.main h2::after {content: ''; animation: name_cn_change 20s infinite;}`
+                main_string.append(cn_temp);
+            }
+        };
+        
     </script>
 
     <script>
@@ -412,48 +440,8 @@ function prev() {
         
         
     </script>
+
     
-    <!-- 이미지 자동 바꾸기 -->
-    <!-- <script>
-        var slideCount = 0;
-        var allCount = 0;
-        showSlides();
-
-        function showSlides() {
-            let bg_img = document.querySelector(".main");
-            let bg_name = document.getElementById("bg_name");
-
-            if(slideCount == 0){
-                // bg_img.style.backgroundImage = "url(./image/bg1.jpg)"
-                bg_name.innerText = "부산 송도해상케이블카"
-                slideCount++;
-            }
-            else if(slideCount == 1){
-                // bg_img.style.backgroundImage = "url(./image/gc2.jpg)"
-                bg_name.innerText = "부산 감천문화마을"
-                slideCount++
-            }
-            else if(slideCount == 2){
-                // bg_img.style.backgroundImage = "url(./image/dadaepo.jpg)"
-                bg_name.innerText = "부산 다대포"
-                slideCount++;
-            }
-            else if(slideCount==3){
-                bg_name.innerText = "부산 청사포"
-                slideCount = 0;
-            }
-            
-
-            if(allCount == 0){
-                setTimeout(showSlides, 4000);
-                allCount++;
-            }
-            else{
-                setTimeout(showSlides, 5000);
-            }
-            
-        }
-    </script> -->
 
     <script>
         var slideCount = 0;

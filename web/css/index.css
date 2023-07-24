@@ -138,7 +138,7 @@ body{
     width: 1200px;
     margin: 0;
     padding-bottom: 10px;
-    animation: name_change 20s infinite;
+    /* animation: name_change 20s infinite; */
 }
 
 .main h2::after{
@@ -173,6 +173,66 @@ body{
     }
     100%{
         content: "부산 송도해상케이블카";
+    }
+}
+
+@keyframes name_eng_change {
+    0% {
+        content: "Busan Songdo Sea Cable Car";
+    }
+    18%{
+        content: "Busan Songdo Sea Cable Car";
+    }
+    25% {
+        content: "Busan Gamcheon Culture Village";
+    }
+    43%{
+        content: "Busan Gamcheon Culture Village";
+    }
+    50%{
+        content: "Busan Dadaepo Beach";
+    }
+    68%{
+        content: "Busan Dadaepo Beach";
+    }
+    75%{
+        content: "Busan Cheongsapo";
+    }
+    93%{
+        content: "Busan Cheongsapo";
+    }
+    100%{
+        content: "Busan Songdo Sea Cable Car";
+    }
+}
+
+@keyframes name_cn_change {
+    0% {
+        content: "釜山 Songdo Sea Cable Car";
+    }
+    18%{
+        content: "釜山 Songdo Sea Cable Car";
+    }
+    25% {
+        content: "釜山 Gamcheon Culture Village";
+    }
+    43%{
+        content: "釜山 Gamcheon Culture Village";
+    }
+    50%{
+        content: "釜山 Dadaepo Beach";
+    }
+    68%{
+        content: "釜山 Dadaepo Beach";
+    }
+    75%{
+        content: "釜山 Cheongsapo";
+    }
+    93%{
+        content: "釜山 Cheongsapo";
+    }
+    100%{
+        content: "釜山 Songdo Sea Cable Car";
     }
 }
 
@@ -384,7 +444,7 @@ li > .image > img {
 
 .box2 .recomand_list_wrap ul {
     /* margin: -40px 0 0 -24px; */
-    z-index: -1;
+    z-index: 0;
 }
 
 .box2 .recomand_list_wrap li {
