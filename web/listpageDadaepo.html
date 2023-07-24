@@ -12,8 +12,15 @@
 
     <title>다대포 맛집</title>
     <style>
-
-        .gamR_img{
+        .menu1{
+            width: 100%;
+            height: 90%;
+            margin-top: 15%;
+        }
+        .menu{
+            width: 200%;
+        }
+        .gamR_img1{
             width: 90%;
             object-fit: cover;
             object-position: 0 -400px;
@@ -54,7 +61,7 @@
         }
 
         @media screen and (max-width:650px) {
-        .gamR_img{
+        .gamR_img1{
             width: 90%;
             object-fit: cover;
             object-position: 0 -250px;
@@ -105,11 +112,11 @@
         <div class="modalBg"></div>
         <div class="sideMenu">
             <ul class="category"> 
-                <li class="gam">감천 문화 마을</li>
-                <li class="gwang" >광안리</li>
-                <li class="Da"style="background-color: #fffbd5;">다대포</li>
-                <li class="cable">영도 해상 케이블카</li>
-                <li class="chung">청사포</li>
+                <li class="gam" ><a href="./listpageGam.html">감천 문화 마을</a></li>
+                <li class="gwang" ><a href="./listpageGwang.html">광안리</a></li>
+                <li class="Da"style="background-color: #fffbd5;"><a href="./listpageDadaepo.html">다대포</a></li>
+                <li class="cable"><a href="./listpageCable.html">영도 해상 케이블카</a></li>
+                <li class="chung"><a href="./listpageChung.html">청사포</a></li>
             </ul>
         </div>
     
@@ -134,10 +141,12 @@
 
         <div class="modal">
         <div class="gamModal gamModalY">
-            <img src="./image/daHal.jpg" class="gamR_img" >
+            <img src="./image/daHal.jpg" class="gamR_img1" >
             <div class="gamModalDe">
-                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.53/5</p></div>
-                <div class="gamModalDetailMenu"><p class="detail">Menu</p>
+                <div class="gamModalDetail"><p class="rating"><h4>Ratings</h4></p><p>4.53/5</p><h4>식당 소개</h4>
+                    <span>3대째 가업을 이어오며 40년 이상의 전통을 가진 분위기 좋은 야외 포장마차 술집</span>
+                </div>
+                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
                     <ul class="menu">
                         <li><img src="./image/daHalMenu1.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
                         <li><img src="./image/daHalmenu2.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
@@ -149,10 +158,9 @@
                             <span class="next">&rang;</span>
                         </p>
                     </div>
-                    
                 </div>
-                <div class="gamModalDetail"><p class="map">Maps</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645379.701216372!2d126.72385683354236!3d36.34546220170444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed3268d25af3%3A0xced12f471b2b80f8!2z6rCI7IK86rWs7J20!5e0!3m2!1sko!2skr!4v1689920265024!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="gamModalAdress">Adress: 부산 서구 구덕로 203</div>
+                <div class="gamModalDetail"><p class="map"><h4>Maps</h4></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.4596212969695!2d128.9668056752537!3d35.045246272799275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568dd6af6832651%3A0x29a7d25ba7caa72f!2z7ZWg66ek7KeR!5e0!3m2!1sko!2skr!4v1690195145649!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">Adress: 부산 사하구 몰운대1길 55 할매집</div><p>call: 051-263-2801</p>  
                 </div>
             </div>
             <button onclick="closeBtn(0)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
@@ -162,9 +170,22 @@
         <div class="gamModal gamModalG">
             <img src="./image/daGga.jpg" class="gamR_img2">
             <div class="gamModalDe">
-                <div class="gamModalDetail"></div>
-                <div class="gamModalDetailMenu"></div>
-                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"><p class="rating"><h4>Ratings</h4></p><p>4.36/5</p><h4>식당 소개</h4>
+                    <span>오겹살 , 된장찌개 맛집</span>
+                </div>
+                <div class="gamModalDetailMenu"><h4>Menu</h4>
+                    <div class="gamGalMenu">
+                        <ul class="menu1">
+                            <li>
+                                <img src="./image/dadaepoMenu.jpg" onclick="window.open(this.src)">
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="gamModalDetail"><p class="map"><h4>Maps</h4></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.0879736863735!2d128.96832977525415!3d35.054539572796045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568dd4694644e49%3A0x6217243c1f9b3369!2z6rmM7LmY7IOd7Iiv67aI6rWs7J20!5e0!3m2!1sko!2skr!4v1690195429275!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">Adress: 부산 사하구 다대동 626</div><p>call: 051-265-9997</p>
+                </div>
             </div>
             <button onclick="closeBtn(1)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
                 close
@@ -259,10 +280,10 @@
         const slideMargin = 10; //슬라이드간의 margin 값
         
         //전체 슬라이드 컨테이너 넓이 설정
-        slides.style.width = 100 + '%';
+        // slides.style.width = 100 + '%';
 
         function moveSlide(num) {
-            slides.style.left = -num * 240 + 'px';
+            slides.style.left = -num * 100 + '%';
             currentIdx = num;
             console.log(currentIdx)
         }

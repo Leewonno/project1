@@ -1,3 +1,10 @@
+a{
+    display: block;
+    text-decoration: none;
+}
+a:visited{
+    color:black;
+}
 .rList span{
     display: flex;
     width: 100%;
@@ -157,6 +164,7 @@ img{
     background-color: white;
     border: 1px solid;
     border-radius: 10px;
+    overflow: scroll;
 }
 
 .closeButton{
@@ -177,7 +185,19 @@ img{
 .menu li{
     list-style: none;
     float: left;
-    margin-top:10%;
+    margin-top:5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu1 li{
+    list-style: none;
+    float: left;
+    margin-top:5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .gamModalDetailMenu {
@@ -198,22 +218,28 @@ img{
     position: absolute;
     left: 0;
     top:0;
-    width: 100%;
+    
     height: 100%;
     transition: left 0.5s ease-out;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-left: 0;
 }
 
-.menu li:first-child{
-    margin-left:130%;
+.menu1{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 300%;
+    height: 100%;
+    transition: left 0.5s ease-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
 }
 
-.menu li:not(:last-child){
-    float: left;
-    margin-right: 10%;
-}
 
 .controller span{
     position:absolute;
@@ -227,6 +253,8 @@ img{
     cursor: pointer;
 }
 
+
+
 .prev{
     left: 5%;
 }
@@ -235,11 +263,24 @@ img{
     right: 5%;
 }
 
+.prev1{
+    left: 5%;
+}
+
+.next1{
+    right: 5%;
+}
+
 .changeBtn{
     width: 100%;
     height: 100%;
     display: flex;
     align-content: center;
+}
+
+.gamR_img{
+    width: 90%;
+    height: 90%;
 }
 
 @media screen and (max-width:650px) {
@@ -284,9 +325,7 @@ img{
         width: 100%;
         margin-left: -10%;
     }
-    span{
-        margin-left: 10%;
-    }
+   
 
     .rList span img{
         width: 10%;
@@ -336,17 +375,11 @@ img{
         width: 100px;
         height: 100px;
     }
-    .menu li{
-        margin-top:30%;
+    .gamR_img{
+        width: 60%;
     }
+    
 
-    .menu li:first-child{
-        margin-left: 150%;
-    }
-
-    .menu li:not(:first-child){
-        margin-left: 40%;
-    }
 
 
 
