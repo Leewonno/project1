@@ -361,13 +361,16 @@ console.log(slide_cont)
 function prev() {
     console.log(festival)
     console.log(slide_cont[festival])
-    $(".slide-main").empty(festival)
-    $(".slide-main").append(slide_cont[festival])
+    // $(".slide-main").empty() //empty에는 넣지 않아도됨
+    document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
+    //$(".slide-list").clone().append(slide_cont[0])
+    // $(".slide-main").append(slide_cont[0])
+    
    
     festival+=1;
     
     if(festival==10) {
-        return "[]"
+        festival =0;
     }
 }
 </script>
