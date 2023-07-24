@@ -3,38 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>감천문화마을</title>
     <link rel="stylesheet" href="./css/infor.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="logo_box">
-            <a href="#" class="logo">LEBU</a>
-        </div>
-        <div class="lang_box">
-            <input type="checkbox" id="lang" checked>
-            <div class="lang"><label for="lang" onclick="lang_click()">LANGUAGE</label></div>
-            <div class="hidden_box">
-                <div class="ko">
-                    <img src="image/kor.webp">
-                    <span><a href="#">KOR</a></span>
-                </div>
-                <div class="en">
-                    <img src="image/eng.svg">
-                    <span><a href="#">ENGLISH</a></span>
-                </div>
-                <div class="cn">
-                    <img src="image/chn.svg">
-                    <span><a href="#">CHINESE</a></span>
-                </div>
-            </div>
-        </div>
-    </header>
+
+    <header id="header"></header>
+
+
     <main>
         <section class="mainFirst" id="mainFirst">
             <div class="mainInfor1" id="mainInfor1">
@@ -48,7 +30,7 @@
             <br>
             <br>
             <div class="introduce">
-                <h1 class="title">감천문화마을 소개</h1>
+                <h1 class="gamcheon">감천문화마을</h1>
                 <p class="informOne">✨감천문화마을은 1950년대 6.25 피난민의 힘겨운 삶의 터전으로 시작되어 현재에
                     이르기까지 민족현대사의 한 단면과 흔적인 부산의 역사를 그대로 간직하고 있는 곳입니다.
                     산자락을 따라 질서정연하게 늘어선 계단식 집단 주거형태와 모든 길이 통하는
@@ -79,7 +61,7 @@
             </div> 
         </section>
         <br>
-        <section class="mainThird" id="mainThird">
+        <section class="mainSecond" id="mainThird">
             <div class="title3">
                 <h2>문화마을이 내려다 보이는 하늘마루</h2>
                 <br>
@@ -91,16 +73,16 @@
                     <br><br>그대로 보존하면서 재생하는 방식으로 설계되었습니다.
                 </p>   
             </div> 
-            <div class="mainInfor3">
+            <div class="mainInfor2">
                 <img src="./image/감천하늘마루.jpg">
             </div>
         </section>
         <br>
-        <section class="mainFourth" id="mainFourth">
-            <div class="mainInfor4">
+        <section class="mainSecond" id="mainFourth">
+            <div class="mainInfor2">
                 <img src="./image/감천감내어울터.jpg">
             </div>
-            <div class="title4">
+            <div class="title2">
                 <h2>마을의 갤러리 공방 감내어울터</h2>
                 <br>
                 <p>부산시에서 2011년부터 진행한
@@ -128,45 +110,27 @@
     </main>
     <aside>
         <div class="btn">
-            <button class="first_Btn">
-                <a href="#mainSecond">어린왕자</a>
-            </button>
-            <button class="second_Btn">
-                <a href="#mainThird">하늘마루</a>
-            </button>
-            <button class="third_Btn">
-                <a href="#mainFourth">감내어울터</a>
-            </button>
-            <button class="fourth_Btn">
-                <a href="#route">오시는길</a>
-            </button>
+            <a href="#mainSecond">어린왕자</a>
+            <a href="#mainThird">하늘마루</a>
+            <a href="#mainFourth">감내어울터</a>
+            <a href="#route">오시는길</a>
         </div>
         <div class="btn2">
             <a class="top_Btn" href="#mainFirst"><i class="bi bi-box-arrow-in-up"></i></a>
         </div>
     </aside>
-    <footer>
-        <div class="ft_box">
-            <div class="ft_infor">
-                <div class="ft_name">제공</div>
-                <div class="ft_ct">포스코 코딩온 웹 풀스택 과정 프로젝트1 2조</div>
-            </div>
-        </div>
-    </footer>
+
+    <script src="./infor.js"></script>
+
+    <footer id="footer"></footer>
 
     <script>
-        const checkbox = document.getElementById('lang');
-        const lang_hd_box = document.getElementsByClassName("hidden_box");
-    
-        function lang_click(){
-            if(checkbox.checked){
-                lang_hd_box[0].style.display = "block"
-            }
-            else{
-                lang_hd_box[0].style.display = "none"
-            }
-        }
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
     </script>
-    <script src="./infor.js"></script>
 </body>
 </html>
