@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/infor_songdo.css">
+    <title>송도 해상케이블카</title>
+    <link rel="stylesheet" href="./css/infor.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
+
+
     <header id="header"></header>
+
+
+
     <main>
         <section class="mainFirst" id="mainFirst">
             <div class="mainInfor1" id="mainInfor1">
@@ -25,8 +31,8 @@
             </div>
             <br>
             <br>
-            <div class="introduce">
-                <h1 class="title">송도 해상케이블카 소개</h1>
+            <div class="introduce"> 
+                <h1 class="songdo">송도 해상케이블카 소개</h1>
                 <p class="informOne">
                     ✨송도해상케이블카는 우리나라 제1호 공설해수욕장인
                     송도해수욕장의 옛 명성을 되살리기 위한 복원사업을 통해 2017년 6월
@@ -79,7 +85,7 @@
             </div> 
         </section>
         <br>
-        <section class="mainThird" id="mainThird">
+        <section class="mainSecond" id="mainThird">
             <div class="title3">
                 <h2>에어크루즈</h2>
                 <br>
@@ -106,16 +112,16 @@
                     </table>
                 </p>   
             </div> 
-            <div class="mainInfor3">
+            <div class="mainInfor2">
                 <img src="./image/ydAirCruise.png">
             </div>
         </section>
         <br>
-        <section class="mainFourth" id="mainFourth">
-            <div class="mainInfor4">
+        <section class="mainSecond" id="mainFourth">
+            <div class="mainInfor2">
                 <img src="./image/ydSkyObservatory.jpg">
             </div>
-            <div class="title4">
+            <div class="title2">
                 <h2>스카이 하버 전망대</h2>
                 <br>
                 <p>송도 바다와 케이블카를 가장 아름답게
@@ -143,37 +149,25 @@
     </main>
     <aside>
         <div class="btn">
-            <button class="first_Btn">
-                <a href="#mainSecond">크리스탈C</a>
-            </button>
-            <button class="second_Btn">
-                <a href="#mainThird">에어C</a>
-            </button>
-            <button class="third_Btn">
-                <a href="#mainFourth">하버전망대</a>
-            </button>
-            <button class="fourth_Btn">
-                <a href="#route">오시는길</a>
-            </button>
+            <a href="#mainSecond">크리스탈크루즈</a>
+            <a href="#mainThird">에어크루즈</a>
+            <a href="#mainFourth">하버전망대</a>
+            <a href="#route">오시는길</a>
         </div>
         <div class="btn2">
             <a class="top_Btn" href="#mainFirst"><i class="bi bi-box-arrow-in-up"></i></a>
         </div>
     </aside>
+
     <footer id="footer"></footer>
 
     <script>
-        const checkbox = document.getElementById('lang');
-        const lang_hd_box = document.getElementsByClassName("hidden_box");
-    
-        function lang_click(){
-            if(checkbox.checked){
-                lang_hd_box[0].style.display = "block"
-            }
-            else{
-                lang_hd_box[0].style.display = "none"
-            }
-        }
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
     </script>
     <script src="./infor.js"></script>
 

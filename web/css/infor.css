@@ -110,6 +110,38 @@ main {
     width: 400px;
     position: relative;
 }
+
+.mainFourth {
+  padding-top: 70px;
+}
+.mainInfor3 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+}
+.mainInfor3 > img {
+  width: 650px;
+  height: 400px;
+  border-radius: 20px;
+  position: relative;
+  border: solid black;
+}
+.mainFourth > h2 {
+  text-align: center;
+}
+.title2 > table {
+  position: relative;
+  padding-left: 105px;
+}
+.title3 > table {
+  position: relative;
+}
+table >tr, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+
 /* .mainFourth {
     display: flex;
     justify-content: space-between;
@@ -146,6 +178,16 @@ main {
     border-bottom: 1px solid black;
     padding-bottom: 10px;
 }
+.road {
+  display: flex;
+  flex-direction: column;
+}
+.road > p{
+  width: 450px;
+  position: relative;
+  font-size: 24px;
+
+}
 .road > img {
     cursor: pointer;
     width: 500px;
@@ -163,6 +205,26 @@ iframe{
 
 iframe:hover{
   scale: 1.1;
+}
+
+.use{
+  padding-top: 70px;
+}
+.usemap {
+    display: flex;
+    position: relative;
+    margin: 0;
+}
+.usemap > img {
+  width: 100%;
+  border-radius: 5rem;
+  position: relative;
+  border: solid black;
+  transition: all 0.3s;
+}
+.usemap > img:hover {
+  scale: 1.1;
+
 }
 
 aside > .btn {
@@ -189,7 +251,8 @@ aside > .btn {
 }
 aside > .btn a {
     margin-bottom: 5px;
-    width: 120px;
+    width: 130px;
+
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -213,7 +276,6 @@ aside > .btn2 {
 }
 .top_Btn > a {
   text-decoration: none;
-  
 }
 
 /* 효과 */
@@ -332,18 +394,24 @@ aside > .btn2 {
       }
       .mainInfor1{
         width: 90%;
-        height: 300px;
+        height: 390px;
+
       }
       .mainInfor1_wrapper > img {
         width: 500px;
         height: auto;
-        object-fit: cover;
+        /* object-fit: cover; */
       }
-      .mainInfor2 > img, .mainInfor3 > img, .mainInfor4 > img  {
+      .mainInfor2 > img  {
           width: 100%;
           object-fit: cover;
           border-radius: 20px;
       }
+      .mainInfor3 > img {
+        width: 100%;
+        border-radius: 20px; 
+      }
+
       .introduce {
          width: 90%;
       }
@@ -367,7 +435,8 @@ aside > .btn2 {
           flex-direction: column-reverse;
           text-align: center;
       }
-      .mainInfor2, .mainInfor3, .mainInfor4, .map{
+      .mainInfor2, .mainInfor3, .map{
+
           width: 90%;
       }
 
@@ -379,14 +448,32 @@ aside > .btn2 {
       .title2 br, .title3 br{
         display: none;
       }
-      .title2 > h2, .title3 > h2, .title4 > h2, .route > h2{
+
+      .title2 > h2, .title3 > h2, .route > h2{
           /* text-align: center; */
           width: 90%;
       }
-      .title2 > p, .title3 > p, .title4 > p{
+      .title2 > p, .title3 > p{
           /* text-align: center; */
           width: auto;
       }
+      .title2 > table {
+        padding-left: 0px;
+      }
+      .road > p{
+        width: auto;
+      }
+      .use > h2 {
+        text-align: center;
+      }
+      .usemap > img {
+        width: 500px;
+        height: 400px;
+      }
+      .usemap > img:hover {
+        width: 570px;
+      }
+
       /* .road > img:hover {
         width:580px;
         height:450px;
@@ -395,7 +482,9 @@ aside > .btn2 {
         flex-direction: row;
         position: absolute;
         left: 5%;
-        top: 420px;
+
+        top: 500px;
+
       }
       aside > .btn a{
         width: auto;

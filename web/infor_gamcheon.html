@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>감천문화마을</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/infor.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -13,10 +13,29 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <header id="header"></header>
-
-
+    <header> 
+        <div class="logo_box">
+            <a href="#" class="logo">LEBU</a>
+        </div>
+        <div class="lang_box">
+            <input type="checkbox" id="lang" checked>
+            <div class="lang"><label for="lang" onclick="lang_click()">LANGUAGE</label></div>
+            <div class="hidden_box">
+                <div class="ko">
+                    <img src="image/kor.webp">
+                    <span><a href="#">KOR</a></span>
+                </div>
+                <div class="en">
+                    <img src="image/eng.svg">
+                    <span><a href="#">ENGLISH</a></span>
+                </div>
+                <div class="cn">
+                    <img src="image/chn.svg">
+                    <span><a href="#">CHINESE</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
     <main>
         <section class="mainFirst" id="mainFirst">
             <div class="mainInfor1" id="mainInfor1">
@@ -30,9 +49,7 @@
             <br>
             <br>
             <div class="introduce">
-
-                <h1 class="gamcheon">감천문화마을</h1>
-
+                <h1 class="title">감천문화마을 소개</h1>
                 <p class="informOne">✨감천문화마을은 1950년대 6.25 피난민의 힘겨운 삶의 터전으로 시작되어 현재에
                     이르기까지 민족현대사의 한 단면과 흔적인 부산의 역사를 그대로 간직하고 있는 곳입니다.
                     산자락을 따라 질서정연하게 늘어선 계단식 집단 주거형태와 모든 길이 통하는
@@ -63,9 +80,7 @@
             </div> 
         </section>
         <br>
-
-        <section class="mainSecond" id="mainThird"> 
-
+        <section class="mainThird" id="mainThird">
             <div class="title3">
                 <h2>문화마을이 내려다 보이는 하늘마루</h2>
                 <br>
@@ -77,16 +92,16 @@
                     <br><br>그대로 보존하면서 재생하는 방식으로 설계되었습니다.
                 </p>   
             </div> 
-            <div class="mainInfor2">
+            <div class="mainInfor3">
                 <img src="./image/감천하늘마루.jpg">
             </div>
         </section>
         <br>
-        <section class="mainSecond" id="mainFourth">
-            <div class="mainInfor2">
+        <section class="mainFourth" id="mainFourth">
+            <div class="mainInfor4">
                 <img src="./image/감천감내어울터.jpg">
             </div>
-            <div class="title2">
+            <div class="title4">
                 <h2>마을의 갤러리 공방 감내어울터</h2>
                 <br>
                 <p>부산시에서 2011년부터 진행한
@@ -103,38 +118,56 @@
             <h2>오시는길</h2>
                 <br>
             <div class="map" id="map">
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.3732194341164!2d129.0080174756915!3d35.09739037278134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9b7a3113a51%3A0x977e01d7224cf6a3!2z6rCQ7LKc66y47ZmU66eI7J2E!5e0!3m2!1sko!2skr!4v1689680063492!5m2!1sko!2skr" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
-                </div>
                 <div class="road">
                     <img src="./image/감천오시는길.PNG">
+                </div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.3732194341164!2d129.0080174756915!3d35.09739037278134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9b7a3113a51%3A0x977e01d7224cf6a3!2z6rCQ7LKc66y47ZmU66eI7J2E!5e0!3m2!1sko!2skr!4v1689680063492!5m2!1sko!2skr" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
                 </div>
             </div>
         </section>
     </main>
     <aside>
         <div class="btn">
-            <a href="#mainSecond">어린왕자</a>
-            <a href="#mainThird">하늘마루</a>
-            <a href="#mainFourth">감내어울터</a>
-            <a href="#route">오시는길</a>
+            <button class="first_Btn">
+                <a href="#mainSecond">어린왕자</a>
+            </button>
+            <button class="second_Btn">
+                <a href="#mainThird">하늘마루</a>
+            </button>
+            <button class="third_Btn">
+                <a href="#mainFourth">감내어울터</a>
+            </button>
+            <button class="fourth_Btn">
+                <a href="#route">오시는길</a>
+            </button>
         </div>
         <div class="btn2">
             <a class="top_Btn" href="#mainFirst"><i class="bi bi-box-arrow-in-up"></i></a>
         </div>
     </aside>
-
-    <script src="./infor.js"></script>
-
-    <footer id="footer"></footer>
+    <footer>
+        <div class="ft_box">
+            <div class="ft_infor">
+                <div class="ft_name">제공</div>
+                <div class="ft_ct">포스코 코딩온 웹 풀스택 과정 프로젝트1 2조</div>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        $(document).ready(function () {
-            $("#header").load("header.html", function () {
-            });
-            $("#footer").load("footer.html", function () {
-            });
-        })
+        const checkbox = document.getElementById('lang');
+        const lang_hd_box = document.getElementsByClassName("hidden_box");
+    
+        function lang_click(){
+            if(checkbox.checked){
+                lang_hd_box[0].style.display = "block"
+            }
+            else{
+                lang_hd_box[0].style.display = "none"
+            }
+        }
     </script>
+    <script src="./infor_gamcheon.js"></script>
 </body>
 </html>
