@@ -587,26 +587,21 @@ button:disabled {
         display: none;
     }
     li {
-        
         box-shadow: 0px 0px;
     }
-
     .box .recomand_list_wrap li{
         width: 100%;
         margin: 0;
         margin-bottom: 20px;
     }
-
     .box .recomand_list_wrap{
         width: 100%;
         margin: 0; 
     }
-
     .box2 .recomand_list_wrap{
         width: 100%;
         margin: 0;
     }
-
     .box2 .recomand_list_wrap li{
         width: 100%;
         margin: 0;
@@ -666,3 +661,53 @@ button:disabled {
         z-index: 2;
     }
 } */
+
+/* 전시회 section */
+.festival-section {
+    position: relative;
+    display: flex;
+}
+
+/*.festival-section .festival-cont {
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 438px;
+    background-color: #F8F9FC;
+}*/
+
+/*.festival-section .festival-cont .btn-block {
+    position: absolute;
+    left: 0;
+    bottom: 78px;
+    z-index: 10;
+    min-width: 68px;
+    height: 30px;
+} */
+
+.festival-section .festival-slider {
+    overflow: hidden;
+    margin-top: 50px;
+    width: 100%;
+    height: 438px;
+    background-color: #F8F9FC;
+}
+
+.festival-section .festival-slider .slide-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.festival-section .festival-slider .slide-list .slide-cont {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    box-sizing: content-box;
+    height: 350px;
+    width: 225px;
+}
