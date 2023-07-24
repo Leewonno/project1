@@ -14,7 +14,9 @@
 </head>
 <body>
 
+
     <header id="header"></header>
+
 
 
     <main>
@@ -168,5 +170,14 @@
         })
     </script>
     <script src="./infor.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+            });
+            $("#footer").load("footer.html", function () {
+            });
+        })
+    </script>
 </body>
 </html>

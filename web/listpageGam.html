@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/listpage.css">
+    <title>감천 문화 마을 맛집</title>
+    <style>
+        @media screen and (max-width:650px) {
+            .gamR_img1{
+            width: 90%;
+            object-fit: cover;
+            object-position: 0 -0px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .gamR_img2{
+            width: 90%;
+            object-fit: cover;
+            object-position: 0 -50px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .gamR_img3{
+            width: 90%;
+            object-fit: cover;
+            object-position: 0 -150px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .gamR_img4{
+            width: 90%;
+            object-fit: cover;
+            object-position: 0 -50px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .gamR_img5{
+            width: 90%;
+            object-fit: cover;
+            object-position: 0 100px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <header id="header"></header>
+    
+    <div class="main">
+        <div class="modalBg"></div>
+        <div class="sideMenu">
+            <ul class="category"> 
+                <li class="gam" style="background-color: #fffbd5;">감천 문화 마을</li>
+                <li class="gwang">광안리</li>
+                <li class="Da">다대포</li>
+                <li class="cable">영도 해상 케이블카</li>
+                <li class="chung">청사포</li>
+            </ul>
+        </div>
+    
+        <div class="rList">
+            <span>
+                <img src="./image/location.svg">
+                <h2>감천 문화 마을</h2>
+            </span>
+            <ul class="gamR">
+                <li class ="gamR_young">
+                    <img src="./image/gamR_young.jpg" onclick="gamRClick('.gamR_young')" >
+                    <div class="block" onclick="gamRClick('.gamR_young')"><p class="gamR_p">영의루</p>
+                        주소: 부산 서구 구덕로 203
+                    </div>   
+                </li>
+                <li class="gamR_giant"><img src="./image/gamR_giant.jpg" onclick="gamRClick('.gamR_giant')"><div class="block" onclick="gamRClick('.gamR_giant')"><p class="gamR_p">거인통닭</p>주소: 부산 사하구 낙동대로233번길 21</div></li>
+                <li class="gamR_it"><img src="./image/gamR_it.jpg" onclick="gamRClick('.gamR_it')"><div class="block" onclick="gamRClick('.gamR_it')"><p class="gamR_p">커피잇집</p>주소: 부산 사하구 옥천로 115 2층</div></li>
+                <li class="gamR_Plate"><img src="./image/gamR_Plate.jpg" onclick="gamRClick('.gamR_Plate')"><div class="block" onclick="gamRClick('.gamR_Plate')"><p class="gamR_p">더 플레이트</p>주소: 부산 사하구 감내2로 113 <br>감천 문화 마을 더플레이트</div></li>
+                <li class="gamR_Darae"><img src="./image/gamR_Darae.jpg" onclick="gamRClick('.gamR_Darae')"><div class="block" onclick="gamRClick('.gamR_Darae')"><p class="gamR_p">다래밀면</p>주소: 부산 중구 흑교로45번길 31-1 1층</div></li>
+            </ul>
+        </div>
+
+        <div class="modal">
+        <div class="gamModal gamModalY">
+            <img src="./image/gamR_young.jpg" class="gamR_img1" >
+            <div class="gamModalDe">
+                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.53/5</p><p>call: 051-254-5501</p></div>
+                <div class="gamModalDetailMenu"><p class="detail">Menu</p>
+                    <!-- <img src="./image/gamY_menu.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
+                    <img src="./image/gamY_menu2.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
+                    <img src="./image/gamY_menu3.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
+                    <button class="changeGamImg" onclick="">></button> -->
+                    <ul class="menu">
+                        <li><img src="./image/gamY_menu.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
+                        <li><img src="./image/gamY_menu2.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
+                        <li><img src="./image/gamY_menu3.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
+                    </ul>
+                    <div class="changeBtn">
+                        <p class="controller">
+                            <span class="prev">&lang;</span>  
+                            <span class="next">&rang;</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="gamModalDetail"><p class="map">Maps</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.15750309735!2d129.0175335152431!3d35.10277778033319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9a2da5a6927%3A0xfa586f17a6549c99!2z7JiB7J2Y66Oo!5e0!3m2!1sko!2skr!4v1689755960197!5m2!1sko!2skr" width="50%" height="50%" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">Adress: 부산 서구 구덕로 203</div>
+                </div>
+            </div>
+            <button onclick="closeBtn(0)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
+                close
+                </span></button>
+        </div>
+        <div class="gamModal gamModalG">
+            <img src="./image/gamR_giant.jpg" class="gamR_img2">
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetailMenu"></div>
+                <div class="gamModalDetail"></div>
+            </div>
+            <button onclick="closeBtn(1)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
+                close
+                </span></button>
+        </div>
+        <div class="gamModal gamModalI">
+            <img src="./image/gamR_it.jpg" class="gamR_img3">
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetailMenu"></div>
+                <div class="gamModalDetail"></div>
+            </div>
+            <button onclick="closeBtn(2)" class="closeButton"style="background: white; border:0px"><span class="material-symbols-outlined">
+                close
+                </span></button>
+        </div>
+        <div class="gamModal gamModalP">
+            <img src="./image/gamR_Plate.jpg" class="gamR_img4">
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetailMenu"></div>
+                <div class="gamModalDetail"></div>
+            </div>
+            <button onclick="closeBtn(3)" class="closeButton" style="background: white; border:0px" ><span class="material-symbols-outlined">
+                close
+                </span></button>
+        </div>
+        <div class="gamModal gamModalD">
+            <img src="./image/gamR_Darae.jpg" class="gamR_img5">
+            <div class="gamModalDe">
+                <div class="gamModalDetail"></div>
+                <div class="gamModalDetailMenu"></div>
+                <div class="gamModalDetail"></div>
+            </div>
+            <button onclick="closeBtn(4)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
+                close
+                </span></button>
+        </div>
+    </div>
+    </div>
+    
+
+    
+    
+
+    <script>
+        let gamModal 
+        function gamRClick(mo){
+            let gamRS = document.querySelector(mo)
+            let modalBg = document.querySelector('.modalBg')
+            if(mo == '.gamR_young'){
+                gamModal = document.querySelector('.gamModalY')
+            }
+            else if(mo == '.gamR_giant'){
+                gamModal = document.querySelector('.gamModalG')
+            }
+            else if(mo == '.gamR_it'){
+                gamModal = document.querySelector('.gamModalI')
+            }
+            else if(mo == '.gamR_Plate'){
+                gamModal = document.querySelector('.gamModalP')
+            }
+            else if(mo == '.gamR_Darae'){
+                gamModal = document.querySelector('.gamModalD')
+            }
+            
+            gamRS.addEventListener('click',()=>{
+                gamModal.style.display = 'flex'
+                modalBg.style.display = 'flex'
+                console.log(modalBg)
+            })
+        }
+
+        function closeBtn(index){
+            // console.log(index)
+            let Gmodal = document.querySelectorAll('.gamModal')
+            let closeBtn = document.querySelectorAll(".closeButton")
+            let GmodalBg = document.querySelector('.modalBg')
+            Gmodal[index].style.display = 'none'
+            GmodalBg.style.display = 'none'
+        }
+        let cnt = 0
+        // function changeImg(){
+        //     let gamRImg = document.querySelectorAll('gamRImg')
+        //     if(cnt > length.gamRImg){
+        //         cnt = 0
+        //     }
+            
+        //     cnt+=1
+        // }
+
+        const slides = document.querySelector('.menu'); //전체 슬라이드 컨테이너
+        const slideImg = document.querySelectorAll('.menu li'); //모든 슬라이드들
+        let currentIdx = 0; //현재 슬라이드 index
+        const slideCount = slideImg.length; // 슬라이드 개수
+        const prev = document.querySelector('.prev'); //이전 버튼
+        const next = document.querySelector('.next'); //다음 버튼
+        const slideWidth = 400; //한개의 슬라이드 넓이
+        const slideMargin = 10; //슬라이드간의 margin 값
+        
+        //전체 슬라이드 컨테이너 넓이 설정
+        slides.style.width = 100 + '%';
+
+        function moveSlide(num) {
+            slides.style.left = -num * 240 + 'px';
+            currentIdx = num;
+            console.log(currentIdx)
+        }
+
+            prev.addEventListener('click', function () {
+        /*첫 번째 슬라이드로 표시 됐을때는 
+        이전 버튼 눌러도 아무런 반응 없게 하기 위해 
+        currentIdx !==0일때만 moveSlide 함수 불러옴 */
+
+                if (currentIdx !== 0) moveSlide(currentIdx - 1);
+            });
+
+            next.addEventListener('click', function () {
+        /* 마지막 슬라이드로 표시 됐을때는 
+        다음 버튼 눌러도 아무런 반응 없게 하기 위해
+        currentIdx !==slideCount - 1 일때만 
+        moveSlide 함수 불러옴 */
+            if (currentIdx !== slideCount - 1) {
+                moveSlide(currentIdx + 1);
+            }
+            });
+
+    </script>
+
+
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("./header.html", function () {
+            });
+            $("#footer").load("./footer.html", function () {
+            });
+        })
+    </script>
+</body>
+</html>

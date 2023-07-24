@@ -8,9 +8,11 @@ let subT2 = document.querySelector(".title3 > p");
 let mainImg2 = document.querySelector("#mainThird >.mainInfor2 > img");
 let mainTable2 = document.querySelector(".title3 > table");
 
+
 let mainText3 = document.querySelector("#mainFourth > .title2 > h2");
 let subT3 = document.querySelector("#mainFourth > .title2 > p");
 let mainImg3 = document.querySelector("#mainFourth > .mainInfor2 > img");
+
 
 let map = document.querySelector(".map"); 
 
@@ -316,7 +318,6 @@ if (title) {
         }
     });
 }
-
 
 
 

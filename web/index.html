@@ -8,8 +8,7 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <header id="header"></header>
@@ -17,15 +16,40 @@
     <div class="main">
         
         <!-- <hr> -->
-        <div>
-            <span><img src="./image/location.svg"><h2>부산 지역 구석구석</h2></span>
-            <div>
-                <div>
-                    <div id="currtime2" class="clock2"></div>
-                </div>
-                <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+        <div class="main_box">
+            <div class="top_box">
+                <span><img src="./image/location.svg"><h2 id="bg_name"></h2></span>
+                <!-- <input type="checkbox" id="main_map"> -->
+                <!-- <label for="main_map"><span class="material-symbols-outlined">expand_more</span></label> -->
             </div>
             
+            <div class="main_element_box">
+                <div class="cl_box">
+                    <div class="city_name">BUSAN</div>
+                    <div class="ct_wt">
+                        <img src="image/weather/wi-day-rain.svg">
+                        <span id="wt_tp"></span>
+                    </div>
+                    <div id="currtime2" class="clock2"></div>
+                </div>
+                <div class="img_box">
+                    <input type="checkbox" id="main_map" checked>
+                    <label for="main_map" onclick="map_on()">
+                        <span class="material-symbols-outlined">public</span>
+                        
+                        <!-- <div class="map_name">MAP</div> -->
+                    </label>
+                    <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="move_icon">
+            <a href="#thema">
+                <span class="material-symbols-outlined">expand_more</span>
+            </a>
         </div>
         
         <map name="image-map">
@@ -38,7 +62,7 @@
         <!-- <div>날씨정보</div> -->
         <!-- <hr> -->
 
-        <script type="text/javascript">
+        <script>
             function getTime() {
                 var date = new Date();
                 var y = date.getFullYear();
@@ -69,95 +93,302 @@
     
             window.onload = function() {
                 getTime();
-    
             }
         </script>
     </div>
 
-    <div class="section">
-        <button class="button1" onclick="slider1_movePre()">옆으로 넘기는 버튼</button>
-        <div class="mainbox">
-            <div>
-                <img src="./image/index_main.jpg" alt="테마메인"> 
+    <div class="section" id="thema">
+        <div class="mainbox" id="ocean">
+                <img src="../web/image/index_main.jpg" alt="테마메인"> 
                 <div class="thema_name">
                     <strong class="tit">
                         Summer
                         <br>
                         Fantasy🌈
                     </strong> 
-                </div>
-
-                <div class="text">
-                    <span>여름을 만끽할 수 있는 부산바다🚢</span>
-                    <span>푸르른 바다뷰를 기차 안에서🏝️</span>
-                    <span>즐거움이 가득한 써핑🏄‍♀</span>
+                    <div class="text">
+                        <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                        <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                        <span>즐거움이 가득한 써핑🏄‍♀</span>
+                    </div>
+            </div>
+            <div class="box">
+                <div class="recomand_list_wrap">
+                    <ul class="type">
+                        <li style="cursor: pointer;">
+                            <div class="image">
+                                <img src="./image/index_광안리.png" alt="추천지1">
+                            </div>
+                            <div class="htl">
+                                <span>
+                                    <span class="tage_group">청량한 바다</span>
+                                </span>
+                                <div class="name_wrap">
+                                    <strong class="item_title">광안리🌊</strong>
+                                    <p class="item_text"> #바다 #야경 #써핑 </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <div class="image">
+                                <img src="./image/index_다대포.jpg" alt="추천지2">
+                            </div>
+                            <div class="htl">
+                                <span>
+                                    <span class="tage_group">들어봤니?</span>
+                                </span>
+                                <div class="name_wrap">
+                                    <strong class="item_title">다대포🏊‍♀</strong>
+                                    <p class="item_text"> #노을맛집 #포장마차 #음악분수 </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <div class="image">
+                                <img src="./image/csp3.jpg" alt="추천지3">
+                            </div>
+                            <div class="htl">
+                                <span>
+                                    <span class="tage_group">이색경험</span>
+                                </span>
+                                <div class="name_wrap">
+                                    <strong class="item_title">해변열차🚠</strong>
+                                    <p class="item_text"> #해변길 #데이트코스 #인생사진 </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <div class="box">
-            <div class="recomand_list_wrap">
-                <ul class="type">
-                    <li style="cursor: pointer;">
-                        <div class="image">
-                            <img src="./image/index_광안리.png" alt="추천지1">
-                        </div>
-                        <div class="htl">
-                            <span>
-                                <span class="tage_group">청량한 바다</span>
-                            <div class="name_wrap">
-                                <strong class="item_title">광안리🌊</strong>
-                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+        
+        <!-- 두번째 테마 -->
+        <div class="mainbox" id="food">
+                <img src="./image/음식테마메인.png" alt="테마메인"> 
+                <div class="thema_name">
+                    <strong class="tit">
+                        부산밥
+                        <br>
+                        묵어봤나?👵🏻
+                    </strong> 
+                <div class="text" id="food_text">
+                        <span>파도소리와 함께 조개구이 어떻노😉</span>
+                        <span>야경과 함께 낙지탕탕이는 또 어떤데🤩</span>
+                        <span>그런다음 진한 국밥 한사바리 할래🤨</span>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="recomand_list_wrap">
+                    <ul class="type">
+                        <li style="cursor: pointer;">
+                            <div class="image">
+                                <img src="./image/조개구이.jpg" alt="제이제이가리비">
                             </div>
-                        </div>
-                    </li>
-                    <li style="cursor: pointer;">
-                        <div class="image">
-                            <img src="./image/index_다대포.jpg" alt="추천지2">
-                        </div>
-                        <div class="htl">
-                            <span>
-                                <span class="tage_group">들어봤니?</span>
-                            </span>
-                            <div class="name_wrap">
-                                <strong class="item_title">다대포🏊‍♀</strong>
-                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                            <div class="htl">
+                                <span>
+                                <span class="tage_group">조개구이</span>
+                                <div class="name_wrap">
+                                    <strong class="item_title">제이제이가리비🐚</strong>
+                                    <p class="item_text"> #파도소리 #조개구이 #모닥불 </p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li style="cursor: pointer;">
-                        <div class="image">
-                            <img src="./image/csp3.jpg" alt="추천지3">
-                        </div>
-                        <div class="htl">
-                            <span>
-                                <span class="tage_group">다양한 즐길거리</span>
-                            </span>
-                            <div class="name_wrap">
-                                <strong class="item_title">해변열차🚠</strong>
-                                <p class="item_text"> #청량한 바다 #야경 #써핑 </p>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <div class="image">
+                                <img src="./image/바다뷰.png" alt="할매집">
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                            <div class="htl">
+                                <span>
+                                <span class="tage_group">포장마차</span>
+                                </span>
+                            <div class="name_wrap">
+                                <strong class="item_title">할매집🦑</strong>
+                                <p class="item_text"> #바다뷰 #낙지탕탕이 #스트레스해소 </p>
+                            </div>
+                            </div>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <div class="image">
+                                <img src="./image/돼지국밥.jpeg" alt="묵촌돼지국밥">
+                            </div>
+                            <div class="htl">
+                                <span>
+                                <span class="tage_group">부산국밥</span>
+                                </span>
+                            <div class="name_wrap">
+                                <strong class="item_title">목촌돼지국밥🍚</strong>
+                                <p class="item_text"> #진한국물 #깊은맛 #푸짐가득 </p>
+                            </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <button class="button2" onclick="slider2_moveNext()">옆으로 넘기는 버튼</button>
+        <div class="mainbox" id="btn">
+            <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">❮</button>
+            <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">❯</button>
+        </div>
+    <video src="video/beach.mp4" loop autoplay muted></video>
+</div>
+
+<script>
+    let count = 0;
+
+    function back() {
+        document.getElementsByClassName("mainbox")[0].style.animationName = "back_main";
+        document.getElementsByClassName("mainbox")[1].style.animationName = "back_main";
+        console.log(count)
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if(count==0)  {
+            count+=1 
+            console.log(mainbox[0])
+            mainbox[count-1].style.display="none"
+            mainbox[count].style.display="block"
+            document.getElementsByClassName("box")[0].style.display = "none";
+            document.getElementsByClassName("box2")[0].style.display = "block";
+        }
+        else {
+            mainbox[count-1].style.display="block"
+            mainbox[count].style.display="none"
+            document.getElementsByClassName("box")[0].style.display = "block";
+            document.getElementsByClassName("box2")[0].style.display = "none"
+            count=0;
+        }
+    }
+
+    function next() {
+        document.getElementsByClassName("mainbox")[0].style.animationName = "next_main";
+        document.getElementsByClassName("mainbox")[1].style.animationName = "next_main";
+        console.log(count)
+        let mainbox = document.querySelectorAll(".mainbox");
+        console.log(mainbox)
+        if(count==0) {
+            count+=1
+            console.log(mainbox[0])
+            console.log(count-1)
+            mainbox[count-1].style.display="none";    
+            mainbox[count].style.display="block";
+            document.getElementsByClassName("box")[0].style.display="none"
+            document.getElementsByClassName("box2")[0].style.display="block";
+        }
+        else {
+            mainbox[count-1].style.display="block";
+            mainbox[count].style.display="none";
+            document.getElementsByClassName("box")[0].style.display="block"
+            document.getElementsByClassName("box2")[0].style.display="none";
+            count=0;
+        }
+    }
+</script>
+    
+<!-- 전시회 section -->
+<section class="festival-section">
+    <div class="button">
+        <button class="button-prev" onclick="prev()">0</button>
+        <button class="button-next" onclick="">0</button>
+        <div class="pagination"> 
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
-    <div>
-        <hr>
-        <!-- <div>footer</div> -->
-    <!-- </div>
+    <div class="festival-slider">
+        <div class="slide-list">
+            <div class="slide-main" id="event">
+            </div>
+            <!--전시내용-->
+            <div class="slide-cont" id="yosigo" style="background-image:url(./image/전시_요시고.png)">
+                <a href="https://tickets.interpark.com/goods/23005227#" target="_self" title="페이지 이동">
+                    <em class="blind"> YOSIGO 사진전 </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="city" style="background-image:url(./image/전시_울리히.png)">
+                <a href="https://www.goeunmuseum.kr/bbs/board.php?bo_table=exhibition&wr_id=223&proc=next" target="_self" title="페이지 이동">
+                    <em class="blind"> 울리히 뷔스트展 《도시산책자 : 울리히 뷔스트의 사진》 </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="summer" style="background-image:url(./image/전시_여름의모양.jpg)">
+                <a href="https://www.shinsegae.com/culture/gallery/exhibition/view.do?glrySeq=1072" target="_self" title="페이지 이동">
+                    <em class="blind"> 여름의 모양: Hyper Summer </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="movie" style="background-image:url(./image/전시_영화.jpeg)">
+                <a href="https://www.busan.go.kr/moca/exhibition01/1561678" target="_self" title="페이지 이동">
+                    <em class="blind"> 영화의 기후: 섬, 행성, 포스트콘택트존 </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="kerri" style="background-image:url(./image/전시_물결.jpg)">
+                <a href="https://seojung-art.com/exhibition/view/RNHNSMC" target="_self" title="페이지 이동">
+                    <em class="blind"> Kerri Lee : Wave on Wave </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="wujing" style="background-image:url(./image/전시_우징.png)">
+                <a href="https://cafe.naver.com/artandcollect/44273" target="_self" title="페이지 이동">
+                    <em class="blind"> 우징작가 초대전 </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="larf" style="background-image:url(./image/전시_랄프.png)">
+                <a href="http://www.gibsongoeunmuseum.com/" target="_self" title="페이지 이동">
+                    <em class="blind"> 랄프깁슨 《Sacred Land》 </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="mar" style="background-image:url(./image/전시_M.png)">
+                <a href="https://blog.naver.com/kafmuseum/223160643416" target="_self" title="페이지 이동">
+                    <em class="blind"> Mar[b]elous Love </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="sugar" style="background-image:url(./image/전시_sugar.png)">
+                <a href="https://www.galleryartsoop.com/" target="_self" title="페이지 이동">
+                    <em class="blind"> Sugar Free </em>
+                </a>
+            </div>
+            <div class="slide-cont" id="sad" style="background-image:url(./image/전시_슬픈.png)">
+                <a href="https://art.busan.go.kr/tblTsite07Display/viewNowClient.nm?id=20230223085230589" target="_self" title="페이지 이동">
+                    <em class="blind"> 슬픈    나의 젊은 날 </em>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+let festival = 0;
+let slide_cont = document.getElementsByClassName("slide-cont")
+console.log(slide_cont)
+
+function prev() {
+    console.log(festival)
+    console.log(slide_cont[festival])
+    $(".slide-main").empty(festival)
+    $(".slide-main").append(slide_cont[festival])
+   
+    festival+=1;
+    
+    if(festival==10) {
+        return "[]"
+    }
+}
+</script>
 
     <footer id="footer"></footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    <script src="./js/weather.js"></script>
+
+    <script>
+        var pagelang = window.location.search.split("?");
+        // console.log(pagelang[1]);
+    </script>
+
     <script>
     $(document).ready(function() {
         $('img[usemap]').rwdImageMaps();
+        console.log(wt_tp);
+        
     });
     </script>
 
@@ -166,8 +397,76 @@
             $("#header").load("header.html", function () {
             });
             $("#footer").load("footer.html", function () {
+                lang_change();
             });
         })
-    </script> -->
+    </script>
+
+    <script>
+        function lang_change() {
+            let header_href = document.getElementById("index_id");
+            let main_string = document.querySelector(".main h2");
+
+            if(pagelang[1]=="en"){
+                var eng_temp = document.createElement("style");
+
+                header_href.href = "index.html?en";
+                eng_temp.innerHTML = `.main h2::after {content: ''; animation: name_eng_change 20s infinite;}`
+                main_string.append(eng_temp);
+
+                
+            }
+            else if(pagelang[1]=="cn"){
+                var cn_temp = document.createElement("style");
+                
+                header_href.href = "index.html?cn";
+                cn_temp.innerHTML = `.main h2::after {content: ''; animation: name_cn_change 20s infinite;}`
+                main_string.append(cn_temp);
+            }
+        };
+        
+    </script>
+
+    <script>
+        let main_map = document.getElementById("busan");
+        function map_on(){
+            if($('input:checkbox[id=main_map]').is(':checked')) {   
+                main_map.style.display = "block";
+            }
+            else{
+                main_map.style.display = "none";
+            }
+        }
+        
+        
+    </script>
+
+    
+
+    <script>
+        var slideCount = 0;
+        showSlides();
+
+        function showSlides() {
+            if(document.documentElement.clientWidth>650){
+
+            }
+            else{
+                if(slideCount == 0){
+                    document.getElementsByClassName("mainbox")[0].style.display = "block";
+                    document.getElementsByClassName("mainbox")[1].style.display = "none";
+                    slideCount++;
+                }
+                else if(slideCount == 1){
+                    document.getElementsByClassName("mainbox")[0].style.display = "none";
+                    document.getElementsByClassName("mainbox")[1].style.display = "block";
+                    slideCount = 0;
+                }
+            }
+            
+            setTimeout(showSlides, 10000);
+            
+        }
+    </script>
 </body>
 </html>
