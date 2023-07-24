@@ -12,8 +12,15 @@
 
     <title>광안리 맛집</title>
     <style>
-
-        .gamR_img{
+        .menu1{
+            width: 100%;
+            height: 90%;
+            margin-top: 15%;
+        }
+        .menu{
+            width: 200%;
+        }
+        .gamR_img1{
             width: 90%;
             object-fit: cover;
             object-position: 0 -100px;
@@ -52,9 +59,10 @@
             margin-bottom: 20px;
             margin-top: 50px;
         }
+        
 
         @media screen and (max-width:650px) {
-            .gamR_img{
+            .gamR_img1{
             width: 90%;
             object-fit: cover;
             object-position: 0 -30px;
@@ -95,6 +103,11 @@
         }
 
         }
+        .menu{
+            width: 200%;
+            height: 90%;
+            margin-top: 15%;
+        }
         
     </style>
 </head>
@@ -105,11 +118,11 @@
         <div class="modalBg"></div>
         <div class="sideMenu">
             <ul class="category"> 
-                <li class="gam">감천 문화 마을</li>
-                <li class="gwang" style="background-color: #fffbd5;">광안리</li>
-                <li class="Da">다대포</li>
-                <li class="cable">영도 해상 케이블카</li>
-                <li class="chung">청사포</li>
+                <li class="gam" ><a href="./listpageGam.html">감천 문화 마을</a></li>
+                <li class="gwang" style="background: #fffbd5;"><a href="./listpageGwang.html">광안리</a></li>
+                <li class="Da"><a href="./listpageDadaepo.html">다대포</a></li>
+                <li class="cable"><a href="./listpageCable.html">영도 해상 케이블카</a></li>
+                <li class="chung"><a href="./listpageChung.html">청사포</a></li>
             </ul>
         </div>
     
@@ -134,17 +147,22 @@
 
         <div class="modal">
         <div class="gamModal gamModalY">
-            <img src="./image/gwangGalSam.jpg" class="gamR_img" >
+            <img src="./image/gwangGalSam.jpg" class="gamR_img1" >
             <div class="gamModalDe">
-                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.53/5</p></div>
-                <div class="gamModalDetailMenu"><p class="detail">Menu</p>
-                    <div id="gwangGalMenu">
-                        <img src="./image/gwangGalMenujpg.jpg" onclick="window.open(this.src)">
-                    </div>
-                    
+                <div class="gamModalDetail"><p class="rating"><h4>Ratings</h4></p><p>4.53/5</p><h4>식당 소개</h4>
+                    <span>부산의 별미, 부산에서만 맛볼 수 있는 갈삼구이 "조개삼겹삼합"</span>
                 </div>
-                <div class="gamModalDetail"><p class="map">Maps</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645379.701216372!2d126.72385683354236!3d36.34546220170444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed3268d25af3%3A0xced12f471b2b80f8!2z6rCI7IK86rWs7J20!5e0!3m2!1sko!2skr!4v1689920265024!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="gamModalAdress">Adress: 부산 서구 구덕로 203</div>
+                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
+                    <div class="gamGalMenu">
+                        <ul class="menu1">
+                            <li>
+                                <img src="./image/gwangGalMenujpg.jpg" onclick="window.open(this.src)">
+                            </li>
+                        </ul>  
+                    </div>                  
+                </div>
+                <div class="gamModalDetail"><p class="map"><h4>Maps</h4></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645379.701216372!2d126.72385683354236!3d36.34546220170444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed3268d25af3%3A0xced12f471b2b80f8!2z6rCI7IK86rWs7J20!5e0!3m2!1sko!2skr!4v1689920265024!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">주소: 부산 수영구 민락수변로 7</div><p>call: 0507-1412-9266</p>
                 </div>
             </div>
             <button onclick="closeBtn(0)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
@@ -154,9 +172,22 @@
         <div class="gamModal gamModalG">
             <img src="./image/gwangSmoko.jpg" class="gamR_img2">
             <div class="gamModalDe">
-                <div class="gamModalDetail"></div>
-                <div class="gamModalDetailMenu"></div>
-                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"><h4>Ratings</h4><p>4.53/5</p><h4>식당 소개</h4><span>와인과 페어링 할 수 있는 음식 위주로 요리를 제공합니다. 식사를 위해 방문해주시는 분들께는 1인 1음료 주문을 받고 있으며, 콜키지는 1병당 2만원 입니다.</span></div>
+                <div class="gamModalDetailMenu"><h4>Menu</h4>
+                    <ul class="menu">
+                        <li><img src="./image/gwangSmokoMenu1.png"  onclick="window.open(this.src)" class="gamR_img"></li>
+                        <li><img src="./image/gwangSmokoMenu2.png"  onclick="window.open(this.src)" class="gamR_img"></li> 
+                    </ul>
+                    <div class="changeBtn">
+                        <p class="controller">
+                            <span class="prev">&lang;</span>  
+                            <span class="next">&rang;</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="gamModalDetail"><p class="map"><h4>Maps</h4></p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13048.281691764814!2d129.1261916!3d35.1548644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ecf6edce3fcf%3A0x19f8fdda12cd0e3c!2z642U7Iqk66qo7L2U!5e0!3m2!1sko!2skr!4v1690178850698!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">주소: 부산 수영구 광안해변로294번길 36 1층</div><p>call: 0507-1462-3202</p>
+                </div>
             </div>
             <button onclick="closeBtn(1)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
                 close
@@ -251,10 +282,10 @@
         const slideMargin = 10; //슬라이드간의 margin 값
         
         //전체 슬라이드 컨테이너 넓이 설정
-        slides.style.width = 100 + '%';
+        // slides.style.width = 100 + '%';
 
         function moveSlide(num) {
-            slides.style.left = -num * 240 + 'px';
+            slides.style.left = -num * 100 + '%';
             currentIdx = num;
             console.log(currentIdx)
         }

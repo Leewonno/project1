@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="./css/listpage.css">
     <title>감천 문화 마을 맛집</title>
     <style>
+        .menu{width:300%;}
+        .gwangGalMenu1{
+            display: flex;
+            justify-content: center;
+        }
+        .gwangGalMenu1 img{
+            width: 80%;
+            height: 80%;
+        }
         @media screen and (max-width:650px) {
             .gamR_img1{
             width: 90%;
@@ -62,11 +71,11 @@
         <div class="modalBg"></div>
         <div class="sideMenu">
             <ul class="category"> 
-                <li class="gam" style="background-color: #fffbd5;">감천 문화 마을</li>
-                <li class="gwang">광안리</li>
-                <li class="Da">다대포</li>
-                <li class="cable">영도 해상 케이블카</li>
-                <li class="chung">청사포</li>
+                <li class="gam" style="background-color: #fffbd5;"><a href="./listpageGam.html">감천 문화 마을</a></li>
+                <li class="gwang" ><a href="./listpageGwang.html">광안리</a></li>
+                <li class="Da"><a href="./listpageDadaepo.html">다대포</a></li>
+                <li class="cable"><a href="./listpageCable.html">영도 해상 케이블카</a></li>
+                <li class="chung"><a href="./listpageChung.html">청사포</a></li>
             </ul>
         </div>
     
@@ -93,12 +102,8 @@
         <div class="gamModal gamModalY">
             <img src="./image/gamR_young.jpg" class="gamR_img1" >
             <div class="gamModalDe">
-                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.53/5</p><p>call: 051-254-5501</p></div>
-                <div class="gamModalDetailMenu"><p class="detail">Menu</p>
-                    <!-- <img src="./image/gamY_menu.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
-                    <img src="./image/gamY_menu2.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
-                    <img src="./image/gamY_menu3.jpg" style="width: 80%; height: 80%;" onclick="window.open(this.src)" class="gamR_img">
-                    <button class="changeGamImg" onclick="">></button> -->
+                <div class="gamModalDetail"><p class="rating"><h4>Ratings</h4></p><p>4.53/5</p><h4>식당 소개</h4><span>중국식 냉면이 인기인 중국요리 전문점입니다. 영의루의 냉면은 쫄깃한 면발과 차가운 국물에 담긴 면의 느낌이 좋지요. 일반 냉면이나 밀면과는 씹는 맛이 다르고 식초가 있어야 육수의 감칠맛이 더해집니다. 고명은 고소한 맛이 좋은 새우와 해파리채, 오이, 고기채, 계란채 정도로 특별한 것은 없지만 그 수수함이 이 집 냉면의 특징이지요.</span></div>
+                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
                     <ul class="menu">
                         <li><img src="./image/gamY_menu.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
                         <li><img src="./image/gamY_menu2.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
@@ -111,8 +116,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="gamModalDetail"><p class="map">Maps</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.15750309735!2d129.0175335152431!3d35.10277778033319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9a2da5a6927%3A0xfa586f17a6549c99!2z7JiB7J2Y66Oo!5e0!3m2!1sko!2skr!4v1689755960197!5m2!1sko!2skr" width="50%" height="50%" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="gamModalAdress">Adress: 부산 서구 구덕로 203</div>
+                <div class="gamModalDetail"><p class="map"><h4>Maps</h4></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.15750309735!2d129.0175335152431!3d35.10277778033319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9a2da5a6927%3A0xfa586f17a6549c99!2z7JiB7J2Y66Oo!5e0!3m2!1sko!2skr!4v1689755960197!5m2!1sko!2skr" width="50%" height="50%" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">Adress: 부산 서구 구덕로 203<p>call: 051-254-5501</p></div>
                 </div>
             </div>
             <button onclick="closeBtn(0)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
@@ -144,9 +149,13 @@
         <div class="gamModal gamModalP">
             <img src="./image/gamR_Plate.jpg" class="gamR_img4">
             <div class="gamModalDe">
-                <div class="gamModalDetail"></div>
-                <div class="gamModalDetailMenu"></div>
-                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"><p class="rating"><h4>Ratings</h4></p><p>4.53/5</p><h4>식당 소개</h4><span>소스부터 소세지까지 한국인 입맛에 맞게 직접 만들어 더맛있는 영국카페입니다.</span></div>
+                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
+                    <div class="gwangGalMenu1">
+                        <img src="./image/gamPlateMenu4.jpg"  onclick="window.open(this.src)" class="gamR_img">
+                    </div>
+                <div class="gamModalDetail"><p class="map"></p><h4>Maps</h4>https://www.google.com/maps/place/부산광역시+사하구+감내2로+113+더플레이트+The+Plate/@35.0972644,129.0078306,15z/data=!4m6!3m5!1s0x3568e9c9cd6aad03:0x11caff3b3df103e1!8m2!3d35.0972644!4d129.0078306!16s%2Fg%2F11gf8g6l15</div>
+                <p>call: 0507-1384-7595</p>
             </div>
             <button onclick="closeBtn(3)" class="closeButton" style="background: white; border:0px" ><span class="material-symbols-outlined">
                 close
@@ -172,11 +181,14 @@
 
     <script>
         let gamModal 
+        let cnt
         function gamRClick(mo){
             let gamRS = document.querySelector(mo)
             let modalBg = document.querySelector('.modalBg')
             if(mo == '.gamR_young'){
                 gamModal = document.querySelector('.gamModalY')
+                cnt = 0
+                console.log(cnt)
             }
             else if(mo == '.gamR_giant'){
                 gamModal = document.querySelector('.gamModalG')
@@ -186,6 +198,8 @@
             }
             else if(mo == '.gamR_Plate'){
                 gamModal = document.querySelector('.gamModalP')
+                cnt =1
+                console.log(cnt)
             }
             else if(mo == '.gamR_Darae'){
                 gamModal = document.querySelector('.gamModalD')
@@ -205,16 +219,9 @@
             let GmodalBg = document.querySelector('.modalBg')
             Gmodal[index].style.display = 'none'
             GmodalBg.style.display = 'none'
+            console.log(cnt)
         }
-        let cnt = 0
-        // function changeImg(){
-        //     let gamRImg = document.querySelectorAll('gamRImg')
-        //     if(cnt > length.gamRImg){
-        //         cnt = 0
-        //     }
-            
-        //     cnt+=1
-        // }
+        
 
         const slides = document.querySelector('.menu'); //전체 슬라이드 컨테이너
         const slideImg = document.querySelectorAll('.menu li'); //모든 슬라이드들
@@ -224,25 +231,26 @@
         const next = document.querySelector('.next'); //다음 버튼
         const slideWidth = 400; //한개의 슬라이드 넓이
         const slideMargin = 10; //슬라이드간의 margin 값
-        
         //전체 슬라이드 컨테이너 넓이 설정
-        slides.style.width = 100 + '%';
+        // slides.style.width = 100 + '%';
 
         function moveSlide(num) {
-            slides.style.left = -num * 240 + 'px';
-            currentIdx = num;
-            console.log(currentIdx)
+            slides.style.left = -num * 100 + '%';
+            currentIdx = num
         }
 
             prev.addEventListener('click', function () {
+                
         /*첫 번째 슬라이드로 표시 됐을때는 
         이전 버튼 눌러도 아무런 반응 없게 하기 위해 
         currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
                 if (currentIdx !== 0) moveSlide(currentIdx - 1);
+                
             });
 
             next.addEventListener('click', function () {
+                
         /* 마지막 슬라이드로 표시 됐을때는 
         다음 버튼 눌러도 아무런 반응 없게 하기 위해
         currentIdx !==slideCount - 1 일때만 
@@ -250,7 +258,10 @@
             if (currentIdx !== slideCount - 1) {
                 moveSlide(currentIdx + 1);
             }
+            
             });
+
+    
 
     </script>
 

@@ -12,8 +12,12 @@
 
     <title>청사포</title>
     <style>
-
-        .gamR_img{
+        .menu{
+            width: 100%;
+            height: 90%;
+            margin-top: 15%;
+        }
+        .gamR_img1{
             width: 90%;
             object-fit: cover;
             object-position: 0 -150px;
@@ -54,7 +58,7 @@
         }
 
         @media screen and (max-width:650px) {
-            .gamR_img{
+            .gamR_img1{
             width: 90%;
             object-fit: cover;
             object-position: 0 -20px;
@@ -105,11 +109,11 @@
         <div class="modalBg"></div>
         <div class="sideMenu">
             <ul class="category"> 
-                <li class="gam">감천 문화 마을</li>
-                <li class="gwang" >광안리</li>
-                <li class="Da">다대포</li>
-                <li class="cable">영도 해상 케이블카</li>
-                <li class="chung" style="background-color: #fffbd5;">청사포</li>
+                <li class="gam" ><a href="./listpageGam.html">감천 문화 마을</a></li>
+                <li class="gwang" ><a href="./listpageGwang.html">광안리</a></li>
+                <li class="Da"><a href="./listpageDadaepo.html">다대포</a></li>
+                <li class="cable"><a href="./listpageCable.html">영도 해상 케이블카</a></li>
+                <li class="chung" style="background-color: #fffbd5;"><a href="./listpageChung.html">청사포</a></li>
             </ul>
         </div>
     
@@ -134,11 +138,12 @@
 
         <div class="modal">
         <div class="gamModal gamModalY">
-            <img src="./image/chungSha.jpg" class="gamR_img" >
+            <img src="./image/chungSha.jpg" class="gamR_img1" >
             <div class="gamModalDe">
-                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.53/5</p></div>
-                <div class="gamModalDetailMenu"><p class="detail">Menu</p>
-
+                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.42/5</p>
+                    <span>매일 이탈리아 정통 방식으로 젤라또를 만들고 매일 한국 정통 방식으로 찹쌀떡을 만듭니다.</span>
+                </div>
+                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
                     <div id="gwangGalMenu">
                         <ul class="menu">
                             <li><img src="./image/daHalMenu1.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
@@ -164,9 +169,17 @@
         <div class="gamModal gamModalG">
             <img src="./image/chungTiger.jpg" class="gamR_img2">
             <div class="gamModalDe">
-                <div class="gamModalDetail"></div>
-                <div class="gamModalDetailMenu"></div>
-                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"><p class="rating"><h4>Ratings</h4></p><p>4.53/5</p><h4>식당 소개</h4>
+                    <span>3대째 가업을 이어오며 40년 이상의 전통을 가진 분위기 좋은 야외 포장마차 술집</span>
+                </div>
+                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
+                    <ul class="menu">
+                        <li><img src="./image/chungTigerMenu.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>                   
+                    </ul>
+                </div>
+                <div class="gamModalDetail"><p class="map"><h4>Maps</h4></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.921237508863!2d129.1708917!3d35.158584999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d2bbd77f29b%3A0x9997ccd3cc8a24ea!2z7Zi4656R7J207KCk652865ah!5e0!3m2!1sko!2skr!4v1690197418338!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">Adress: 부산 해운대구 달맞이길62번길 38 115호, 116호</div><p>call: 0507-1302-4130</p>  
+                </div>
             </div>
             <button onclick="closeBtn(1)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">
                 close
@@ -186,9 +199,17 @@
         <div class="gamModal gamModalP">
             <img src="./image/chungJ.jpg" class="gamR_img4" >
             <div class="gamModalDe">
-                <div class="gamModalDetail"></div>
-                <div class="gamModalDetailMenu"></div>
-                <div class="gamModalDetail"></div>
+                <div class="gamModalDetail"><p class="rating"><h4>Ratings</h4></p><p>4.52/5</p><h4>식당 소개</h4>
+                    <span>오션뷰가 시원하게 내려다보이는 감성돋는 미친 분위기 조개구이 맛집, 부산 현지인들에게 '바다 보이는 조개구이 집'으로 유명한 곳이며, 라라랜드를 연상케하는 예쁜 노을을 바라보면서 운치있게 핫플을 즐길 수 있는 명소. 인원별로 다양한 세트메뉴가 구성되어있음</span>
+                </div>
+                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
+                    <ul class="menu">
+                        <li><img src="./image/chungJMenu1.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>                   
+                    </ul>
+                </div>
+                <div class="gamModalDetail"><p class="map"><h4>Maps</h4></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.818822534858!2d129.19120667516785!3d35.16113897275962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d02e01ee4df%3A0x2995a734ea111a6f!2z7KCc7J207KCc7J206rCA66as67mE!5e0!3m2!1sko!2skr!4v1690197785904!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="gamModalAdress">Adress: 부산 해운대구 청사포로 139-4</div><p>call: 0507-1301-7028</p>  
+                </div>
             </div>
             <button onclick="closeBtn(3)" class="closeButton" style="background: white; border:0px" ><span class="material-symbols-outlined">
                 close
@@ -261,10 +282,10 @@
         const slideMargin = 10; //슬라이드간의 margin 값
         
         //전체 슬라이드 컨테이너 넓이 설정
-        slides.style.width = 100 + '%';
+        // slides.style.width = 100 + '%';
 
         function moveSlide(num) {
-            slides.style.left = -num * 240 + 'px';
+            slides.style.left = -num * 100 + '%';
             currentIdx = num;
             console.log(currentIdx)
         }
