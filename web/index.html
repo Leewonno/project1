@@ -117,7 +117,7 @@
                     <ul class="type">
                         <li style="cursor: pointer;">
                             <div class="image">
-                                <img src="./image/index_광안리.png" alt="추천지1">
+                                <img src="./image/index_광안리.png" id="gwanganli" onclick="gwanganli()" alt="추천지1">
                             </div>
                             <div class="htl">
                                 <span>
@@ -131,7 +131,7 @@
                         </li>
                         <li style="cursor: pointer;">
                             <div class="image">
-                                <img src="./image/index_다대포.jpg" alt="추천지2">
+                                <img src="./image/index_다대포.jpg" id="dadaepo_" onclick="dadaepo_()" alt="추천지2">
                             </div>
                             <div class="htl">
                                 <span>
@@ -145,7 +145,7 @@
                         </li>
                         <li style="cursor: pointer;">
                             <div class="image">
-                                <img src="./image/csp3.jpg" alt="추천지3">
+                                <img src="./image/csp3.jpg" id="train" onclick="train()" alt="추천지3">
                             </div>
                             <div class="htl">
                                 <span>
@@ -182,7 +182,7 @@
                     <ul class="type">
                         <li style="cursor: pointer;">
                             <div class="image">
-                                <img src="./image/조개구이.jpg" alt="제이제이가리비">
+                                <img src="./image/조개구이.jpg" id="조개" onclick="조개()" alt="제이제이가리비">
                             </div>
                             <div class="htl">
                                 <span>
@@ -195,7 +195,7 @@
                         </li>
                         <li style="cursor: pointer;">
                             <div class="image">
-                                <img src="./image/바다뷰.png" alt="할매집">
+                                <img src="./image/바다뷰.png" id="granma" onclick="granma()" alt="할매집">
                             </div>
                             <div class="htl">
                                 <span>
@@ -209,7 +209,7 @@
                         </li>
                         <li style="cursor: pointer;">
                             <div class="image">
-                                <img src="./image/돼지국밥.jpeg" alt="묵촌돼지국밥">
+                                <img src="./image/돼지국밥.jpeg" id="pig" onclick="pig()" alt="묵촌돼지국밥">
                             </div>
                             <div class="htl">
                                 <span>
@@ -281,6 +281,27 @@
             count=0;
         }
     }
+
+    // 여행테마 링크 이동
+    function gwanganli() {
+        window.location.assign("www.naver.com")
+    }
+    function dadaepo_() {
+        window.location.assign("www.naver.com")
+    }
+    function train() {
+        window.location.assign("www.naver.com")
+    }
+    function 조개() {
+        window.location.assign("www.naver.com")
+    }
+    function granma() {
+        window.location.assign("www.naver.com")
+    }
+    function pig() {
+        window.location.assign("www.naver.com")
+    }
+
 </script>
     
 <!-- 전시회 section -->
