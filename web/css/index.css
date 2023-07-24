@@ -714,7 +714,7 @@ button:disabled {
 }
 
 .festival-section .festival-slider .slide-main {
-    height: 300px;
-    width: 225px;
     z-index: 10;
+    height: 350px;
+    width: 230px;
 }
