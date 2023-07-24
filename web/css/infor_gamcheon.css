@@ -62,8 +62,6 @@ main {
     padding-top: 70px;
 }
 .title2 {
-    display: flex;
-    flex-direction: column;
     text-align: right;
     margin: 0;
 }
@@ -81,14 +79,6 @@ main {
     width: 400px;
     position: relative;
 }
-.title2 > table {
-  position: relative;
-  padding-left: 3px;
-}
-table >tr, th, td {
-  border: 1px solid black;
-  text-align: center;
-}
 
 .mainThird {
     display: flex;
@@ -96,8 +86,6 @@ table >tr, th, td {
     padding-top: 70px;
 }
 .title3 {
-    display: flex;
-    flex-direction: column;
     text-align: left;
     margin: 0;
 }
@@ -115,23 +103,12 @@ table >tr, th, td {
     width: 400px;
     position: relative;
 }
-.title3 > table {
-  position: relative;
-  padding-right: 3px;
-}
-table >tr, th, td {
-  border: 1px solid black;
-  text-align: center;
-}
-
 .mainFourth {
     display: flex;
     justify-content: space-between;
     padding-top: 70px;
 }
 .title4 {
-    display: flex;
-    flex-direction: column;
     text-align: right;
     margin: 0;
 }
@@ -185,7 +162,6 @@ aside > .btn {
     border-radius: 10%;
     box-shadow: 0px 3px 10px rgb(4, 29, 220);
     border: solid rgb(54, 62, 176);
-    white-space: nowrap;
 }
 .first_Btn, .second_Btn, .third_Btn, .fourth_Btn{
     background-color: rgb(138, 236, 236);
@@ -343,7 +319,7 @@ aside > .btn2 {
     .introduce > .title {
         text-align: center;
     }
-    .informOne, .informTwo, .informThree {
+    .informOne, .informTwo {
         margin-bottom: 30px;
         text-align: center;
         width:400px;
@@ -378,7 +354,7 @@ aside > .btn2 {
       flex-direction: row;
       position: absolute;
       right: 70%;
-      margin-right: -398px;
+      margin-right: -375px;
       top: 530px;
       padding: 0;
       background-color: #77B0F0;
@@ -386,13 +362,13 @@ aside > .btn2 {
       border:none;
     }
     .first_Btn, .second_Btn, .third_Btn, .fourth_Btn{
-      max-width: 140px;
+      width: 130px;
       border-radius: 0%;
       border: thick double rgb(54, 62, 176);
   }
     .first_Btn > a, .second_Btn > a, .third_Btn > a, .fourth_Btn > a {
       text-decoration: none;
       color: rgb(rgb(125, 113, 215), green, blue);
-      font-size: 17px;
+      font-size: 20px;
   }
   }

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/infor_gwanganri.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo_box">
+            <a href="#" class="logo">LEBU</a>
+        </div>
+        <div class="lang_box">
+            <input type="checkbox" id="lang" checked>
+            <div class="lang"><label for="lang" onclick="lang_click()">LANGUAGE</label></div>
+            <div class="hidden_box">
+                <div class="ko">
+                    <img src="image/kor.webp">
+                    <span><a href="#">KOR</a></span>
+                </div>
+                <div class="en">
+                    <img src="image/eng.svg">
+                    <span><a href="#">ENGLISH</a></span>
+                </div>
+                <div class="cn">
+                    <img src="image/chn.svg">
+                    <span><a href="#">CHINESE</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="mainFirst" id="mainFirst">
+            <div class="mainInfor1" id="mainInfor1">
+                <div class="mainInfor1_wrapper">
+                    <img src="./image/kar1.jpg">
+                    <img src="./image/kar2.jpg">
+                    <img src="./image/kar3.jpg">
+                    <img src="./image/kar4.jpg">
+                </div>  
+            </div>
+            <br>
+            <br>
+            <div class="introduce">
+                <h1 class="title">광안리 해수욕장 소개</h1>
+                <p class="informOne">
+                    ✨해수욕장 뒷산 금련산에서 내린 질 좋은 사질에 완연한 반월형으로 휘어진 사장은
+                    전국적으로 이름나 있고 해수욕장 주변에는 제각기 독특한 분위기를
+                    자아내는 레스토랑 뿐만 아니라 특색있는 카페거리가 있습니다.
+                </p>
+                <br>
+                <p class="informTwo">
+                    ✨해수욕장에 야외상설무대를 설치하여 각종 공연이 상시 열리고 있으며
+                    가까운 곳에 수변공원, 해변공원, 청소년수련원, 해양레포츠센터가 있어
+                    바나나보트, 윈드서핑 등 다양한 해양스포츠도 즐길 수 있습니다.
+                </p>
+                <br>
+                <p class="informThree">
+                    ✨부산 수영구 남천동, 광안동, 민락동에 걸쳐 있으며 조선시대의 동래군 남촌면
+                    광안리란 지명을 그대로 따서 부르고 있습니다. 예로부터 이곳은 물이 좋아서 멸치 등
+                    고기잡이 막사가 많이 있었으며 부산의 대표적인 도심속의 해양공원입니다.
+                </p>
+            </div>      
+        </section>
+        <br>
+        <section class="mainSecond" id="mainSecond">
+            <div class="mainInfor2" >
+                <img src="./image/kar_night_view.jpg">
+            </div>
+            <div class="title2">
+                <h2>광안리 해변 야경</h2>
+                <br>
+                <p>광안리의 상징인 광안리 해수욕장은
+                    <br><br>대표적인 야경 장소 입니다.
+                    <br><br>정면으로 광안대교가 보이고 광안대교 뒤편으로
+                    <br><br>멋진 해운대의 야경도 감상할 수 있습니다.
+                    <br><br>가만히 앉아 광안대교를 바라보는 것도 좋고,
+                    <br><br>가볍게 해변을 산책하는 것만으로도 좋습니다.
+                </p>   
+            </div> 
+        </section>
+        <br>
+        <section class="mainThird" id="mainThird">
+            <div class="title3">
+                <h2>요트투어</h2>
+                <br>
+                <p>바다에서 즐거운 시간을 보낼 수 있는 요트투어입니다.
+                    <br><br>요트투어는 주간, 야간타임으로 나눠져 있습니다.
+                    <br><br>요트투어는 한 시간 진행되며 가장 인기 있는 
+                    <br><br>시간은 일몰과 야경을 함께 볼 수 있는 시간대입니다.
+                    <br><br>업체별로 가격은 다르지만 코스는 같으므로
+                    <br><br>저렴한 가격대의 투어를 찾는것을 추천드립니다.
+                </p>   
+            </div> 
+            <div class="mainInfor3">
+                <img src="./image/kar_tour.jpg">
+            </div>
+        </section>
+        <br>
+        <section class="mainFourth" id="mainFourth">
+            <div class="mainInfor4">
+                <img src="./image/kar_park.jpg">
+            </div>
+            <div class="title4">
+                <h2>민락 수변공원</h2>
+                <br>
+                <p>광안리의 핫 플레이스 민락 수변공원입니다.
+                    <br><br>1997년에 생긴 이래 마린시티와 광안대교가
+                    <br><br>생기면서 야경명소로 더욱 유명해진 곳 입니다.
+                    <br><br>매년 가을 부산 불꽃축제가 열리면
+                    <br><br>많은 인파가 모이는 대표적인 장소입니다.
+                    <br><br>주변으로 상권이 잘 발달되었고,
+                    <br><br>포장 전문 횟집들도 많이 자리 잡고 있습니다.
+                </p>   
+            </div> 
+        </section>
+        <br>
+        <section class="route" id="route">
+            <h2>오시는길</h2>
+                <br>
+            <div class="map" id="map">
+                <div class="road">
+                    <p>
+                        <strong>위치</strong><br><br>
+                        부산광역시 수영구 광안해변로 219
+                        <br>(광안동) 광안리해수욕장
+                    </p>
+                    <p>
+                        <strong>교통편</strong><br><br>
+                        지하철 : 2호선 금련산역 하차(3번출구)
+                        <br>도보로 5분거리, 광안역 하차(3번출구)
+                        <br>도보로 10분거리
+                        <br>버스 : 41, 49, 38, 42, 51, 62, 83, 83-1,
+                        <br>108-1 광안리해수욕장하차 3분거리
+                    </p>
+                </div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7592.520547776606!2d129.1143078185879!3d35.15255500133291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed2f27c70ec7%3A0xff6df0e14d9216fb!2z6rSR7JWI66as7ZW07IiY7JqV7J6l!5e0!3m2!1sko!2skr!4v1690048182133!5m2!1sko!2skr" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="use" id="use">
+            <h2>해수욕장 이용안내</h2>
+                <br>
+            <div class="usemap">
+                <img src="./image/kar 편의시설.jpg">
+            </div>
+        </section>
+    </main>
+    <aside>
+        <div class="btn">
+            <button class="first_Btn">
+                <a href="#mainSecond">해변야경</a>
+            </button>
+            <button class="second_Btn">
+                <a href="#mainThird">요트투어</a>
+            </button>
+            <button class="third_Btn">
+                <a href="#mainFourth">민락해변공원</a>
+            </button>
+            <button class="fourth_Btn">
+                <a href="#route">오시는길</a>
+            </button>
+            <button class="fourth_Btn">
+                <a href="#use">이용안내</a>
+            </button>
+        </div>
+        <div class="btn2">
+            <a class="top_Btn" href="#mainFirst"><i class="bi bi-box-arrow-in-up"></i></a>
+        </div>
+    </aside>
+    <footer>
+        <div class="ft_box">
+            <div class="ft_infor">
+                <div class="ft_name">제공</div>
+                <div class="ft_ct">포스코 코딩온 웹 풀스택 과정 프로젝트1 2조</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const checkbox = document.getElementById('lang');
+        const lang_hd_box = document.getElementsByClassName("hidden_box");
+    
+        function lang_click(){
+            if(checkbox.checked){
+                lang_hd_box[0].style.display = "block"
+            }
+            else{
+                lang_hd_box[0].style.display = "none"
+            }
+        }
+    </script>
+    <script src="./infor_gwanganri.js"></script>
+</body>
+</html>
