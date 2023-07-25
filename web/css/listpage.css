@@ -1,9 +1,27 @@
 p{
-    padding-left: 5%;
+    padding-left: 5px;
 }
 
 h4{
-    padding-left: 5%;
+    padding-left: 5px;
+}
+
+.gamModalDetail span{
+    padding-left: 5px;
+    padding-right: 5px;
+    display: block;
+}
+
+.gamModalDetail iframe{
+    margin-left: 5px;
+}
+
+.gamModalAdress{
+    padding-left: 5px;
+}
+
+.gamModalAdress p{
+    padding-left: 0px;
 }
 
 a{
@@ -77,7 +95,7 @@ body{
     width: 200px;
     top: 150px;
     left: 50px;
-    
+    z-index: 0;
 }
 .sideMenu ul{
     display: flex;
@@ -194,9 +212,9 @@ img{
     width: 33%;
     height: 100%;
     background-color: white;
-    border: 1px solid;
+    border: 1px solid #d9d9d9;
     border-radius: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .closeButton{
@@ -239,7 +257,7 @@ img{
     position: relative;
     margin: 0;
     overflow: hidden;
-    border: 1px solid;
+    border: 1px solid #d9d9d9;
     border-radius: 10px;
     margin-right: 5%;
     margin-left: 5%;
@@ -382,7 +400,7 @@ img{
     .gamModalDetail{
         width: 90%;
         min-height: 300px;
-        margin-top:5% ;
+        margin-top:5%;
         
     }
 
@@ -405,8 +423,8 @@ img{
         margin-left: 20%;
     }
     img{
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: 80vw;
     }
     .gamR_img{
         width: 60%;
@@ -427,5 +445,6 @@ img{
     display: none;
     position:fixed;
     top:0;
+    z-index: 1;
 
 }

@@ -191,21 +191,22 @@
             if(mo == '.gamR_young'){
                 gamModal = document.querySelector('.gamModalY')
                 cnt = 0
-                console.log(cnt)
             }
             else if(mo == '.gamR_giant'){
                 gamModal = document.querySelector('.gamModalG')
+                cnt = 1
             }
             else if(mo == '.gamR_it'){
                 gamModal = document.querySelector('.gamModalI')
+                cnt = 2
             }
             else if(mo == '.gamR_Plate'){
                 gamModal = document.querySelector('.gamModalP')
-                cnt =1
-                console.log(cnt)
+                cnt = 3
             }
             else if(mo == '.gamR_Darae'){
                 gamModal = document.querySelector('.gamModalD')
+                cnt = 4
             }
             
             gamRS.addEventListener('click',()=>{
@@ -224,6 +225,11 @@
             GmodalBg.style.display = 'none'
             console.log(cnt)
         }
+
+        document.querySelector(".modalBg").addEventListener("click", function(){
+            document.querySelector('.modalBg').style.display = 'none'
+            document.querySelectorAll('.gamModal')[cnt].style.display = 'none'
+        });
         
 
         const slides = document.querySelector('.menu'); //전체 슬라이드 컨테이너
