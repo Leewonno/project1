@@ -39,10 +39,10 @@ body{
         background-image:url(../image/gc2.jpg);
     }
     50%{
-        background-image:url(../image/dadaepo.jpg);
+        background-image:url(../image/dadaepo1.jpg);
     }
     70%{
-        background-image:url(../image/dadaepo.jpg);
+        background-image:url(../image/dadaepo1.jpg);
     }
     75%{
         background-image:url(../image/csp2.jpg)
@@ -208,31 +208,31 @@ body{
 
 @keyframes name_cn_change {
     0% {
-        content: "釜山 Songdo Sea Cable Car";
+        content: "釜山 松岛海上缆车";
     }
     18%{
-        content: "釜山 Songdo Sea Cable Car";
+        content: "釜山 松岛海上缆车";
     }
     25% {
-        content: "釜山 Gamcheon Culture Village";
+        content: "釜山 甘川文化村";
     }
     43%{
-        content: "釜山 Gamcheon Culture Village";
+        content: "釜山 甘川文化村";
     }
     50%{
-        content: "釜山 Dadaepo Beach";
+        content: "釜山 多大浦";
     }
     68%{
-        content: "釜山 Dadaepo Beach";
+        content: "釜山 多大浦";
     }
     75%{
-        content: "釜山 Cheongsapo";
+        content: "釜山 青沙浦";
     }
     93%{
-        content: "釜山 Cheongsapo";
+        content: "釜山 青沙浦";
     }
     100%{
-        content: "釜山 Songdo Sea Cable Car";
+        content: "釜山 松岛海上缆车";
     }
 }
 
@@ -344,7 +344,7 @@ body{
         opacity: 0;
     }
     100% {
-        left: 0;
+        left: 120px;
         opacity: 1;
     }
 }
@@ -355,7 +355,7 @@ body{
         opacity: 0;
     }
     100% {
-        right: 0;
+        right: 120px;
         opacity: 1;
     }
 }
@@ -800,9 +800,10 @@ button:disabled {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
-    padding-bottom: 90px;
+    /* padding-bottom: 90px; */
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin-top: -90px;
 }
 
 
@@ -838,7 +839,7 @@ button:disabled {
     color: black;
     font-weight: 600;
     bottom: -45px;
-
+    z-index: 1;
 }
 
 .festival-section .festival-slider .slide-main {

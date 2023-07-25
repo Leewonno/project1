@@ -26,11 +26,28 @@ header .logo{
     font-size: 35px;
 }
 
+header .item_box{
+    display: flex;
+    margin-right: 10px;
+}
+
+header .item_box a{
+    display: flex;
+    height: 30px;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* font-weight: 600; */
+    text-decoration: none;
+}
+
 header .lang_box{
-    width: 120px;
+    /* width: 120px; */
     display: flex;
     justify-content: center;
-    margin-right: 10px;
+    margin-right: 25px;
+    align-items: center;
 }
 
 header .lang_box .lang label{
@@ -47,6 +64,8 @@ header .lang_box .hidden_box{
     display: none;
     position: absolute;
     margin-top: 30px;
+    top: 30px;
+    right: 7px;
 }
 
 .hidden_box > div{
@@ -79,6 +98,7 @@ header .lang_box .hidden_box{
     }
     header .lang_box{
         margin: 0;
+        margin-right: 10px;
     }
     .hidden_box > div{
         width: 90px;
