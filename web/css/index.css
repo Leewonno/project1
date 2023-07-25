@@ -741,14 +741,14 @@ button:disabled {
     background-color: #F8F9FC;
 } */
 
-.festival-section .festival-cont .btn-block {
+/* .festival-section .festival-cont .btn-block {
     position: absolute;
     left: 0;
     bottom: 78px;
     z-index: 10;
     min-width: 68px;
     height: 30px;
-}
+} */
 
 .festival-section .festival-slider {
     /* display: flex; */
@@ -765,6 +765,19 @@ button:disabled {
     position: absolute;
     width: 100%;
     top: -100%;
+}
+
+.festival-section .festival-slider h1 {
+    font-size:58px;
+    font-weight: 1000;
+    font-style: italic;
+    color: rgb(144, 222, 229);
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.festival-section .festival-slider a  em {
+    
 }
 
 .festival-section .festival-slider .slide-list {
@@ -791,6 +804,7 @@ button:disabled {
     flex-wrap: wrap;
     justify-content: flex-end;
 }
+
 
 
 .festival-section .festival-slider .slide-list .slide-cont {
@@ -832,3 +846,9 @@ button:disabled {
     height: 350px;
     width: 230px;
 }
+
+
+
+/* .slide-list:nth-child(1){
+    scale: 1.1;
+} */

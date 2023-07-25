@@ -287,36 +287,39 @@
         window.location.assign("www.naver.com")
     }
     function dadaepo_() {
-        window.location.assign("www.naver.com")
+        window.location.assign("http://127.0.0.1:5500/web/infor_dadaepo.html")
     }
     function train() {
-        window.location.assign("www.naver.com")
+        window.location.assign("http://127.0.0.1:5500/web/infor_beachTrain.html")
     }
     function 조개() {
-        window.location.assign("www.naver.com")
+        window.location.assign("http://127.0.0.1:5500/web/listpageChung.html")
     }
     function granma() {
-        window.location.assign("www.naver.com")
+        window.location.assign("http://127.0.0.1:5500/web/listpageDadaepo.html")
     }
     function pig() {
-        window.location.assign("www.naver.com")
+        window.location.assign("http://127.0.0.1:5500/web/listpageCable.html")
     }
 
 </script>
     
 <!-- 전시회 section -->
 <section class="festival-section">
-    <div class="button">
+    <!-- <div class="button">
         <button class="button-prev" onclick="prev()">0</button>
         <button class="button-next" onclick="next2()">0</button>
         <div class="pagination"> 
             <span></span>
             <span></span>
         </div>
-    </div>
+    </div> -->
+
+    
 
     <div class="festival-slider">
-        
+
+        <h1>Festival</h1>
         <div class="slide-list">
             <!-- <div class="slide-main" id="event">
             </div> -->
@@ -391,6 +394,7 @@
 
         
     
+      //없어지는 순서가 맞지않음
         festival+=1;
         
         if(festival==10) {
@@ -402,8 +406,6 @@
         console.log(festival)
         console.log(slide_cont[festival])
         document.getElementsByClassName("slide-list")[0].prepend(slide_cont[9])
-
-        
     
         festival-=1;
         
