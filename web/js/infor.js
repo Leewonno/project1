@@ -16,10 +16,10 @@ let mainImg3 = document.querySelector("#mainFourth > .mainInfor2 > img");
 
 let map = document.querySelector(".map"); 
 
-let title = document.querySelector(".songdo")
-let title2 = document.querySelector(".gwangan")
-let title3 = document.querySelector(".gamcheon")
-let title4 = document.querySelector(".dadaepo")
+let title = document.querySelector("#songdo")
+let title2 = document.querySelector("#gwangan")
+let title3 = document.querySelector("#gamcheon")
+let title4 = document.querySelector("#dadaepo")
 
 
 if (title) {

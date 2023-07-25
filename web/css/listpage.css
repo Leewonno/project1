@@ -1,15 +1,47 @@
+p{
+    padding-left: 5%;
+}
+
+h4{
+    padding-left: 5%;
+}
+
 a{
     display: block;
     text-decoration: none;
+    color:black;
 }
+.rList span .material-symbols-outlined{
+    width: 100px;
+    height: 50px;
+    border-block-style: none;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rList span .material-symbols-outlined:hover{
+    width: 100px;
+    height: 50px;
+    background-color: #fffbd5;
+    border-radius: 10px;
+}
+
+
+
 .main a{
+
     color:black;
 }
 .rList span{
     display: flex;
     width: 100%;
     border-bottom: 1px solid black;
-    /* margin-top:5%; */
+
+    margin-top:5%;
+    justify-content: flex-end;
+
 }
 
 .rList span img{
@@ -24,7 +56,7 @@ a{
     /* padding-bottom: 10px; */
 }
 body{
-    
+    font-family: 'SCoreDream';
     width: 100%;
     height: 100%;
     /* background-color: #00C4FF; */
@@ -107,8 +139,8 @@ img{
     position: fixed;
     top: 50%;
     left: 50%;        
-    width: 80%;
-    height: 80%;
+    width: 1000px;
+    height: 600px;
     transform: translate(-50%, -50%);
     display: none;
     background-color: white;
@@ -362,8 +394,9 @@ img{
     }
 
     .gamModal{
-        margin-top: 10%;
-        
+        /* margin-top: 10%; */
+        width: 80%;
+        height: 80%;
     }
 
     
@@ -378,11 +411,13 @@ img{
     .gamR_img{
         width: 60%;
     }
-    
-
-
-
-
+    .gamModalDetail span{
+        padding-left: 5%;
+    }
+    .rList span .material-symbols-outlined{
+        margin-top: 5%;
+        width: 30%;
+    }
 }
 .modalBg{
     background-color: black;

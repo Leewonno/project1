@@ -21,8 +21,7 @@
                 <span><img src="./image/location.svg"><h2 id="bg_name"></h2></span>
                 <!-- <input type="checkbox" id="main_map"> -->
                 <!-- <label for="main_map"><span class="material-symbols-outlined">expand_more</span></label> -->
-            </div>
-            
+            </div>        
             <div class="main_element_box">
                 <div class="cl_box">
                     <div class="city_name">BUSAN</div>
@@ -284,7 +283,7 @@
 
     // 여행테마 링크 이동
     function gwanganli() {
-        window.location.assign("www.naver.com")
+        window.location.assign("http://127.0.0.1:5500/web/infor_gwanganri.html")
     }
     function dadaepo_() {
         window.location.assign("http://127.0.0.1:5500/web/infor_dadaepo.html")
@@ -306,71 +305,63 @@
     
 <!-- 전시회 section -->
 <section class="festival-section">
-    <div class="button">
-        <button class="button-prev" onclick="prev()">0</button>
-        <button class="button-next" onclick="next2()">0</button>
-        <div class="pagination"> 
-            <span></span>
-            <span></span>
-        </div>
-    </div>
 
+    <button class="button-prev" onclick="prev()">◀</button>
+    <button class="button-next" onclick="next2()">▶</button>
     
-
     <div class="festival-slider">
-
         <h1>Festival</h1>
         <div class="slide-list">
             <!-- <div class="slide-main" id="event">
             </div> -->
             <!--전시내용-->
             <div class="slide-cont" id="yosigo" style="background-image:url(./image/전시_요시고.png)">
-                <a href="https://tickets.interpark.com/goods/23005227#" target="_self" title="페이지 이동">
+                <a href="https://tickets.interpark.com/goods/23005227#" target="_blank" title="페이지 이동">
                     <em class="blind"> YOSIGO 사진전 </em>
                 </a>
             </div>
             <div class="slide-cont" id="city" style="background-image:url(./image/전시_울리히.png)">
-                <a href="https://www.goeunmuseum.kr/bbs/board.php?bo_table=exhibition&wr_id=223&proc=next" target="_self" title="페이지 이동">
+                <a href="https://www.goeunmuseum.kr/bbs/board.php?bo_table=exhibition&wr_id=223&proc=next" target="_blank" title="페이지 이동">
                     <em class="blind"> 울리히 뷔스트展 《도시산책자 : 울리히 뷔스트의 사진》 </em>
                 </a>
             </div>
             <div class="slide-cont" id="summer" style="background-image:url(./image/전시_여름의모양.jpg)">
-                <a href="https://www.shinsegae.com/culture/gallery/exhibition/view.do?glrySeq=1072" target="_self" title="페이지 이동">
+                <a href="https://www.shinsegae.com/culture/gallery/exhibition/view.do?glrySeq=1072" target="_blank" title="페이지 이동">
                     <em class="blind"> 여름의 모양: Hyper Summer </em>
                 </a>
             </div>
             <div class="slide-cont" id="movie" style="background-image:url(./image/전시_영화.jpeg)">
-                <a href="https://www.busan.go.kr/moca/exhibition01/1561678" target="_self" title="페이지 이동">
+                <a href="https://www.busan.go.kr/moca/exhibition01/1561678" target="_blank" title="페이지 이동">
                     <em class="blind"> 영화의 기후: 섬, 행성, 포스트콘택트존 </em>
                 </a>
             </div>
             <div class="slide-cont" id="kerri" style="background-image:url(./image/전시_물결.jpg)">
-                <a href="https://seojung-art.com/exhibition/view/RNHNSMC" target="_self" title="페이지 이동">
+                <a href="https://seojung-art.com/exhibition/view/RNHNSMC" target="_blank" title="페이지 이동">
                     <em class="blind"> Kerri Lee : Wave on Wave </em>
                 </a>
             </div>
             <div class="slide-cont" id="wujing" style="background-image:url(./image/전시_우징.png)">
-                <a href="https://cafe.naver.com/artandcollect/44273" target="_self" title="페이지 이동">
+                <a href="https://cafe.naver.com/artandcollect/44273" target="_blank" title="페이지 이동">
                     <em class="blind"> 우징작가 초대전 </em>
                 </a>
             </div>
             <div class="slide-cont" id="larf" style="background-image:url(./image/전시_랄프.png)">
-                <a href="http://www.gibsongoeunmuseum.com/" target="_self" title="페이지 이동">
+                <a href="http://www.gibsongoeunmuseum.com/" target="_blank" title="페이지 이동">
                     <em class="blind"> 랄프깁슨 《Sacred Land》 </em>
                 </a>
             </div>
             <div class="slide-cont" id="mar" style="background-image:url(./image/전시_M.png)">
-                <a href="https://blog.naver.com/kafmuseum/223160643416" target="_self" title="페이지 이동">
+                <a href="https://blog.naver.com/kafmuseum/223160643416" target="_blank" title="페이지 이동">
                     <em class="blind"> Mar[b]elous Love </em>
                 </a>
             </div>
             <div class="slide-cont" id="sugar" style="background-image:url(./image/전시_sugar.png)">
-                <a href="https://www.galleryartsoop.com/" target="_self" title="페이지 이동">
+                <a href="https://www.galleryartsoop.com/" target="_blank" title="페이지 이동">
                     <em class="blind"> Sugar Free </em>
                 </a>
             </div>
             <div class="slide-cont" id="sad" style="background-image:url(./image/전시_슬픈.png)">
-                <a href="https://art.busan.go.kr/tblTsite07Display/viewNowClient.nm?id=20230223085230589" target="_self" title="페이지 이동">
+                <a href="https://art.busan.go.kr/tblTsite07Display/viewNowClient.nm?id=20230223085230589" target="_blank" title="페이지 이동">
                     <em class="blind"> 슬픈 나의 젊은 날 </em>
                 </a>
             </div>
@@ -391,10 +382,7 @@
         console.log(festival)
         console.log(slide_cont[festival])
         document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
-
-        
     
-      //없어지는 순서가 맞지않음
         festival+=1;
         
         if(festival==10) {
@@ -481,8 +469,6 @@
         
         
     </script>
-
-    
 
     <script>
         var slideCount = 0;

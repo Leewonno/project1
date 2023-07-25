@@ -59,10 +59,26 @@ main {
 }
 
 .introduce h1{
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
-
+.food_btn {
+  bottom: 30px;
+  text-decoration: none;
+  padding-top: 5px;
+}
+.food_btn > .material-symbols-outlined {
+  font-size: 40px;
+  color: rgb(13, 76, 171);
+  padding-left: 10px;
+}
+.food_btn > .food_List {
+  font-size: 20px;
+  padding-left: 3px;
+  color: rgb(13, 76, 171);
+}
 .mainSecond {
     display: flex;
     justify-content: space-between;
@@ -459,6 +475,9 @@ aside > .btn2 {
       }
       .title2 > table {
         padding-left: 0px;
+      }
+      .road > img {
+        object-fit: cover;
       }
       .road > p{
         width: auto;
