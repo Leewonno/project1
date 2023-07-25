@@ -437,6 +437,10 @@
         function lang_change() {
             let header_href = document.getElementById("index_id");
             let main_string = document.querySelector(".main h2");
+            let main_text_span = document.querySelectorAll(".mainbox .text span");
+            let tage_group = document.querySelectorAll(".tage_group");
+            let item_title = document.querySelectorAll(".item_title");
+            let item_text = document.querySelectorAll(".item_text");
 
             if(pagelang[1]=="en"){
                 var eng_temp = document.createElement("style");
@@ -444,6 +448,34 @@
                 header_href.href = "index.html?en";
                 eng_temp.innerHTML = `.main h2::after {content: ''; animation: name_eng_change 20s infinite;}`
                 main_string.append(eng_temp);
+                main_text_span[0].innerText = "Busan sea where you can enjoy the summer 🚢"
+                main_text_span[1].innerText = "The blue sea view on the train 🏝️"
+                main_text_span[2].innerText = "Surfing full of fun 🏄"
+                main_text_span[3].innerText = "Then I'll have a bowl of thick rice soup🤨"
+                main_text_span[4].innerText = "What about chopped live octopus with the night view? 🤩"
+                main_text_span[5].innerText = "How about grilled clams with the sound of waves 😉"
+
+                tage_group[0].innerText = "Busan rice soup"
+                tage_group[1].innerText = "Food stall"
+                tage_group[2].innerText = "Grilled clams"
+                tage_group[3].innerText = "Unique experience"
+                tage_group[4].innerText = "Have you heard of it?"
+                tage_group[5].innerText = "The refreshing sea"
+
+                item_title[0].innerText = "Gwangalli🌊"
+                item_title[1].innerText = "Dadaepo🏊‍♀"
+                item_title[2].innerText = "Beach Train🚠"
+                item_title[3].innerText = "JJ Garibee🐚"
+                item_title[4].innerText = "Grandmother's House🦑"
+                item_title[5].innerText = "Mokchon Pork Soup🍚"
+
+                item_text[0].innerText = "#Sea #Nightscape #Surfing"
+                item_text[1].innerText = "#NightTaste #PackagingCart #MusicFountain"
+                item_text[2].innerText = "#BeachRoad #DateCourse #LifePicture"
+                item_text[3].innerText = "#WaveSound #Grilled Shellfish #BasinBul"
+                item_text[4].innerText = "#SeaView #chopped live octopus #RelievingStress"
+                item_text[5].innerText = "##DarkSoup #DeepTaste #FullFull"
+
             }
             else if(pagelang[1]=="cn"){
                 var cn_temp = document.createElement("style");
@@ -451,6 +483,33 @@
                 header_href.href = "index.html?cn";
                 cn_temp.innerHTML = `.main h2::after {content: ''; animation: name_cn_change 20s infinite;}`
                 main_string.append(cn_temp);
+                main_text_span[0].innerText = "可以尽情享受夏天的釜山大海🚢"
+                main_text_span[1].innerText = "蔚蓝的海景在火车上🏝️"
+                main_text_span[2].innerText = "充满欢乐的冲浪🏄"
+                main_text_span[3].innerText = "然后要做一碗浓汤饭🤨"
+                main_text_span[4].innerText = "夜景和生拌剁碎长爪章鱼又如何🤩"
+                main_text_span[5].innerText = "和海浪声一起烤扇贝怎么样😉"
+
+                tage_group[0].innerText = "釜山汤饭"
+                tage_group[1].innerText = "大排档"
+                tage_group[2].innerText = "烤扇贝"
+                tage_group[3].innerText = "特色经验"
+                tage_group[4].innerText = "听说过吗？"
+                tage_group[5].innerText = "清凉的大海"
+
+                item_title[0].innerText = "广安里🌊"
+                item_title[1].innerText = "多大浦🏊‍♀"
+                item_title[2].innerText = "海边列车🚠"
+                item_title[3].innerText = "JJ Garibi🐚"
+                item_title[4].innerText = "奶奶店🦑"
+                item_title[5].innerText = "木村猪肉汤饭🍚"
+
+                item_text[0].innerText = "#大海#夜景 #冲浪"
+                item_text[1].innerText = "#晚霞美食店 #音乐喷泉"
+                item_text[2].innerText = "#海边路 #约会路线 #人生照片"
+                item_text[3].innerText = "#海浪声 #烤扇贝 #篝火"
+                item_text[4].innerText = "#大海风景 #生拌剁碎长爪章鱼 #消除压力"
+                item_text[5].innerText = "#浓汤 #浓郁的味道 #丰盛"
             }
         };
         
