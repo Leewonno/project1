@@ -726,59 +726,133 @@ button:disabled {
 .festival-section {
     position: relative;
     display: flex;
-}
-
-.festival-section .festival-cont {
-    overflow: hidden;
-    position: relative;
-    margin-top: 50px;
     width: 100%;
-    height: 438px;
-    background-color: #F8F9FC;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.festival-section .festival-cont .btn-block {
-    position: absolute;
-    left: 0;
-    bottom: 78px;
-    z-index: 10;
-    min-width: 68px;
+.festival-section button {
+    position: relative;
+    bottom: -350px;
+    left: 600px;
+    width: 30px;
+    margin: 6px;
     height: 30px;
+    border-radius: 100%;
+    border-color: rgb(237, 242, 183);
+    background-color: rgb(237, 242, 183);
+    z-index: 10;
+    cursor: pointer;
 }
 
 .festival-section .festival-slider {
-    overflow: hidden;
-    margin-top: 50px;
+    /* display: flex; */
+    /* overflow: hidden; */
+    /* margin-top: 50px; */
+    width: 1200px;
+    height: 275px;
+    /* background-color: #F8F9FC; */
+}
+
+.festival-section .festival-slider .white_gr{
+    background: linear-gradient( to right, rgb(255 255 255 / 0%) 10%, rgb(255 255 255 / 0%) 25%, rgb(255 255 255 / 0%) 50%, rgb(255 255 255 / 100%) 90%, rgb(255 255 255) 100% );
+    height: 100%;
+    position: absolute;
     width: 100%;
-    height: 438px;
-    background-color: #F8F9FC;
+    top: -100%;
+}
+
+.festival-section .festival-slider h1 {
+    font-size:58px;
+    font-weight: 1000;
+    font-style: italic;
+    color: rgb(144, 222, 229);
+    margin-left: 10px;
+    margin-bottom: 0;
 }
 
 .festival-section .festival-slider .slide-list {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 90px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.slide-list:nth-child(1){
-    scale: 1.1;
+.festival-section .festival-slider .slide-list-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 90px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .festival-section .festival-slider .slide-list .slide-cont {
     position: relative;
     object-fit: cover;
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-position: top left;
-    box-sizing: content-box;
+    box-sizing: content-box; */
     height: 250px;
     width: 200px;
+    
+}
+
+.slide-cont:not(:nth-child(1)){
+    margin-right: 10px;    
+}   
+
+
+.slide-cont:nth-child(1){
+    scale: 1.1;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    z-index: 1;
+}
+
+.slide-cont a{
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    bottom: -45px;
 }
 
 .festival-section .festival-slider .slide-main {
     z-index: 10;
     height: 350px;
     width: 230px;
+}
+
+@media screen and (max-width: 650px) {
+    .festival-section .festival-slider h1 {
+        font-size:38px;
+        font-weight: 550;
+    }
+
+    .festival-section button {
+        position: relative;
+        top: -75px;
+        left: 235px;
+        width: 25px;
+        height: 25px;
+        margin: 3px;
+        border-radius: 100%;
+        border-color: rgb(237, 242, 183);
+        background-color: rgb(237, 242, 183);
+        z-index: 10;
+        cursor: pointer;
+        /* display: none; */
+    }
 }
