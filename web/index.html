@@ -308,7 +308,7 @@
 <section class="festival-section">
     <div class="button">
         <button class="button-prev" onclick="prev()">0</button>
-        <button class="button-next" onclick="">0</button>
+        <button class="button-next" onclick="next2()">0</button>
         <div class="pagination"> 
             <span></span>
             <span></span>
@@ -316,9 +316,10 @@
     </div>
 
     <div class="festival-slider">
+        
         <div class="slide-list">
-            <div class="slide-main" id="event">
-            </div>
+            <!-- <div class="slide-main" id="event">
+            </div> -->
             <!--전시내용-->
             <div class="slide-cont" id="yosigo" style="background-image:url(./image/전시_요시고.png)">
                 <a href="https://tickets.interpark.com/goods/23005227#" target="_self" title="페이지 이동">
@@ -371,29 +372,45 @@
                 </a>
             </div>
         </div>
+        <div class="slide-list-2">
+            <div class="white_gr"></div>
+        </div>
+        
     </div>
 </section>
 
 <script>
-let festival = 0;
-let slide_cont = document.getElementsByClassName("slide-cont")
-console.log(slide_cont)
+    let festival = 0;
+    let slide_cont = document.getElementsByClassName("slide-cont")
+    console.log(slide_cont)
 
-function prev() {
-    console.log(festival)
-    console.log(slide_cont[festival])
-    // $(".slide-main").empty() //empty에는 넣지 않아도됨
-    document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
-    //$(".slide-list").clone().append(slide_cont[0])
-    // $(".slide-main").append(slide_cont[0])
+    function prev() {
+        console.log(festival)
+        console.log(slide_cont[festival])
+        document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
+
+        
     
-   
-    festival+=1;
-    
-    if(festival==10) {
-        festival =0;
+        festival+=1;
+        
+        if(festival==10) {
+            festival = 0;
+        }
     }
-}
+
+    function next2() {
+        console.log(festival)
+        console.log(slide_cont[festival])
+        document.getElementsByClassName("slide-list")[0].prepend(slide_cont[9])
+
+        
+    
+        festival-=1;
+        
+        if(festival==-1) {
+            festival = 0;
+        }
+    }
 </script>
 
     <footer id="footer"></footer>
