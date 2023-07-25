@@ -59,10 +59,20 @@ main {
 }
 
 .introduce h1{
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
-
+.food_btn {
+  bottom: 30px;
+  text-decoration: none;
+}
+.food_btn > .material-symbols-outlined {
+  font-size: 40px;
+  color: rgb(13, 76, 171);
+  padding-left: 10px;
+}
 .mainSecond {
     display: flex;
     justify-content: space-between;
