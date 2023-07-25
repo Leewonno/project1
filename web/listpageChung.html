@@ -9,8 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/listpage.css">
+    
 
-    <title>청사포</title>
+    <title>청사포(해변열차) 맛집</title>
     <style>
         .menu{
             width: 100%;
@@ -112,27 +113,28 @@
                 <li class="gam" ><a href="./listpageGam.html">감천 문화 마을</a></li>
                 <li class="gwang" ><a href="./listpageGwang.html">광안리</a></li>
                 <li class="Da"><a href="./listpageDadaepo.html">다대포</a></li>
-                <li class="cable"><a href="./listpageCable.html">영도 해상 케이블카</a></li>
-                <li class="chung" style="background-color: #fffbd5;"><a href="./listpageChung.html">청사포</a></li>
+                <li class="cable"><a href="./listpageCable.html">송도 해상 케이블카</a></li>
+                <li class="chung" style="background-color: #fffbd5;"><a href="./listpageChung.html">청사포(해변열차)</a></li>
             </ul>
         </div>
     
         <div class="rList">
             <span>
                 <img src="./image/location.svg">
-                <h2>청사포</h2>
+                <h2>청사포(해변열차)</h2>
+                <span class="material-symbols-outlined"><a href="./infor_beachTrain.html">deck</a></span>
             </span>
             <ul class="gamR">
                 <li class ="gamR_young">
                     <img src="./image/chungSha.jpg" onclick="gamRClick('.gamR_young')" >
-                    <div class="block" onclick="gamRClick('.gamR_young')"><p class="gamR_p">샤브막심 송정본점</p>주소: 부산 해운대구 송정구덕포길 104 <br>1층
+                    <div class="block" onclick="gamRClick('.gamR_young')"><p class="gamR_p"><h3>샤브막심 송정본점</h3></p>주소: 부산 해운대구 송정구덕포길 104 <br>1층
                         
                     </div>   
                 </li>
-                <li class="gamR_giant"><img src="./image/chungTiger.jpg" onclick="gamRClick('.gamR_giant')"><div class="block" onclick="gamRClick('.gamR_giant')">호랑이젤라떡<p class="gamR_p"></p>주소: 부산 해운대구 달맞이길62번길 38 115호, 116호</div></li>
-                <li class="gamR_it"><img src="./image/chungHae.jpg" onclick="gamRClick('.gamR_it')"><div class="block" onclick="gamRClick('.gamR_it')"><p class="gamR_p">해운대 기와집 대구탕</p>주소: 부산 해운대구 달맞이길104번길<br> 46</div></li>
-                <li class="gamR_Plate"><img src="./image/chungJ.jpg" onclick="gamRClick('.gamR_Plate')"><div class="block" onclick="gamRClick('.gamR_Plate')"><p class="gamR_p">제이제이 가리비</p>주소: 부산 해운대구 청사포로 139-4</div></li>
-                <li class="gamR_Darae"><img src="./image/chungMam.jpg" onclick="gamRClick('.gamR_Darae')"><div class="block" onclick="gamRClick('.gamR_Darae')"><p class="gamR_p">맘보식당</p>주소: 부산 해운대구 송정광어골로 76 <br>1층</div></li>
+                <li class="gamR_giant"><img src="./image/chungTiger.jpg" onclick="gamRClick('.gamR_giant')"><div class="block" onclick="gamRClick('.gamR_giant')"><h3>호랑이젤라떡</h3><p class="gamR_p"></p>주소: 부산 해운대구 달맞이길62번길 38 115호, 116호</div></li>
+                <li class="gamR_it"><img src="./image/chungHae.jpg" onclick="gamRClick('.gamR_it')"><div class="block" onclick="gamRClick('.gamR_it')"><p class="gamR_p"><h3>해운대 기와집 대구탕</h3></p>주소: 부산 해운대구 달맞이길104번길<br> 46</div></li>
+                <li class="gamR_Plate"><img src="./image/chungJ.jpg" onclick="gamRClick('.gamR_Plate')"><div class="block" onclick="gamRClick('.gamR_Plate')"><p class="gamR_p"><h3>제이제이 가리비</h3></p>주소: 부산 해운대구 청사포로 139-4</div></li>
+                <li class="gamR_Darae"><img src="./image/chungMam.jpg" onclick="gamRClick('.gamR_Darae')"><div class="block" onclick="gamRClick('.gamR_Darae')"><p class="gamR_p"><h3>맘보식당</h3></p>주소: 부산 해운대구 송정광어골로 76 <br>1층</div></li>
             </ul>
         </div>
 
@@ -140,26 +142,14 @@
         <div class="gamModal gamModalY">
             <img src="./image/chungSha.jpg" class="gamR_img1" >
             <div class="gamModalDe">
-                <div class="gamModalDetail"><p class="rating">Ratings</p><p>4.42/5</p>
-                    <span>매일 이탈리아 정통 방식으로 젤라또를 만들고 매일 한국 정통 방식으로 찹쌀떡을 만듭니다.</span>
-                </div>
-                <div class="gamModalDetailMenu"><p class="detail"><h4>Menu</h4></p>
-                    <div id="gwangGalMenu">
-                        <ul class="menu">
-                            <li><img src="./image/daHalMenu1.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
-                            <li><img src="./image/daHalmenu2.jpg"  onclick="window.open(this.src)" class="gamR_img"></li>
-                        </ul>
-                    </div>
-                    <div class="changeBtn">
-                        <p class="controller">
-                            <span class="prev">&lang;</span>  
-                            <span class="next">&rang;</span>
-                        </p>
-                    </div>
+                <div class="gamModalDetail"><p class="rating"></p>
                     
                 </div>
-                <div class="gamModalDetail"><p class="map">Maps</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645379.701216372!2d126.72385683354236!3d36.34546220170444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed3268d25af3%3A0xced12f471b2b80f8!2z6rCI7IK86rWs7J20!5e0!3m2!1sko!2skr!4v1689920265024!5m2!1sko!2skr" width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="gamModalAdress">Adress: 부산 서구 구덕로 203</div>
+                <div class="gamModalDetailMenu"><p class="detail"></p>
+
+                </div>
+                <div class="gamModalDetail"><p class="map"></p>
+                   
                 </div>
             </div>
             <button onclick="closeBtn(0)" class="closeButton" style="background: white; border:0px"><span class="material-symbols-outlined">

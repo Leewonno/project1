@@ -1,7 +1,33 @@
+p{
+    padding-left: 5%;
+}
+
+h4{
+    padding-left: 5%;
+}
+
 a{
     display: block;
     text-decoration: none;
+    color:black;
 }
+.rList span .material-symbols-outlined{
+    width: 100px;
+    height: 50px;
+    border-block-style: none;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rList span .material-symbols-outlined:hover{
+    width: 100px;
+    height: 50px;
+    background-color: #fffbd5;
+    border-radius: 10px;
+}
+
 a:visited{
     color:black;
 }
@@ -10,6 +36,8 @@ a:visited{
     width: 100%;
     border-bottom: 1px solid black;
     margin-top:5%;
+    justify-content: flex-end;
+    overflow: visible;
 }
 
 .rList span img{
@@ -24,7 +52,7 @@ a:visited{
     padding-bottom: 10px;
 }
 body{
-    
+    font-family: 'SCoreDream';
     width: 100%;
     height: 100%;
     /* background-color: #00C4FF; */
@@ -378,11 +406,13 @@ img{
     .gamR_img{
         width: 60%;
     }
-    
-
-
-
-
+    .gamModalDetail span{
+        padding-left: 5%;
+    }
+    .rList span .material-symbols-outlined{
+        margin-top: 5%;
+        width: 30%;
+    }
 }
 .modalBg{
     background-color: black;
