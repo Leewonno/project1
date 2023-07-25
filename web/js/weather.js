@@ -64,6 +64,103 @@ xhr.onreadystatechange = function () {
 
         $('#wt_tp').text(wt_tp + "℃");
 
+        wt_rain = 0;
+
+        if(wt_sky==1){
+            console.log('맑음')
+            // 날씨 맑고 비 오지 않음
+            if(wt_rain==0){
+                document.getElementById("wt_img").src = "image/weather/wi-day-cloudy.svg"
+            }
+            // 날씨 맑고 비 옴
+            else if(wt_rain==1){
+                document.getElementById("wt_img").src = "image/weather/wi-day-rain.svg"
+            }
+            // 날씨 맑고 비나 눈
+            else if(wt_rain==2){
+                document.getElementById("wt_img").src = "image/weather/wi-day-rain-mix.svg"
+            }
+            // 날씨 맑고 눈
+            else if(wt_rain==3){
+                document.getElementById("wt_img").src = "image/weather/wi-day-snow.svg"
+            }
+            // 날씨 맑고 빗방울
+            else if(wt_rain==5){
+                document.getElementById("wt_img").src = "image/weather/image/weather/wi-day-showers.svg"
+            }
+            //날씨 맑고 빗방울 눈날림
+            else if(wt_rain==6){
+                document.getElementById("wt_img").src = "image/weather/wi-day-sleet.svg"
+            }
+            // 날씨 맑고 눈날림
+            else if(wt_rain==7){
+                document.getElementById("wt_img").src = "image/weather/wi-day-snow-wind.svg"
+            }
+            
+        }
+        else if(wt_sky==3){
+            // 구름 많고 비 오지 않음
+            if(wt_rain==0){
+                document.getElementById("wt_img").src = "image/weather/wi-cloudy.svg"
+            }
+            // 구름 많고 비 옴
+            else if(wt_rain==1){
+                document.getElementById("wt_img").src = "image/weather/wi-day-rain.svg"
+            }
+            // 구름 많고 비나 눈
+            else if(wt_rain==2){
+                document.getElementById("wt_img").src = "image/weather/wi-day-rain-mix.svg"
+            }
+            // 구름 많고 눈
+            else if(wt_rain==3){
+                document.getElementById("wt_img").src = "image/weather/wi-day-snow.svg"
+            }
+            // 구름 많고 빗방울
+            else if(wt_rain==5){
+                document.getElementById("wt_img").src = "image/weather/wi-day-showers.svg"
+            }
+            // 구름 많고 빗방울 눈날림
+            else if(wt_rain==6){
+                document.getElementById("wt_img").src = "image/weather/wi-day-sleet.svg";
+            }
+            // 구름 많고 눈날림
+            else if(wt_rain==7){
+                document.getElementById("wt_img").src = "image/weather/wi-day-snow-wind.svg"
+            }
+
+        }
+        else if(wt_sky==4){
+            // 흐리고 비 오지 않음
+            if(wt_rain==0){
+                document.getElementById("wt_img").src = "image/weather/wi-cloud.svg"
+                $('#wt_img').attr("src" + "");
+            }
+            // 흐리고 비 옴
+            else if(wt_rain==1){
+                document.getElementById("wt_img").src = "image/weather/wi-rain.svg"
+            }
+            // 흐리고 비나 눈
+            else if(wt_rain==2){
+                document.getElementById("wt_img").src = "image/weather/wi-rain-mix.svg"
+            }
+            // 흐리고 눈
+            else if(wt_rain==3){
+                document.getElementById("wt_img").src = "image/weather/wi-snow.svg"
+            }
+            // 흐리고 빗방울
+            else if(wt_rain==5){
+                document.getElementById("wt_img").src = "image/weather/wi-showers.svg"
+            }
+            // 흐리고 빗방울 눈날림
+            else if(wt_rain==6){
+                document.getElementById("wt_img").src = "image/weather/wi-rain-wind.svg"
+            }
+            // 흐리고 눈날림
+            else if(wt_rain==7){
+                document.getElementById("wt_img").src = "image/weather/wi-snow-wind.svg"
+            }
+        }
+
         // // 번개가친다.
         // if(wt_lightning>0){
 

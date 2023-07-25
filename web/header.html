@@ -2,20 +2,24 @@
     <a href="index.html" class="logo" id="index_id">LEBU</a>
 </div>
 <div class="lang_box">
+    <div class="item_box">
+        <a href="#" class="gg">관광지</a>
+        <a href="#" class="mj">식당</a>
+    </div>
     <input type="checkbox" id="lang" checked>
     <div class="lang"><label for="lang" onclick="lang_click()">LANGUAGE</label></div>
     <div class="hidden_box">
         <div class="ko">
             <img src="image/kor.webp">
-            <span><a href="#">한국어</a></span>
+            <span><a href="#" id="kor">한국어</a></span>
         </div>
         <div class="en">
             <img src="image/eng.svg">
-            <span><a href="#">ENG</a></span>
+            <span><a href="#" id="eng">ENG</a></span>
         </div>
         <div class="cn">
             <img src="image/chn.svg">
-            <span><a href="#">中文</a></span>
+            <span><a href="#" id="cn">中文</a></span>
         </div>
     </div>
 </div>
@@ -32,4 +36,25 @@
             lang_hd_box[0].style.display = "none"
         }
     }
+</script>
+
+<script>
+    let cr_href = window.location.href.split("?");
+
+    document.getElementById("kor").href = cr_href[0];
+    document.getElementById("eng").href = cr_href[0] + "?en";
+    document.getElementById("cn").href = cr_href[0] + "?cn";
+
+    if(cr_href[1]=="en"){
+        document.getElementsByClassName("gg")[0].innerText = "SIGHTS";
+        document.getElementsByClassName("mj")[0].innerText = "RESTAURANT";
+        document.querySelectorAll(".item_box > a")[0].style.width = "100px";
+        document.querySelectorAll(".item_box > a")[1].style.width = "100px";
+    }
+    else if(cr_href[1]=="cn"){
+        document.getElementsByClassName("gg")[0].innerText = "景点";
+        document.getElementsByClassName("mj")[0].innerText = "餐厅";
+    }
+
+    console.log(cr_href[0]);
 </script>
