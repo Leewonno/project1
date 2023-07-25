@@ -56,9 +56,10 @@ a{
     display: flex;
     width: 100%;
     border-bottom: 1px solid black;
-
+    
     margin-top:5%;
     justify-content: flex-end;
+   
 
 }
 
@@ -70,7 +71,7 @@ a{
 
 .rList h2{
     width: calc(100vw - 30px);
-    /* margin-top: 15px; */
+    
     /* padding-bottom: 10px; */
 }
 body{
@@ -334,6 +335,9 @@ img{
 }
 
 @media screen and (max-width:650px) {
+    .rList h2{
+        margin-top: 30px;
+    }
     .main{
         width: 100%;
         margin-top: 70px;
@@ -375,7 +379,11 @@ img{
         width: 100%;
         margin-left: -10%;
     }
-   
+    .rList span{
+        margin-left: 11%;
+        display: flex;
+        align-items: center;
+    }
 
     .rList span img{
         width: 10%;
