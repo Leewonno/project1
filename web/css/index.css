@@ -776,10 +776,6 @@ button:disabled {
     margin-bottom: 0;
 }
 
-.festival-section .festival-slider a  em {
-    
-}
-
 .festival-section .festival-slider .slide-list {
     position: relative;
     width: 100%;
@@ -820,8 +816,7 @@ button:disabled {
 }
 
 .slide-cont:not(:nth-child(1)){
-    margin-right: 10px;
-    
+    margin-right: 10px;    
 }   
 
 
@@ -846,9 +841,3 @@ button:disabled {
     height: 350px;
     width: 230px;
 }
-
-
-
-/* .slide-list:nth-child(1){
-    scale: 1.1;
-} */
