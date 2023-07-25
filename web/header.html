@@ -58,3 +58,14 @@
 
     console.log(cr_href[0]);
 </script>
+
+<script>
+    let path = window.location.pathname;
+    if(path.indexOf("/en") || path.indexOf("/cn")){
+        document.getElementById("index_id").href = "../index.html";
+        document.querySelectorAll(".hidden_box img")[0].src = "../image/kor.webp";
+        document.querySelectorAll(".hidden_box img")[1].src = "../image/eng.svg";
+        document.querySelectorAll(".hidden_box img")[2].src = "../image/chn.svg";
+    }
+    
+</script>
