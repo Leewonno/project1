@@ -726,6 +726,10 @@ button:disabled {
 .festival-section {
     position: relative;
     display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 /* .festival-section .festival-cont {
@@ -747,11 +751,20 @@ button:disabled {
 } */
 
 .festival-section .festival-slider {
-    overflow: hidden;
-    margin-top: 50px;
+    /* display: flex; */
+    /* overflow: hidden; */
+    /* margin-top: 50px; */
+    width: 1200px;
+    height: 275px;
+    /* background-color: #F8F9FC; */
+}
+
+.festival-section .festival-slider .white_gr{
+    background: linear-gradient( to right, rgb(255 255 255 / 0%) 10%, rgb(255 255 255 / 0%) 25%, rgb(255 255 255 / 0%) 50%, rgb(255 255 255 / 100%) 90%, rgb(255 255 255) 100% );
+    height: 100%;
+    position: absolute;
     width: 100%;
-    height: 438px;
-    background-color: #F8F9FC;
+    top: -100%;
 }
 
 .festival-section .festival-slider h1 {
@@ -771,19 +784,61 @@ button:disabled {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 90px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
+
+.festival-section .festival-slider .slide-list-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 90px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
 
 .festival-section .festival-slider .slide-list .slide-cont {
     position: relative;
     object-fit: cover;
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-position: top left;
-    box-sizing: content-box;
+    box-sizing: content-box; */
     height: 250px;
     width: 200px;
+    
+}
+
+.slide-cont:not(:nth-child(1)){
+    margin-right: 10px;
+    
+}   
+
+
+.slide-cont:nth-child(1){
+    scale: 1.1;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    z-index: 1;
+}
+
+.slide-cont a{
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    bottom: -45px;
+
 }
 
 .festival-section .festival-slider .slide-main {

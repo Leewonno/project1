@@ -308,7 +308,7 @@
 <section class="festival-section">
     <!-- <div class="button">
         <button class="button-prev" onclick="prev()">0</button>
-        <button class="button-next" onclick="">0</button>
+        <button class="button-next" onclick="next2()">0</button>
         <div class="pagination"> 
             <span></span>
             <span></span>
@@ -318,6 +318,7 @@
     
 
     <div class="festival-slider">
+
         <h1>Festival</h1>
         <div class="slide-list">
             <!-- <div class="slide-main" id="event">
@@ -374,30 +375,44 @@
                 </a>
             </div>
         </div>
+        <div class="slide-list-2">
+            <div class="white_gr"></div>
+        </div>
+        
     </div>
 </section>
 
 <script>
-let festival = 0;
-let slide_cont = document.getElementsByClassName("slide-cont")
-console.log(slide_cont)
+    let festival = 0;
+    let slide_cont = document.getElementsByClassName("slide-cont")
+    console.log(slide_cont)
 
-function prev() {
-    console.log(festival)
-    console.log(slide_cont[festival])
-    // $(".slide-main").empty() //empty에는 넣지 않아도됨
-    document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
-    //$(".slide-list").clone().append(slide_cont[0])
-    // $(".slide-main").append(slide_cont[0])
+    function prev() {
+        console.log(festival)
+        console.log(slide_cont[festival])
+        document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
+
+        
     
-    //없어지는 순서가 맞지않음
-   
-    festival+=1;
-    
-    if(festival==10) {
-        festival =0;
+      //없어지는 순서가 맞지않음
+        festival+=1;
+        
+        if(festival==10) {
+            festival = 0;
+        }
     }
-}
+
+    function next2() {
+        console.log(festival)
+        console.log(slide_cont[festival])
+        document.getElementsByClassName("slide-list")[0].prepend(slide_cont[9])
+    
+        festival-=1;
+        
+        if(festival==-1) {
+            festival = 0;
+        }
+    }
 </script>
 
     <footer id="footer"></footer>
