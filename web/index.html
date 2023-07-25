@@ -306,14 +306,14 @@
     
 <!-- 전시회 section -->
 <section class="festival-section">
-    <!-- <div class="button">
+    <div class="button">
         <button class="button-prev" onclick="prev()">0</button>
         <button class="button-next" onclick="next2()">0</button>
         <div class="pagination"> 
             <span></span>
             <span></span>
         </div>
-    </div> -->
+    </div>
 
     
 
@@ -391,10 +391,7 @@
         console.log(festival)
         console.log(slide_cont[festival])
         document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
-
-        
     
-      //없어지는 순서가 맞지않음
         festival+=1;
         
         if(festival==10) {
@@ -481,8 +478,6 @@
         
         
     </script>
-
-    
 
     <script>
         var slideCount = 0;
