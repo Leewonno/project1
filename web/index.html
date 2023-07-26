@@ -52,11 +52,11 @@
         </div>
         
         <map name="image-map">
-            <area target="" alt="다대포" title="다대포" href="#" coords="336,377,307,378,299,383,299,437,306,440,413,441,421,436,417,397,380,394,376,379,370,351,350,351,344,362" shape="poly">
-            <area target="" alt="" title="감천문화마을" href="#" coords="427,301,450,304,450,325,466,330,468,343,490,345,493,394,381,392,377,331,415,327" shape="poly">
-            <area target="" alt="광안리" title="광안리" href="#" coords="509,252,531,254,533,274,566,280,568,332,556,345,466,343,470,280,501,276" shape="poly">
-            <area target="" alt="" title="영도해상케이블카" href="#" coords="558,361,525,362,517,397,522,426,616,427,626,416,622,365,606,358,576,335,555,341" shape="poly">
-            <area target="" alt="" title="청사포" href="#" coords="653,244,629,243,623,219,595,219,596,247,570,246,571,326,654,327,654,289,653,279" shape="poly">
+            <area target="" alt="다대포" title="다대포" href="infor_dadaepo.html" coords="336,377,307,378,299,383,299,437,306,440,413,441,421,436,417,397,380,394,376,379,370,351,350,351,344,362" shape="poly">
+            <area target="" alt="" title="감천문화마을" href="infor.html" coords="427,301,450,304,450,325,466,330,468,343,490,345,493,394,381,392,377,331,415,327" shape="poly">
+            <area target="" alt="광안리" title="광안리" href="infor_gwanganri.html" coords="509,252,531,254,533,274,566,280,568,332,556,345,466,343,470,280,501,276" shape="poly">
+            <area target="" alt="" title="송도해상케이블카" href="infor_songdo.html" coords="558,361,525,362,517,397,522,426,616,427,626,416,622,365,606,358,576,335,555,341" shape="poly">
+            <area target="" alt="" title="청사포(해변열차)" href="infor_beachTrain.html" coords="653,244,629,243,623,219,595,219,596,247,570,246,571,326,654,327,654,289,653,279" shape="poly">
         </map>
         <!-- <div>날씨정보</div> -->
         <!-- <hr> -->
@@ -97,6 +97,7 @@
     </div>
 
     <div class="section" id="thema">
+        <div class="thema_name_box">부산, 여긴 어때?</div>
         <div class="mainbox" id="ocean">
                 <img src="../web/image/index_main.jpg" alt="테마메인"> 
                 <div class="thema_name">
@@ -228,180 +229,182 @@
             <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">❮</button>
             <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">❯</button>
         </div>
-    <video src="video/ocean.mp4" loop autoplay muted></video>
-</div>
-
-<script>
-    let count = 0;
-
-    function back() {
-        document.getElementsByClassName("mainbox")[0].style.animationName = "back_main";
-        document.getElementsByClassName("mainbox")[1].style.animationName = "back_main";
-        console.log(count)
-        let mainbox = document.querySelectorAll(".mainbox");
-        console.log(mainbox)
-        if(count==0)  {
-            count+=1 
-            console.log(mainbox[0])
-            mainbox[count-1].style.display="none"
-            mainbox[count].style.display="block"
-            document.getElementsByClassName("box")[0].style.display = "none";
-            document.getElementsByClassName("box2")[0].style.display = "block";
-        }
-        else {
-            mainbox[count-1].style.display="block"
-            mainbox[count].style.display="none"
-            document.getElementsByClassName("box")[0].style.display = "block";
-            document.getElementsByClassName("box2")[0].style.display = "none"
-            count=0;
-        }
-    }
-
-    function next() {
-        document.getElementsByClassName("mainbox")[0].style.animationName = "next_main";
-        document.getElementsByClassName("mainbox")[1].style.animationName = "next_main";
-        console.log(count)
-        let mainbox = document.querySelectorAll(".mainbox");
-        console.log(mainbox)
-        if(count==0) {
-            count+=1
-            console.log(mainbox[0])
-            console.log(count-1)
-            mainbox[count-1].style.display="none";    
-            mainbox[count].style.display="block";
-            document.getElementsByClassName("box")[0].style.display="none"
-            document.getElementsByClassName("box2")[0].style.display="block";
-        }
-        else {
-            mainbox[count-1].style.display="block";
-            mainbox[count].style.display="none";
-            document.getElementsByClassName("box")[0].style.display="block"
-            document.getElementsByClassName("box2")[0].style.display="none";
-            count=0;
-        }
-    }
-
-    // 여행테마 링크 이동
-    function gwanganli() {
-        window.location.assign("http://127.0.0.1:5500/web/infor_gwanganri.html")
-    }
-    function dadaepo_() {
-        window.location.assign("http://127.0.0.1:5500/web/infor_dadaepo.html")
-    }
-    function train() {
-        window.location.assign("http://127.0.0.1:5500/web/infor_beachTrain.html")
-    }
-    function 조개() {
-        window.location.assign("http://127.0.0.1:5500/web/listpageChung.html")
-    }
-    function granma() {
-        window.location.assign("http://127.0.0.1:5500/web/listpageDadaepo.html")
-    }
-    function pig() {
-        window.location.assign("http://127.0.0.1:5500/web/listpageCable.html")
-    }
-
-</script>
-    
-<!-- 전시회 section -->
-<section class="festival-section">
-
-    <button class="button-prev" onclick="prev()">◀</button>
-    <button class="button-next" onclick="next2()">▶</button>
-    
-    <div class="festival-slider">
-        <h1>Festival</h1>
-        <div class="slide-list">
-            <!-- <div class="slide-main" id="event">
-            </div> -->
-            <!--전시내용-->
-            <div class="slide-cont" id="yosigo" style="background-image:url(./image/전시_요시고.png)">
-                <a href="https://tickets.interpark.com/goods/23005227#" target="_blank" title="페이지 이동">
-                    <em class="blind"> YOSIGO 사진전 </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="city" style="background-image:url(./image/전시_울리히.png)">
-                <a href="https://www.goeunmuseum.kr/bbs/board.php?bo_table=exhibition&wr_id=223&proc=next" target="_blank" title="페이지 이동">
-                    <em class="blind"> 울리히 뷔스트展 《도시산책자 : 울리히 뷔스트의 사진》 </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="summer" style="background-image:url(./image/전시_여름의모양.jpg)">
-                <a href="https://www.shinsegae.com/culture/gallery/exhibition/view.do?glrySeq=1072" target="_blank" title="페이지 이동">
-                    <em class="blind"> 여름의 모양: Hyper Summer </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="movie" style="background-image:url(./image/전시_영화.jpeg)">
-                <a href="https://www.busan.go.kr/moca/exhibition01/1561678" target="_blank" title="페이지 이동">
-                    <em class="blind"> 영화의 기후: 섬, 행성, 포스트콘택트존 </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="kerri" style="background-image:url(./image/전시_물결.jpg)">
-                <a href="https://seojung-art.com/exhibition/view/RNHNSMC" target="_blank" title="페이지 이동">
-                    <em class="blind"> Kerri Lee : Wave on Wave </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="wujing" style="background-image:url(./image/전시_우징.png)">
-                <a href="https://cafe.naver.com/artandcollect/44273" target="_blank" title="페이지 이동">
-                    <em class="blind"> 우징작가 초대전 </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="larf" style="background-image:url(./image/전시_랄프.png)">
-                <a href="http://www.gibsongoeunmuseum.com/" target="_blank" title="페이지 이동">
-                    <em class="blind"> 랄프깁슨 《Sacred Land》 </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="mar" style="background-image:url(./image/전시_M.png)">
-                <a href="https://blog.naver.com/kafmuseum/223160643416" target="_blank" title="페이지 이동">
-                    <em class="blind"> Mar[b]elous Love </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="sugar" style="background-image:url(./image/전시_sugar.png)">
-                <a href="https://www.galleryartsoop.com/" target="_blank" title="페이지 이동">
-                    <em class="blind"> Sugar Free </em>
-                </a>
-            </div>
-            <div class="slide-cont" id="sad" style="background-image:url(./image/전시_슬픈.png)">
-                <a href="https://art.busan.go.kr/tblTsite07Display/viewNowClient.nm?id=20230223085230589" target="_blank" title="페이지 이동">
-                    <em class="blind"> 슬픈 나의 젊은 날 </em>
-                </a>
-            </div>
-        </div>
-        <div class="slide-list-2">
-            <div class="white_gr"></div>
-        </div>
-        
+        <!-- <video src="video/ocean.mp4" loop autoplay muted></video> -->
     </div>
-</section>
 
-<script>
-    let festival = 0;
-    let slide_cont = document.getElementsByClassName("slide-cont")
-    console.log(slide_cont)
+    <script>
+        let count = 0;
 
-    function prev() {
-        console.log(festival)
-        console.log(slide_cont[festival])
-        document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
-    
-        festival+=1;
-        
-        if(festival==10) {
-            festival = 0;
+        function back() {
+            document.getElementsByClassName("mainbox")[0].style.animationName = "back_main";
+            document.getElementsByClassName("mainbox")[1].style.animationName = "back_main";
+            console.log(count)
+            let mainbox = document.querySelectorAll(".mainbox");
+            console.log(mainbox)
+            if(count==0)  {
+                count+=1 
+                console.log(mainbox[0])
+                mainbox[count-1].style.display="none"
+                mainbox[count].style.display="block"
+                document.getElementsByClassName("box")[0].style.display = "none";
+                document.getElementsByClassName("box2")[0].style.display = "block";
+            }
+            else {
+                mainbox[count-1].style.display="block"
+                mainbox[count].style.display="none"
+                document.getElementsByClassName("box")[0].style.display = "block";
+                document.getElementsByClassName("box2")[0].style.display = "none"
+                count=0;
+            }
         }
-    }
 
-    function next2() {
-        console.log(festival)
-        console.log(slide_cont[festival])
-        document.getElementsByClassName("slide-list")[0].prepend(slide_cont[9])
-    
-        festival-=1;
-        
-        if(festival==-1) {
-            festival = 0;
+        function next() {
+            document.getElementsByClassName("mainbox")[0].style.animationName = "next_main";
+            document.getElementsByClassName("mainbox")[1].style.animationName = "next_main";
+            console.log(count)
+            let mainbox = document.querySelectorAll(".mainbox");
+            console.log(mainbox)
+            if(count==0) {
+                count+=1
+                console.log(mainbox[0])
+                console.log(count-1)
+                mainbox[count-1].style.display="none";    
+                mainbox[count].style.display="block";
+                document.getElementsByClassName("box")[0].style.display="none"
+                document.getElementsByClassName("box2")[0].style.display="block";
+            }
+            else {
+                mainbox[count-1].style.display="block";
+                mainbox[count].style.display="none";
+                document.getElementsByClassName("box")[0].style.display="block"
+                document.getElementsByClassName("box2")[0].style.display="none";
+                count=0;
+            }
         }
-    }
-</script>
+
+        // 여행테마 링크 이동
+        function gwanganli() {
+            window.location.assign("./infor_gwanganri.html")
+        }
+        function dadaepo_() {
+            window.location.assign("./infor_dadaepo.html")
+        }
+        function train() {
+            window.location.assign("./infor_beachTrain.html")
+        }
+        function 조개() {
+            window.location.assign("./listpageChung.html")
+        }
+        function granma() {
+            window.location.assign("./listpageDadaepo.html")
+        }
+        function pig() {
+            window.location.assign("./listpageCable.html")
+        }
+
+    </script>
+        
+    <!-- 전시회 section -->
+    <section class="festival-section">
+        <div class="btn_box">
+            <button class="button-prev" onclick="prev()">❮</button>
+            <button class="button-next" onclick="next2()">❯</button>
+        </div>
+        
+        
+        <div class="festival-slider">
+            <h1>부산 지역 행사 정보</h1>
+            <div class="slide-list">
+                <!-- <div class="slide-main" id="event">
+                </div> -->
+                <!--전시내용-->
+                <div class="slide-cont" id="yosigo" style="background-image:url(./image/전시_요시고.png)">
+                    <a href="https://tickets.interpark.com/goods/23005227#" target="_blank" title="페이지 이동">
+                        <em class="blind"> YOSIGO 사진전 </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="city" style="background-image:url(./image/전시_울리히.png)">
+                    <a href="https://www.goeunmuseum.kr/bbs/board.php?bo_table=exhibition&wr_id=223&proc=next" target="_blank" title="페이지 이동">
+                        <em class="blind"> 울리히 뷔스트展 《도시산책자 : 울리히 뷔스트의 사진》 </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="summer" style="background-image:url(./image/전시_여름의모양.jpg)">
+                    <a href="https://www.shinsegae.com/culture/gallery/exhibition/view.do?glrySeq=1072" target="_blank" title="페이지 이동">
+                        <em class="blind"> 여름의 모양: Hyper Summer </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="movie" style="background-image:url(./image/전시_영화.jpeg)">
+                    <a href="https://www.busan.go.kr/moca/exhibition01/1561678" target="_blank" title="페이지 이동">
+                        <em class="blind"> 영화의 기후: 섬, 행성, 포스트콘택트존 </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="kerri" style="background-image:url(./image/전시_물결.jpg)">
+                    <a href="https://seojung-art.com/exhibition/view/RNHNSMC" target="_blank" title="페이지 이동">
+                        <em class="blind"> Kerri Lee : Wave on Wave </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="wujing" style="background-image:url(./image/전시_우징.png)">
+                    <a href="https://cafe.naver.com/artandcollect/44273" target="_blank" title="페이지 이동">
+                        <em class="blind"> 우징작가 초대전 </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="larf" style="background-image:url(./image/전시_랄프.png)">
+                    <a href="http://www.gibsongoeunmuseum.com/" target="_blank" title="페이지 이동">
+                        <em class="blind"> 랄프깁슨 《Sacred Land》 </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="mar" style="background-image:url(./image/전시_M.png)">
+                    <a href="https://blog.naver.com/kafmuseum/223160643416" target="_blank" title="페이지 이동">
+                        <em class="blind"> Mar[b]elous Love </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="sugar" style="background-image:url(./image/전시_sugar.png)">
+                    <a href="https://www.galleryartsoop.com/" target="_blank" title="페이지 이동">
+                        <em class="blind"> Sugar Free </em>
+                    </a>
+                </div>
+                <div class="slide-cont" id="sad" style="background-image:url(./image/전시_슬픈.png)">
+                    <a href="https://art.busan.go.kr/tblTsite07Display/viewNowClient.nm?id=20230223085230589" target="_blank" title="페이지 이동">
+                        <em class="blind"> 슬픈 나의 젊은 날 </em>
+                    </a>
+                </div>
+            </div>
+            <div class="slide-list-2">
+                <div class="white_gr"></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        let festival = 0;
+        let slide_cont = document.getElementsByClassName("slide-cont")
+        console.log(slide_cont)
+
+        function prev() {
+            console.log(festival)
+            console.log(slide_cont[festival])
+            document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
+        
+            festival+=1;
+            
+            if(festival==10) {
+                festival = 0;
+            }
+        }
+
+        function next2() {
+            console.log(festival)
+            console.log(slide_cont[festival])
+            document.getElementsByClassName("slide-list")[0].prepend(slide_cont[9])
+        
+            festival-=1;
+            
+            if(festival==-1) {
+                festival = 0;
+            }
+        }
+    </script>
 
     <footer id="footer"></footer>
 
@@ -441,6 +444,7 @@
             let tage_group = document.querySelectorAll(".tage_group");
             let item_title = document.querySelectorAll(".item_title");
             let item_text = document.querySelectorAll(".item_text");
+            let area = document.querySelectorAll("area");
 
             if(pagelang[1]=="en"){
                 var eng_temp = document.createElement("style");
@@ -476,6 +480,12 @@
                 item_text[4].innerText = "#SeaView #chopped live octopus #RelievingStress"
                 item_text[5].innerText = "##DarkSoup #DeepTaste #FullFull"
 
+                area[0].href = "./en/infor_dadaepo.html"
+                area[1].href = "./en/infor.html"
+                area[2].href = "./en/infor_gwanganri.html"
+                area[3].href = "./en/infor_songdo.html"
+                area[4].href = "./en/infor_beachTrain.html"
+
             }
             else if(pagelang[1]=="cn"){
                 var cn_temp = document.createElement("style");
@@ -510,6 +520,12 @@
                 item_text[3].innerText = "#海浪声 #烤扇贝 #篝火"
                 item_text[4].innerText = "#大海风景 #生拌剁碎长爪章鱼 #消除压力"
                 item_text[5].innerText = "#浓汤 #浓郁的味道 #丰盛"
+
+                area[0].href = "./cn/infor_dadaepo.html"
+                area[1].href = "./cn/infor.html"
+                area[2].href = "./cn/infor_gwanganri.html"
+                area[3].href = "./cn/infor_songdo.html"
+                area[4].href = "./cn/infor_beachTrain.html"
             }
         };
         

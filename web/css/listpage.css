@@ -37,11 +37,11 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
 }
 
 .rList span .material-symbols-outlined:hover{
-    width: 100px;
-    height: 50px;
+    scale: 1.1;
     background-color: #fffbd5;
     border-radius: 10px;
 }
@@ -361,7 +361,8 @@ img{
     .sideMenu ul li {
         width: 100%;
         height: 70px;
-        margin-top: 2%;
+        line-height: 70px;
+        /* margin-top: 2%; */
     }
 
 
@@ -430,19 +431,19 @@ img{
         width: 80%;
         margin-left: 20%;
     }
-    img{
+    .gamR img{
         width: 100%;
         height: 80vw;
     }
     .gamR_img{
-        width: 60%;
+        /* width: 60%; */
     }
     .gamModalDetail span{
         padding-left: 5%;
     }
     .rList span .material-symbols-outlined{
-        margin-top: 5%;
-        width: 30%;
+        margin-top: 20px;
+        /* width: 30%; */
     }
 }
 .modalBg{

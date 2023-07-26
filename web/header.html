@@ -3,8 +3,26 @@
 </div>
 <div class="lang_box">
     <div class="item_box">
-        <a href="#" class="gg">관광지</a>
-        <a href="#" class="mj">식당</a>
+        <input type="checkbox" id="gg" checked>
+        <input type="checkbox" id="mj" checked>
+        <div class="gg_box"><label for="gg" onclick="gg_click()">관광지</label></div>
+        <div class="gg_hidden_box">
+            <a href="./infor.html">감천문화마을</a>
+            <a href="./infor_dadaepo.html">다대포</a>
+            <a href="./infor_songdo.html">송도해상케이블카</a>
+            <a href="./infor_gwanganri.html">광안리</a>
+            <a href="./infor_beachTrain.html">해변열차</a>
+        </div>
+        <div class="mj_box"><label for="mj" onclick="mj_click()">식당</label></div>
+        <div class="mj_hidden_box">
+            <a href="./listpageGam.html">감천문화마을</a>
+            <a href="./listpageDadaepo.html">다대포</a>
+            <a href="./listpageCable.html">송도해상케이블카</a>
+            <a href="./listpageGwang.html">광안리</a>
+            <a href="./listpageChung.html">해변열차</a>
+        </div>
+        <!-- <a href="#" class="gg">관광지</a> -->
+        <!-- <a href="#" class="mj">식당</a> -->
     </div>
     <input type="checkbox" id="lang" checked>
     <div class="lang"><label for="lang" onclick="lang_click()">LANGUAGE</label></div>
@@ -35,6 +53,26 @@
         else{
             lang_hd_box[0].style.display = "none"
         }
+        
+    }
+
+    function gg_click(){
+        if(document.getElementById('gg').checked){
+            document.getElementsByClassName("gg_hidden_box")[0].style.display = "block"
+        }
+        else{
+            document.getElementsByClassName("gg_hidden_box")[0].style.display = "none"
+        }
+        
+    }
+
+    function mj_click(){
+        if(document.getElementById('mj').checked){
+            document.getElementsByClassName("mj_hidden_box")[0].style.display = "block"
+        }
+        else{
+            document.getElementsByClassName("mj_hidden_box")[0].style.display = "none"
+        }
     }
 </script>
 
@@ -46,14 +84,49 @@
     document.getElementById("cn").href = cr_href[0] + "?cn";
 
     if(cr_href[1]=="en"){
-        document.getElementsByClassName("gg")[0].innerText = "SIGHTS";
-        document.getElementsByClassName("mj")[0].innerText = "RESTAURANT";
-        document.querySelectorAll(".item_box > a")[0].style.width = "100px";
-        document.querySelectorAll(".item_box > a")[1].style.width = "100px";
+        document.querySelectorAll(".item_box label")[0].innerText = "SIGHTS";
+        document.querySelectorAll(".item_box label")[1].innerText = "RESTAURANT";
+        document.querySelectorAll(".item_box label")[0].style.width = "100px";
+        document.querySelectorAll(".item_box label")[1].style.width = "100px";
+        document.querySelectorAll(".gg_hidden_box a")[3].href = "./en/infor_gwanganri.html"
+        document.querySelectorAll(".gg_hidden_box a")[4].href = "./en/infor_beachTrain.html"
+        document.querySelectorAll("header .mj_hidden_box")[0].style.right = "90px"
+        document.querySelectorAll("header .gg_hidden_box")[0].style.right = "175px"
+
+        document.querySelectorAll(".gg_hidden_box a")[0].innerText = "Gamcheon Culture Village"
+        document.querySelectorAll(".gg_hidden_box a")[1].innerText = "Dadaepo"
+        document.querySelectorAll(".gg_hidden_box a")[2].innerText = "Songdo Cable Car"
+        document.querySelectorAll(".gg_hidden_box a")[3].innerText = "Gwangalli"
+        document.querySelectorAll(".gg_hidden_box a")[4].innerText = "Beach Train"
+
+        document.querySelectorAll(".mj_hidden_box a")[0].innerText = "Gamcheon Culture Village"
+        document.querySelectorAll(".mj_hidden_box a")[1].innerText = "Dadaepo"
+        document.querySelectorAll(".mj_hidden_box a")[2].innerText = "Songdo Cable Car"
+        document.querySelectorAll(".mj_hidden_box a")[3].innerText = "Gwangalli"
+        document.querySelectorAll(".mj_hidden_box a")[4].innerText = "Beach Train"
+
+        for(var i = 0; i<10; i++){
+            document.querySelectorAll("header .item_box a")[i].style.fontSize = "10px"
+        }
+        
     }
     else if(cr_href[1]=="cn"){
-        document.getElementsByClassName("gg")[0].innerText = "景点";
-        document.getElementsByClassName("mj")[0].innerText = "餐厅";
+        document.querySelectorAll(".item_box label")[0].innerText = "景点";
+        document.querySelectorAll(".item_box label")[1].innerText = "餐厅";
+        document.querySelectorAll(".gg_hidden_box a")[3].href = "./cn/infor_gwanganri.html"
+        document.querySelectorAll(".gg_hidden_box a")[4].href = "./cn/infor_beachTrain.html"
+
+        document.querySelectorAll(".gg_hidden_box a")[0].innerText = "甘川文化村"
+        document.querySelectorAll(".gg_hidden_box a")[1].innerText = "多大浦"
+        document.querySelectorAll(".gg_hidden_box a")[2].innerText = "松岛海上缆车"
+        document.querySelectorAll(".gg_hidden_box a")[3].innerText = "廣安里"
+        document.querySelectorAll(".gg_hidden_box a")[4].innerText = "青沙浦"
+
+        document.querySelectorAll(".mj_hidden_box a")[0].innerText = "甘川文化村"
+        document.querySelectorAll(".mj_hidden_box a")[1].innerText = "多大浦"
+        document.querySelectorAll(".mj_hidden_box a")[2].innerText = "松岛海上缆车"
+        document.querySelectorAll(".mj_hidden_box a")[3].innerText = "廣安里"
+        document.querySelectorAll(".mj_hidden_box a")[4].innerText = "青沙浦"
     }
 
     console.log(cr_href[0]);
