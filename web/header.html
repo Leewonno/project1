@@ -142,9 +142,51 @@
 
     if(path.indexOf("/en")!=-1){
         document.getElementById("index_id").href = "../index.html?en";
+
+        document.querySelectorAll(".item_box label")[0].innerText = "SIGHTS";
+        document.querySelectorAll(".item_box label")[1].innerText = "RESTAURANT";
+        document.querySelectorAll(".item_box label")[0].style.width = "100px";
+        document.querySelectorAll(".item_box label")[1].style.width = "100px";
+        document.querySelectorAll(".gg_hidden_box a")[3].href = "../en/infor_gwanganri.html"
+        document.querySelectorAll(".gg_hidden_box a")[4].href = "../en/infor_beachTrain.html"
+        document.querySelectorAll("header .mj_hidden_box")[0].style.right = "90px"
+        document.querySelectorAll("header .gg_hidden_box")[0].style.right = "175px"
+
+        document.querySelectorAll(".gg_hidden_box a")[0].innerText = "Gamcheon Culture Village"
+        document.querySelectorAll(".gg_hidden_box a")[1].innerText = "Dadaepo"
+        document.querySelectorAll(".gg_hidden_box a")[2].innerText = "Songdo Cable Car"
+        document.querySelectorAll(".gg_hidden_box a")[3].innerText = "Gwangalli"
+        document.querySelectorAll(".gg_hidden_box a")[4].innerText = "Beach Train"
+
+        document.querySelectorAll(".mj_hidden_box a")[0].innerText = "Gamcheon Culture Village"
+        document.querySelectorAll(".mj_hidden_box a")[1].innerText = "Dadaepo"
+        document.querySelectorAll(".mj_hidden_box a")[2].innerText = "Songdo Cable Car"
+        document.querySelectorAll(".mj_hidden_box a")[3].innerText = "Gwangalli"
+        document.querySelectorAll(".mj_hidden_box a")[4].innerText = "Beach Train"
+
+        for(var i = 0; i<10; i++){
+            document.querySelectorAll("header .item_box a")[i].style.fontSize = "10px"
+        }
     }
     else if(path.indexOf("/cn")!=-1){
         document.getElementById("index_id").href = "../index.html?cn";
+        document.querySelectorAll(".item_box label")[0].innerText = "景点";
+        document.querySelectorAll(".item_box label")[1].innerText = "餐厅";
+
+        document.querySelectorAll(".gg_hidden_box a")[3].href = "../cn/infor_gwanganri.html"
+        document.querySelectorAll(".gg_hidden_box a")[4].href = "../cn/infor_beachTrain.html"
+
+        document.querySelectorAll(".gg_hidden_box a")[0].innerText = "甘川文化村"
+        document.querySelectorAll(".gg_hidden_box a")[1].innerText = "多大浦"
+        document.querySelectorAll(".gg_hidden_box a")[2].innerText = "松岛海上缆车"
+        document.querySelectorAll(".gg_hidden_box a")[3].innerText = "廣安里"
+        document.querySelectorAll(".gg_hidden_box a")[4].innerText = "青沙浦"
+
+        document.querySelectorAll(".mj_hidden_box a")[0].innerText = "甘川文化村"
+        document.querySelectorAll(".mj_hidden_box a")[1].innerText = "多大浦"
+        document.querySelectorAll(".mj_hidden_box a")[2].innerText = "松岛海上缆车"
+        document.querySelectorAll(".mj_hidden_box a")[3].innerText = "廣安里"
+        document.querySelectorAll(".mj_hidden_box a")[4].innerText = "青沙浦"
     }
     
 </script>
