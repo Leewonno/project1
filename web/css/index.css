@@ -298,10 +298,20 @@ body{
     position: relative;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 600px;
     margin: 0 auto;
     align-items: center;
     overflow: hidden;
+}
+
+.section .thema_name_box{
+    width: 1200px;
+    position: absolute;
+    top: 40px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .section .mainbox {
@@ -373,8 +383,8 @@ body{
 }
 
 .mainbox img {
-    width: 800px;
-    height: 400px;
+    width: 700px;
+    height: 350px;
     margin: 0;
     object-fit: cover;
 }
@@ -414,7 +424,7 @@ ul {
     position: absolute;
     display: flex;
     left: 330px;
-    top: 110px;
+    top: 80px;
     padding-left: 0px;
     /* animation-name: next_main; */
     /* animation-duration: 0.6s; */
@@ -489,7 +499,7 @@ li {
 }
 
 .section button {
-    position:absolute;
+    position: absolute;
     border: none;
     background-color: transparent;
     font-weight: 100;
@@ -497,9 +507,9 @@ li {
     font-size: 30px;
     width: 50px;
     height: 50px;
-    background-color: #d7eaff;
+    /* background-color: #d7eaff; */
     border-radius: 50%;
-    color: white;
+    color: black;
 }
 
 button:active {
@@ -598,6 +608,7 @@ button:disabled {
         height: 100%;
         min-height: 100%;
         position: relative;
+        margin-top: 120px;
         /* position: absolute; */
         /* position: flex;
         justify-content: center;
@@ -668,82 +679,44 @@ button:disabled {
         margin-bottom: 20px;
     }
 
-    /* .box .recomand_list_wrap ul {
-        margin: 10px 0px;
-        animation-name: sample;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-delay: 5s;
+
+
+    .section .thema_name_box{
+        width: 80%;
     }
-    .box .recomand_list_wrap li {
-        width: 100%;
-        margin: 10px 0 ;
-        animation-name: sample;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-delay: 5s;
-    }
-    .box2 .recomand_list_wrap ul {
-        margin: 10px 0;
-        animation-name: second;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }
-    .box2 .recomand_list_wrap li {
-        width: 100%;
-        margin: 10px 0;
-        animation-name: second;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }   */
 }
 
-/* @keyframes sample {
-    0% {
-        display: block;
-    }
-    99%{
-        display: block;
-    }
-    100% {
-        display: none;
-    }
-}
-@keyframes second {
-    0% {
-        display: none;
-    }
-    99%{
-        display: none;
-    }
-    100% {
-        display: block;
-        z-index: 2;
-    }
-} */
 
 /* 전시회 section */
 .festival-section {
     position: relative;
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 600px;
     align-items: center;
     justify-content: center;
 }
 
+.festival-section .btn_box{
+    position: absolute;
+    bottom: 90px;
+} 
+
 .festival-section button {
     position: relative;
-    bottom: -350px;
-    left: 600px;
-    width: 30px;
-    margin: 6px;
-    height: 30px;
-    border-radius: 100%;
-    border-color: rgb(237, 242, 183);
-    background-color: rgb(237, 242, 183);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* border-color: rgb(237, 242, 183); */
+    /* background-color: rgb(237, 242, 183); */
+    border: none;
     z-index: 10;
+    color: black;
     cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    background-color: white;
 }
 
 .festival-section .festival-slider {
@@ -752,6 +725,8 @@ button:disabled {
     /* margin-top: 50px; */
     width: 1200px;
     height: 275px;
+    margin-top: -300px;
+    /* margin-left: -200px; */
     /* background-color: #F8F9FC; */
 }
 
@@ -764,12 +739,14 @@ button:disabled {
 }
 
 .festival-section .festival-slider h1 {
-    font-size:58px;
-    font-weight: 1000;
-    font-style: italic;
-    color: rgb(144, 222, 229);
+    font-size: 25px;
+    font-weight: 600;
     margin-left: 10px;
     margin-bottom: 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-weight: 400;
 }
 
 .festival-section .festival-slider .slide-list {
@@ -839,12 +816,34 @@ button:disabled {
 }
 
 @media screen and (max-width: 650px) {
+    .festival-section .festival-slider{
+        width: 80%;
+    }
+    .festival-section .festival-slider .slide-list{
+        width: 100%;
+        padding-left: 10px;
+        margin-top: -60px;
+    }
+    .festival-section .festival-slider .slide-list-2{
+        width: 100%;
+        margin-top: -60px;
+    }
     .festival-section .festival-slider h1 {
-        font-size:38px;
-        font-weight: 550;
+        margin-left: 0;
+        /* font-size:38px;
+        font-weight: 550; */
     }
 
-    .festival-section button {
+    .festival-section .festival-slider .slide-list .slide-cont{
+        height: 190px;
+        width: 140px;
+    }
+
+    .festival-section .festival-slider .white_gr{
+        top: -90%;
+    }
+
+    /* .festival-section button {
         position: relative;
         top: -75px;
         left: 235px;
@@ -856,6 +855,11 @@ button:disabled {
         background-color: rgb(237, 242, 183);
         z-index: 10;
         cursor: pointer;
-        /* display: none; */
-    }
+        display: none;
+    } */
+
+    .festival-section .btn_box{
+        position: absolute;
+        bottom: 90px;
+    } 
 }

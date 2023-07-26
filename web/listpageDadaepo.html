@@ -233,25 +233,31 @@
     
 
     <script>
-        
+        let cnt;
         function gamRClick(mo){
             let gamModal 
+            
             let gamRS = document.querySelector(mo)
             let modalBg = document.querySelector('.modalBg')
             if(mo == '.gamR_young'){
                 gamModal = document.querySelector('.gamModalY')
+                cnt = 0
             }
             else if(mo == '.gamR_giant'){
                 gamModal = document.querySelector('.gamModalG')
+                cnt = 1
             }
             else if(mo == '.gamR_it'){
                 gamModal = document.querySelector('.gamModalI')
+                cnt = 2
             }
             else if(mo == '.gamR_Plate'){
                 gamModal = document.querySelector('.gamModalP')
+                cnt = 3
             }
             else if(mo == '.gamR_Darae'){
                 gamModal = document.querySelector('.gamModalD')
+                cnt = 4
             }
             
             gamRS.addEventListener('click',()=>{
@@ -270,6 +276,10 @@
             GmodalBg.style.display = 'none'
         }
         
+        document.querySelector(".modalBg").addEventListener("click", function(){
+            document.querySelector('.modalBg').style.display = 'none'
+            document.querySelectorAll('.gamModal')[cnt].style.display = 'none'
+        });
 
         const slides = document.querySelector('.menu'); //전체 슬라이드 컨테이너
         const slideImg = document.querySelectorAll('.menu li'); //모든 슬라이드들
