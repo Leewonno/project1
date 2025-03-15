@@ -1,31 +1,23 @@
-p {
-    padding-left: 5px;
-}
-
-h4 {
-    padding-left: 5px;
-}
-
 .now {
-    background-color: #fffbd5;
+    background-color: #e7f5ff;
 }
 
-.gamModalDetail span {
-    padding-left: 5px;
-    padding-right: 5px;
-    display: block;
+body {
+    font-family: 'SCoreDream';
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.gamModalDetail iframe {
-    margin-left: 5px;
-}
-
-.gamModalAdress {
-    padding-left: 5px;
-}
-
-.gamModalAdress p {
-    padding-left: 0px;
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 a {
@@ -34,216 +26,180 @@ a {
     color: black;
 }
 
-.rList span .material-symbols-outlined {
-    width: 100px;
-    height: 50px;
-    border-block-style: none;
-    margin-top: 1%;
+.rList {
+    width: 100%;
+}
+
+.sideMenu {
+    margin-top: 35px;
+    border: 1px solid #e7e7e7;
+    background-color: white;
+    height: fit-content;
+}
+
+.listBox {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.listBox h2 {
+    margin: 0;
+}
+
+.go_info {
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
+    border: none;
 }
 
-.rList span .material-symbols-outlined:hover {
+.go_info:hover {
     scale: 1.1;
-    background-color: #fffbd5;
-    border-radius: 10px;
 }
 
-
-
-.main a {
-
-    color: black;
-}
-
-.rList span {
+.title_box {
     display: flex;
-    width: 100%;
-    border-bottom: 1px solid black;
-
-    margin-top: 5%;
-    justify-content: flex-end;
-
-
 }
 
-.rList span img {
-    width: 5%;
-    height: 5%;
-    margin-top: 15px;
-}
-
-.rList h2 {
-    width: calc(100vw - 30px);
-
-    /* padding-bottom: 10px; */
-}
-
-body {
-    font-family: 'SCoreDream';
-    width: 100%;
-    height: 100%;
-    /* background-color: #00C4FF; */
-}
-
-.main {
-    width: 1150px;
-    min-height: 500px;
-    overflow: auto;
-    /* margin: auto; */
-    margin-top: 100px;
-}
-
-.sideMenu {
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    background-color: white;
-    position: fixed;
-    width: 10%;
-    width: 200px;
-    top: 150px;
-    left: 50px;
-    z-index: 0;
+.location {
+    width: 30px;
+    height: 30px;
 }
 
 .sideMenu ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
 }
 
 .sideMenu ul li {
-    width: 200px;
-    height: 50px;
+    padding: 10px 10px;
     list-style: none;
     text-align: center;
-    font-size: 16px;
-    line-height: 50px;
+    font-size: 1em;
     cursor: pointer;
 }
 
 .category li:hover {
-    background-color: #fffbd5;
+    background-color: #bbe3ff;
 }
 
-.gamR {
-    padding-left: 0;
+.listbox {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.rList {
-    margin-top: -16px;
-    margin-left: 300px;
-    margin-bottom: 50px;
+.foodlist {
+    display: flex;
+    border: 1px solid #e5e5e5;
 }
+
+.foodlistbox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.address {
+    color: #b3b3b3;
+}
+
+.content {}
 
 .rList .block {
     width: calc(100% - 230px);
     padding: 15px;
 }
 
-.gamR>li {
-    list-style: none;
-    display: flex;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.gamR>li>div .block {
-    display: inline-block;
-}
-
 img {
     width: 200px;
     height: 200px;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+}
+
+.modalBg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000006e;
+}
+
+.modalbox {
     border-radius: 10px;
-}
-
-.gamR img:hover {
-    cursor: pointer;
-}
-
-.gamModal {
     overflow: auto;
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 1000px;
-    height: 600px;
     transform: translate(-50%, -50%);
-    display: none;
-    background-color: white;
-    justify-content: center;
+    background-color: #fff;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 300;
 }
 
-.gamR_img1 {
-    width: 90%;
+.modalImg {
+    width: 100%;
     object-fit: cover;
-    object-position: 0 -50px;
     margin-bottom: 20px;
-    margin-top: 50px;
 }
 
-.gamR_img2 {
-    width: 90%;
-    object-fit: cover;
-    object-position: 0 -150px;
-    margin-bottom: 20px;
-    margin-top: 50px;
+.modalTitieBox {
+    width: 100%;
+    display: flex;
+    padding: 0px 20px;
+    box-sizing: border-box;
 }
 
-.gamR_img3 {
-    width: 90%;
-    object-fit: cover;
-    object-position: 0 -600px;
-    margin-bottom: 20px;
-    margin-top: 50px;
+.modalTitie {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.gamR_img4 {
-    width: 90%;
-    object-fit: cover;
-    object-position: 0 -250px;
-    margin-bottom: 20px;
-    margin-top: 50px;
+.modalContentBox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    gap: 10px;
 }
 
-.gamR_img5 {
-    width: 90%;
-    object-fit: cover;
-    object-position: 0 -400px;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-
-.gamModalDetail {
+.modalDetail {
     width: 33%;
-    height: 100%;
     background-color: white;
     border: 1px solid #d9d9d9;
-    border-radius: 10px;
-    overflow-y: scroll;
+    padding: 10px;
 }
 
-.closeButton {
-    position: absolute;
-    top: 20px;
-    right: 17px;
-    cursor: pointer;
-}
-
-.gamModalDe {
-    display: flex;
-    width: 90%;
-    height: 50%;
-    justify-content: space-between;
-
+.modalDetail h4 {
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .menu li {
@@ -264,20 +220,6 @@ img {
     justify-content: center;
 }
 
-.gamModalDetailMenu {
-    width: 33%;
-    height: 100%;
-    background-color: white;
-    position: relative;
-    margin: 0;
-    overflow: hidden;
-    border: 1px solid #d9d9d9;
-    border-radius: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-
-}
-
 .menu {
     position: absolute;
     left: 0;
@@ -292,16 +234,16 @@ img {
 }
 
 .menu1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 300%;
-    height: 100%;
-    transition: left 0.5s ease-out;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 0;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 0; */
+    /* width: 300%; */
+    /* height: 100%; */
+    /* transition: left 0.5s ease-out; */
+    /* display: flex
+; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
 }
 
 
@@ -454,6 +396,7 @@ img {
         width: 80%;
         margin-left: 20%;
     }
+
     .gamR img {
         width: 100%;
         height: 80vw;
@@ -471,16 +414,4 @@ img {
         margin-top: 20px;
         /* width: 30%; */
     }
-}
-
-.modalBg {
-    background-color: black;
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-
 }
