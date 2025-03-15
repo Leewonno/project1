@@ -277,10 +277,6 @@ body{
     /* filter: drop-shadow(2px 4px 50px gray); */
 }
 
-.main .move_icon{
-
-}
-
 .main .move_icon span{
     color: white;
     margin-bottom: 20px;
@@ -442,11 +438,6 @@ li > .image > img {
     object-fit: cover;
 }
 
-.box .recomand_list_wrap ul {
-    /* margin: -40px 0 0 -24px;
-    z-index: 0; */
-}
-
 .box .recomand_list_wrap li {
     width: 250px;
     margin: 40px 0 0 24px;
@@ -511,14 +502,6 @@ li {
     /* background-color: #d7eaff; */
     border-radius: 50%;
     color: black;
-}
-
-button:active {
-    /* background: #3e3e3e; */
-}
-
-button:disabled {
-    /* background: #cbcaca; */
 }
 
 .back {
