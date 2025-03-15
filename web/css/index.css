@@ -1,5 +1,6 @@
 *{
     font-family: 'SCoreDream';
+    box-sizing: border-box;
 }
 
 html{
@@ -22,7 +23,7 @@ body{
     background-position-y: 60px;
     /* background-attachment: fixed; */
     height: 100%;
-    animation: fade 20s infinite;
+    animation: fade 50s infinite;
 }
 
 @keyframes fade {
