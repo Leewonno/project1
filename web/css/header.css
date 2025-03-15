@@ -21,8 +21,8 @@ header .logo_box {
 }
 
 header .logo {
-    color: white;
-    font-weight: 600;
+    color: #fff;
+    font-weight: 900;
     text-decoration: none;
     font-size: 35px;
 }
@@ -43,6 +43,7 @@ header .gg_hidden_box {
     border-radius: 15px;
     flex-direction: column;
     gap: 5px;
+    box-shadow: 0px 0px 5px 0.0005px #4f4f4f;
 }
 
 header .item_box a {
@@ -86,6 +87,7 @@ header .lang_box .hidden_box {
     border-radius: 15px;
     flex-direction: column;
     gap: 5px;
+    box-shadow: 0px 0px 5px 0.0005px #4f4f4f;
 }
 
 header .gg_box label {
@@ -112,6 +114,7 @@ header .mj_hidden_box {
     border-radius: 15px;
     flex-direction: column;
     gap: 5px;
+    box-shadow: 0px 0px 5px 0.0005px #4f4f4f;
 }
 
 .hidden_box>div {
