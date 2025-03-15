@@ -1,35 +1,40 @@
-p{
+p {
     padding-left: 5px;
 }
 
-h4{
+h4 {
     padding-left: 5px;
 }
 
-.gamModalDetail span{
+.now {
+    background-color: #fffbd5;
+}
+
+.gamModalDetail span {
     padding-left: 5px;
     padding-right: 5px;
     display: block;
 }
 
-.gamModalDetail iframe{
+.gamModalDetail iframe {
     margin-left: 5px;
 }
 
-.gamModalAdress{
+.gamModalAdress {
     padding-left: 5px;
 }
 
-.gamModalAdress p{
+.gamModalAdress p {
     padding-left: 0px;
 }
 
-a{
+a {
     display: block;
     text-decoration: none;
-    color:black;
+    color: black;
 }
-.rList span .material-symbols-outlined{
+
+.rList span .material-symbols-outlined {
     width: 100px;
     height: 50px;
     border-block-style: none;
@@ -40,7 +45,7 @@ a{
     transition: all 0.3s;
 }
 
-.rList span .material-symbols-outlined:hover{
+.rList span .material-symbols-outlined:hover {
     scale: 1.1;
     background-color: #fffbd5;
     border-radius: 10px;
@@ -48,90 +53,98 @@ a{
 
 
 
-.main a{
+.main a {
 
-    color:black;
+    color: black;
 }
-.rList span{
+
+.rList span {
     display: flex;
     width: 100%;
     border-bottom: 1px solid black;
-    
-    margin-top:5%;
+
+    margin-top: 5%;
     justify-content: flex-end;
-   
+
 
 }
 
-.rList span img{
+.rList span img {
     width: 5%;
     height: 5%;
     margin-top: 15px;
 }
 
-.rList h2{
+.rList h2 {
     width: calc(100vw - 30px);
-    
+
     /* padding-bottom: 10px; */
 }
-body{
+
+body {
     font-family: 'SCoreDream';
     width: 100%;
     height: 100%;
     /* background-color: #00C4FF; */
 }
-.main{
+
+.main {
     width: 1150px;
     min-height: 500px;
     overflow: auto;
     /* margin: auto; */
     margin-top: 100px;
 }
-.sideMenu{
+
+.sideMenu {
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     background-color: white;
-    position:fixed;
+    position: fixed;
     width: 10%;
     width: 200px;
     top: 150px;
     left: 50px;
     z-index: 0;
 }
-.sideMenu ul{
+
+.sideMenu ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding-left: 0;
 }
-.sideMenu ul li{
+
+.sideMenu ul li {
     width: 200px;
     height: 50px;
     list-style: none;
-    text-align:center;
+    text-align: center;
     font-size: 16px;
     line-height: 50px;
     cursor: pointer;
 }
-.category li:hover{
+
+.category li:hover {
     background-color: #fffbd5;
 }
 
-.gamR{
-    padding-left: 0;            
+.gamR {
+    padding-left: 0;
 }
-.rList{
+
+.rList {
     margin-top: -16px;
     margin-left: 300px;
     margin-bottom: 50px;
 }
 
-.rList .block{
+.rList .block {
     width: calc(100% - 230px);
     padding: 15px;
 }
 
-.gamR >li{
+.gamR>li {
     list-style: none;
     display: flex;
     border: 1px solid #e5e5e5;
@@ -139,25 +152,25 @@ body{
     margin-bottom: 15px;
 }
 
-.gamR > li > div .block{
+.gamR>li>div .block {
     display: inline-block;
 }
 
-img{
+img {
     width: 200px;
     height: 200px;
     border-radius: 10px;
 }
 
-.gamR img:hover{
+.gamR img:hover {
     cursor: pointer;
 }
 
-.gamModal{
+.gamModal {
     overflow: auto;
     position: fixed;
     top: 50%;
-    left: 50%;        
+    left: 50%;
     width: 1000px;
     height: 600px;
     transform: translate(-50%, -50%);
@@ -169,7 +182,7 @@ img{
     z-index: 300;
 }
 
-.gamR_img1{
+.gamR_img1 {
     width: 90%;
     object-fit: cover;
     object-position: 0 -50px;
@@ -177,7 +190,7 @@ img{
     margin-top: 50px;
 }
 
-.gamR_img2{
+.gamR_img2 {
     width: 90%;
     object-fit: cover;
     object-position: 0 -150px;
@@ -185,7 +198,7 @@ img{
     margin-top: 50px;
 }
 
-.gamR_img3{
+.gamR_img3 {
     width: 90%;
     object-fit: cover;
     object-position: 0 -600px;
@@ -193,7 +206,7 @@ img{
     margin-top: 50px;
 }
 
-.gamR_img4{
+.gamR_img4 {
     width: 90%;
     object-fit: cover;
     object-position: 0 -250px;
@@ -201,7 +214,7 @@ img{
     margin-top: 50px;
 }
 
-.gamR_img5{
+.gamR_img5 {
     width: 90%;
     object-fit: cover;
     object-position: 0 -400px;
@@ -209,7 +222,7 @@ img{
     margin-top: 50px;
 }
 
-.gamModalDetail{
+.gamModalDetail {
     width: 33%;
     height: 100%;
     background-color: white;
@@ -218,34 +231,34 @@ img{
     overflow-y: scroll;
 }
 
-.closeButton{
+.closeButton {
     position: absolute;
     top: 20px;
-    right: 17px;    
+    right: 17px;
     cursor: pointer;
 }
 
-.gamModalDe{
+.gamModalDe {
     display: flex;
     width: 90%;
     height: 50%;
     justify-content: space-between;
-    
+
 }
 
-.menu li{
+.menu li {
     list-style: none;
     float: left;
-    margin-top:5%;
+    margin-top: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.menu1 li{
+.menu1 li {
     list-style: none;
     float: left;
-    margin-top:5%;
+    margin-top: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -253,7 +266,7 @@ img{
 
 .gamModalDetailMenu {
     width: 33%;
-    height: 100%;   
+    height: 100%;
     background-color: white;
     position: relative;
     margin: 0;
@@ -262,14 +275,14 @@ img{
     border-radius: 10px;
     margin-right: 5%;
     margin-left: 5%;
-    
+
 }
 
-.menu{
+.menu {
     position: absolute;
     left: 0;
-    top:0;
-    
+    top: 0;
+
     height: 100%;
     transition: left 0.5s ease-out;
     display: flex;
@@ -278,10 +291,10 @@ img{
     padding-left: 0;
 }
 
-.menu1{
+.menu1 {
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     width: 300%;
     height: 100%;
     transition: left 0.5s ease-out;
@@ -292,8 +305,8 @@ img{
 }
 
 
-.controller span{
-    position:absolute;
+.controller span {
+    position: absolute;
     background-color: transparent;
     color: black;
     text-align: center;
@@ -306,58 +319,62 @@ img{
 
 
 
-.prev{
+.prev {
     left: 5%;
 }
 
-.next{
+.next {
     right: 5%;
 }
 
-.prev1{
+.prev1 {
     left: 5%;
 }
 
-.next1{
+.next1 {
     right: 5%;
 }
 
-.changeBtn{
+.changeBtn {
     width: 100%;
     height: 100%;
     display: flex;
     align-content: center;
 }
 
-.gamR_img{
+.gamR_img {
     width: 90%;
     height: 90%;
 }
 
 @media screen and (max-width:650px) {
-    .rList h2{
+    .rList h2 {
         margin-top: 30px;
     }
-    .main{
+
+    .main {
         width: 100%;
         margin-top: 70px;
     }
-    .sideMenu{
+
+    .sideMenu {
         width: 100%;
         height: auto;
         overflow: auto;
         display: flex;
         align-items: flex-end;
         position: static;
-        margin-top: 0;  
+        margin-top: 0;
     }
-    .sideMenu ul{
+
+    .sideMenu ul {
         width: 100%;
         height: auto;
         flex-direction: column;
         margin-top: 0;
-        
+
     }
+
     .sideMenu ul li {
         width: 100%;
         height: 70px;
@@ -366,32 +383,37 @@ img{
     }
 
 
-    .gamR{
+    .gamR {
         margin-top: 25%;
         width: 100%;
     }
-    .gamR>li{
+
+    .gamR>li {
         flex-direction: column;
     }
-    .gamR_p{
+
+    .gamR_p {
         font-size: large;
     }
-    .rList{
+
+    .rList {
         width: 100%;
         margin-left: -10%;
     }
-    .rList span{
+
+    .rList span {
         margin-left: 11%;
         display: flex;
         align-items: center;
     }
 
-    .rList span img{
+    .rList span img {
         width: 10%;
         height: 10%;
         margin-top: 10px;
     }
-    .rList .block{
+
+    .rList .block {
         width: 100%;
     }
 
@@ -403,57 +425,62 @@ img{
         flex-direction: column;
         align-content: center;
         align-items: center;
-        overflow:auto;
-        
-    }
-    .gamModalDetail{
-        width: 90%;
-        min-height: 300px;
-        margin-top:5%;
-        
+        overflow: auto;
+
     }
 
-    .gamModalDetailMenu{
+    .gamModalDetail {
         width: 90%;
         min-height: 300px;
-        margin-top:5%;
-        
+        margin-top: 5%;
+
     }
 
-    .gamModal{
+    .gamModalDetailMenu {
+        width: 90%;
+        min-height: 300px;
+        margin-top: 5%;
+
+    }
+
+    .gamModal {
         /* margin-top: 10%; */
         width: 80%;
         height: 80%;
     }
 
-    
-    .rList ul{
+
+    .rList ul {
         width: 80%;
         margin-left: 20%;
     }
-    .gamR img{
+    .gamR img {
         width: 100%;
         height: 80vw;
     }
-    .gamR_img{
+
+    .gamR_img {
         /* width: 60%; */
     }
-    .gamModalDetail span{
+
+    .gamModalDetail span {
         padding-left: 5%;
     }
-    .rList span .material-symbols-outlined{
+
+    .rList span .material-symbols-outlined {
         margin-top: 20px;
         /* width: 30%; */
     }
 }
-.modalBg{
+
+.modalBg {
     background-color: black;
     opacity: 0.5;
     width: 100%;
     height: 100%;
     display: none;
-    position:fixed;
-    top:0;
+    position: fixed;
+    top: 0;
     z-index: 1;
 
 }

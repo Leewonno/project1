@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+<title id="title"></title>
+
+<body>
+    <header id="header"></header>
+
+    <div class="main">
+        <div class="sideMenu">
+            <ul id="list_nav" class="category"></ul>
+        </div>
+        <div class="rList">
+            <div class="listBox">
+                <div class="title_box">
+                    <img class="location" src="./image/location.svg">
+                    <h2 id="inner_title"></h2>
+                </div>
+                <span class="material-symbols-outlined go_info"><a id="go" href="#">deck</a></span>
+            </div>
+            <ul id="food_list" class="listbox">
+            </ul>
+        </div>
+
+        <div id="modal" class="modal">
+            <div id="modalBg" class="modalBg"></div>
+            <div class="modalbox">
+                <img id="modal_img" class="modalImg">
+                <div class="modalTitieBox">
+                    <div id="modal_title" class="modalTitie"></div>
+                </div>
+                <div class="modalContentBox">
+                    <div class="modalDetail">
+                        <h4>소개</h4>
+                        <span id="modal_food_content"></span>
+                    </div>
+                    <div class="modalDetail">
+                        <h4>메뉴</h4>
+                        <div class="modalMenuBox">
+                            <img id="modal_menu" src="" onclick="window.open(this.src)">
+                        </div>
+
+                    </div>
+                    <div class="modalDetail">
+                        <h4>위치</h4>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.3941522819287!2d129.075356!3d35.07188329999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eed2336fda9d%3A0xe04aed1f2f5f4be4!2z66qp7LSM64-87KeA6rWt67Cl!5e0!3m2!1sko!2skr!4v1690196639590!5m2!1sko!2skr"
+                            width="50%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div id="modal_address"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleOnClick(value) {
+            const food = value;
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal_img');
+            const modalFoodContent = document.getElementById('modal_food_content');
+            const modalTitie = document.getElementById('modal_title');
+            const modalMenu = document.getElementById('modal_menu');
+            const modalAddress = document.getElementById('modal_address');
+            modalImg.src = value.img;
+            modalTitie.textContent = value.name;
+            modalFoodContent.textContent = value.content;
+            modalMenu.src = value.menu;
+            modalAddress.textContent = value.address;
+            modal.style.display = 'flex'
+        }
+
+        document.getElementById("modalBg").addEventListener("click", function () {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none'
+        });
+    </script>
+
+
+    <footer id="footer" />
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("./header.html", function () {
+            });
+            $("#footer").load("./footer.html", function () {
+            });
+        })
+    </script>
+
+    <script src="./js/list.js"></script>
+    <!-- settings -->
+    <script>
+            (function () {
+                // data setting
+                const url = new URL(window.location.href)
+                const urlParams = url.searchParams;
+                const num = urlParams.get('q');
+                const data = listData[num];
+
+                // title setting
+                document.getElementById('title').textContent = data.title;
+
+                // list nav setting
+                const viewList = listTitle;
+                const ul = document.getElementById('list_nav');
+                viewList.map((v, i) => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    if (i == Number(num)) {
+                        li.setAttribute('class', 'now');
+                    }
+                    a.href = `./list.html?q=${i}`;
+                    a.textContent = v;
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                })
+
+                // content setting
+                const linkList = listInfoLink;
+                const innerTitle = document.getElementById('inner_title');
+                innerTitle.textContent = data.title;
+                const goButton = document.getElementById('go');
+                goButton.href = linkList[num];
+
+                // foodList setting
+                const foodList = data.foodList;
+                const foodListElement = document.getElementById('food_list');
+                foodList.map((v, i) => {
+                    const li = document.createElement('li');
+                    const img = document.createElement('img');
+                    const box = document.createElement('div');
+                    const name = document.createElement('div');
+                    const address = document.createElement('div');
+                    const content = document.createElement('div');
+                    li.className = 'foodlist'
+                    box.className = 'foodlistbox'
+                    img.src = v.img;
+                    name.textContent = v.name;
+                    name.className = 'name';
+                    address.textContent = v.address;
+                    address.className = 'address';
+                    content.textContent = v.content;
+                    content.className = 'content';
+                    box.appendChild(name);
+                    box.appendChild(address);
+                    box.appendChild(content);
+                    li.appendChild(img);
+                    li.appendChild(box);
+                    li.addEventListener('click', () => handleOnClick(v));
+                    foodListElement.appendChild(li);
+                })
+            })()
+    </script>
+
+</body>
+
+</html>

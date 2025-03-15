@@ -1,6 +1,5 @@
 * {
     font-family: 'SCoreDream';
-    box-sizing: border-box;
 }
 
 html {
@@ -340,6 +339,7 @@ body {
     position: absolute;
     top: 55px;
     font-size: 25px;
+    font-weight: 600;
 }
 
 .section .mainbox {
@@ -768,7 +768,7 @@ li {
     margin-left: 10px;
     margin-bottom: 10px;
     padding-bottom: 5px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .festival-section .festival-slider .slide-list {
@@ -821,14 +821,19 @@ li {
     z-index: 1;
 }
 
-.slide-cont a {
+.slide-cont div {
     position: absolute;
+    bottom: -55px;
+    height: 50px;
+    display: flex;
+    z-index: 1;
+    align-items: flex-start;
+}
+
+.slide-cont div a {
     text-decoration: none;
     color: black;
     font-weight: 600;
-    bottom: -45px;
-    z-index: 1;
-
 }
 
 .festival-section .festival-slider .slide-main {
