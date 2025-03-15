@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +10,24 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
+
 <body>
     <header id="header"></header>
 
     <div class="main">
-        
+
         <!-- <hr> -->
         <div class="main_box">
             <div class="top_box">
-                <span><img src="./image/location.svg"><h2 id="bg_name"></h2></span>
+                <span><img src="./image/location.svg">
+                    <h2 id="bg_name"></h2>
+                </span>
                 <!-- <input type="checkbox" id="main_map"> -->
                 <!-- <label for="main_map"><span class="material-symbols-outlined">expand_more</span></label> -->
-            </div>        
+            </div>
             <div class="main_element_box">
                 <div class="cl_box">
                     <div class="city_name">BUSAN</div>
@@ -36,14 +41,14 @@
                     <input type="checkbox" id="main_map" checked>
                     <label for="main_map" onclick="map_on()">
                         <span class="material-symbols-outlined">public</span>
-                        
+
                         <!-- <div class="map_name">MAP</div> -->
                     </label>
                     <img id="busan" src="./image/부산지도2.png" alt="부산지역지도" / usemap="#image-map" class="map_img">
                 </div>
-                
+
             </div>
-            
+
         </div>
 
         <div class="move_icon">
@@ -51,13 +56,19 @@
                 <span class="material-symbols-outlined">expand_more</span>
             </a>
         </div>
-        
+
         <map name="image-map">
-            <area target="" alt="다대포" title="다대포" href="infor_dadaepo.html" coords="336,377,307,378,299,383,299,437,306,440,413,441,421,436,417,397,380,394,376,379,370,351,350,351,344,362" shape="poly">
-            <area target="" alt="" title="감천문화마을" href="infor.html" coords="427,301,450,304,450,325,466,330,468,343,490,345,493,394,381,392,377,331,415,327" shape="poly">
-            <area target="" alt="광안리" title="광안리" href="infor_gwanganri.html" coords="509,252,531,254,533,274,566,280,568,332,556,345,466,343,470,280,501,276" shape="poly">
-            <area target="" alt="" title="송도해상케이블카" href="infor_songdo.html" coords="558,361,525,362,517,397,522,426,616,427,626,416,622,365,606,358,576,335,555,341" shape="poly">
-            <area target="" alt="" title="청사포(해변열차)" href="infor_beachTrain.html" coords="653,244,629,243,623,219,595,219,596,247,570,246,571,326,654,327,654,289,653,279" shape="poly">
+            <area target="" alt="다대포" title="다대포" href="infor_dadaepo.html"
+                coords="336,377,307,378,299,383,299,437,306,440,413,441,421,436,417,397,380,394,376,379,370,351,350,351,344,362"
+                shape="poly">
+            <area target="" alt="" title="감천문화마을" href="infor.html"
+                coords="427,301,450,304,450,325,466,330,468,343,490,345,493,394,381,392,377,331,415,327" shape="poly">
+            <area target="" alt="광안리" title="광안리" href="infor_gwanganri.html"
+                coords="509,252,531,254,533,274,566,280,568,332,556,345,466,343,470,280,501,276" shape="poly">
+            <area target="" alt="" title="송도해상케이블카" href="infor_songdo.html"
+                coords="558,361,525,362,517,397,522,426,616,427,626,416,622,365,606,358,576,335,555,341" shape="poly">
+            <area target="" alt="" title="청사포(해변열차)" href="infor_beachTrain.html"
+                coords="653,244,629,243,623,219,595,219,596,247,570,246,571,326,654,327,654,289,653,279" shape="poly">
         </map>
         <!-- <div>날씨정보</div> -->
         <!-- <hr> -->
@@ -69,29 +80,29 @@
                 var i = date.getMonth() + 1;
                 var d = date.getDate();
                 var h = date.getHours();
-    
+
                 if (h < 10) {
                     h = "0" + h;
                 }
-    
+
                 var m = date.getMinutes();
-    
+
                 if (m < 10) {
                     m = "0" + m;
                 }
-    
+
                 var s = date.getSeconds();
-    
+
                 if (s < 10) {
                     s = "0" + s;
                 }
-    
+
                 var ctime2 = h + ":" + m + ":" + s;
                 document.getElementById("currtime2").innerHTML = ctime2;
                 window.setTimeout("getTime();", 1000);
             }
-    
-            window.onload = function() {
+
+            window.onload = function () {
                 getTime();
             }
         </script>
@@ -100,18 +111,18 @@
     <div class="section" id="thema">
         <div class="thema_name_box">부산, 여긴 어때?</div>
         <div class="mainbox" id="ocean">
-                <img src="./image/index_main.jpg" alt="테마메인"> 
-                <div class="thema_name">
-                    <strong class="tit">
-                        Summer
-                        <br>
-                        Fantasy🌈
-                    </strong> 
-                    <div class="text">
-                        <span>여름을 만끽할 수 있는 부산바다🚢</span>
-                        <span>푸르른 바다뷰를 기차 안에서🏝️</span>
-                        <span>즐거움이 가득한 써핑🏄‍♀</span>
-                    </div>
+            <img src="./image/index_main.jpg" alt="테마메인">
+            <div class="thema_name">
+                <strong class="tit">
+                    Summer
+                    <br>
+                    Fantasy🌈
+                </strong>
+                <div class="text">
+                    <span>여름을 만끽할 수 있는 부산바다🚢</span>
+                    <span>푸르른 바다뷰를 기차 안에서🏝️</span>
+                    <span>즐거움이 가득한 써핑🏄‍♀</span>
+                </div>
             </div>
             <div class="box">
                 <div class="recomand_list_wrap">
@@ -162,20 +173,20 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- 두번째 테마 -->
         <div class="mainbox" id="food">
-                <img src="./image/음식테마메인.png" alt="테마메인"> 
-                <div class="thema_name">
-                    <strong class="tit">
-                        부산밥
-                        <br>
-                        묵어봤나?👵🏻
-                    </strong> 
+            <img src="./image/음식테마메인.png" alt="테마메인">
+            <div class="thema_name">
+                <strong class="tit">
+                    부산밥
+                    <br>
+                    묵어봤나?👵🏻
+                </strong>
                 <div class="text" id="food_text">
-                        <span>파도소리와 함께 조개구이 어떻노😉</span>
-                        <span>야경과 함께 낙지탕탕이는 또 어떤데🤩</span>
-                        <span>그런다음 진한 국밥 한사바리 할래🤨</span>
+                    <span>파도소리와 함께 조개구이 어떻노😉</span>
+                    <span>야경과 함께 낙지탕탕이는 또 어떤데🤩</span>
+                    <span>그런다음 진한 국밥 한사바리 할래🤨</span>
                 </div>
             </div>
             <div class="box2">
@@ -187,11 +198,11 @@
                             </div>
                             <div class="htl">
                                 <span>
-                                <span class="tage_group">조개구이</span>
-                                <div class="name_wrap">
-                                    <strong class="item_title">제이제이가리비🐚</strong>
-                                    <p class="item_text"> #파도소리 #조개구이 #모닥불 </p>
-                                </div>
+                                    <span class="tage_group">조개구이</span>
+                                    <div class="name_wrap">
+                                        <strong class="item_title">제이제이가리비🐚</strong>
+                                        <p class="item_text"> #파도소리 #조개구이 #모닥불 </p>
+                                    </div>
                             </div>
                         </li>
                         <li style="cursor: pointer;">
@@ -200,12 +211,12 @@
                             </div>
                             <div class="htl">
                                 <span>
-                                <span class="tage_group">포장마차</span>
+                                    <span class="tage_group">포장마차</span>
                                 </span>
-                            <div class="name_wrap">
-                                <strong class="item_title">할매집🦑</strong>
-                                <p class="item_text"> #바다뷰 #낙지탕탕이 #스트레스해소 </p>
-                            </div>
+                                <div class="name_wrap">
+                                    <strong class="item_title">할매집🦑</strong>
+                                    <p class="item_text"> #바다뷰 #낙지탕탕이 #스트레스해소 </p>
+                                </div>
                             </div>
                         </li>
                         <li style="cursor: pointer;">
@@ -214,12 +225,12 @@
                             </div>
                             <div class="htl">
                                 <span>
-                                <span class="tage_group">부산국밥</span>
+                                    <span class="tage_group">부산국밥</span>
                                 </span>
-                            <div class="name_wrap">
-                                <strong class="item_title">목촌돼지국밥🍚</strong>
-                                <p class="item_text"> #진한국물 #깊은맛 #푸짐가득 </p>
-                            </div>
+                                <div class="name_wrap">
+                                    <strong class="item_title">목촌돼지국밥🍚</strong>
+                                    <p class="item_text"> #진한국물 #깊은맛 #푸짐가득 </p>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -228,10 +239,10 @@
         </div>
         <div class="mainbox" id="btn">
             <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">
-                <img src="../image/left.svg"/>
+                <img src="../image/left.svg" />
             </button>
             <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">
-                <img src="../image/right.svg"/>
+                <img src="../image/right.svg" />
             </button>
         </div>
         <!-- <video src="video/ocean.mp4" loop autoplay muted></video> -->
@@ -244,19 +255,19 @@
             document.getElementsByClassName("mainbox")[0].style.animationName = "back_main";
             document.getElementsByClassName("mainbox")[1].style.animationName = "back_main";
             let mainbox = document.querySelectorAll(".mainbox");
-            if(count==0)  {
-                count+=1
-                mainbox[count-1].style.display="none"
-                mainbox[count].style.display="block"
+            if (count == 0) {
+                count += 1
+                mainbox[count - 1].style.display = "none"
+                mainbox[count].style.display = "block"
                 document.getElementsByClassName("box")[0].style.display = "none";
                 document.getElementsByClassName("box2")[0].style.display = "block";
             }
             else {
-                mainbox[count-1].style.display="block"
-                mainbox[count].style.display="none"
+                mainbox[count - 1].style.display = "block"
+                mainbox[count].style.display = "none"
                 document.getElementsByClassName("box")[0].style.display = "block";
                 document.getElementsByClassName("box2")[0].style.display = "none"
-                count=0;
+                count = 0;
             }
         }
 
@@ -264,19 +275,19 @@
             document.getElementsByClassName("mainbox")[0].style.animationName = "next_main";
             document.getElementsByClassName("mainbox")[1].style.animationName = "next_main";
             let mainbox = document.querySelectorAll(".mainbox");
-            if(count==0) {
-                count+=1
-                mainbox[count-1].style.display="none";    
-                mainbox[count].style.display="block";
-                document.getElementsByClassName("box")[0].style.display="none"
-                document.getElementsByClassName("box2")[0].style.display="block";
+            if (count == 0) {
+                count += 1
+                mainbox[count - 1].style.display = "none";
+                mainbox[count].style.display = "block";
+                document.getElementsByClassName("box")[0].style.display = "none"
+                document.getElementsByClassName("box2")[0].style.display = "block";
             }
             else {
-                mainbox[count-1].style.display="block";
-                mainbox[count].style.display="none";
-                document.getElementsByClassName("box")[0].style.display="block"
-                document.getElementsByClassName("box2")[0].style.display="none";
-                count=0;
+                mainbox[count - 1].style.display = "block";
+                mainbox[count].style.display = "none";
+                document.getElementsByClassName("box")[0].style.display = "block"
+                document.getElementsByClassName("box2")[0].style.display = "none";
+                count = 0;
             }
         }
 
@@ -301,19 +312,19 @@
         }
 
     </script>
-        
+
     <!-- 전시회 section -->
     <section class="festival-section">
         <div class="btn_box">
             <button class="button-prev" onclick="next2()">
-                <img src="../image/left.svg"/>
+                <img src="../image/left.svg" />
             </button>
             <button class="button-next" onclick="prev()">
-                <img src="../image/right.svg"/>
+                <img src="../image/right.svg" />
             </button>
         </div>
-        
-        
+
+
         <div class="festival-slider">
             <h1>부산 지역 행사 정보</h1>
             <div class="slide-list">
@@ -321,54 +332,77 @@
                 </div> -->
                 <!--전시내용-->
                 <div class="slide-cont" id="yosigo" style="background-image:url(./image/전시_요시고.png)">
-                    <a href="https://tickets.interpark.com/goods/23005227#" target="_blank" title="페이지 이동">
-                        <em class="blind"> YOSIGO 사진전 </em>
-                    </a>
+                    <div>
+                        <a href="https://tickets.interpark.com/goods/23005227#" target="_blank" title="페이지 이동">
+                            YOSIGO 사진전
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="city" style="background-image:url(./image/전시_울리히.png)">
-                    <a href="https://www.goeunmuseum.kr/bbs/board.php?bo_table=exhibition&wr_id=223&proc=next" target="_blank" title="페이지 이동">
-                        <em class="blind"> 울리히 뷔스트展 《도시산책자 : 울리히 뷔스트의 사진》 </em>
-                    </a>
+                    <div>
+                        <a href="https://www.goeunmuseum.kr/bbs/board.php?bo_table=exhibition&wr_id=223&proc=next"
+                            target="_blank" title="페이지 이동">
+                            울리히 뷔스트展 《도시산책자 : 울리히 뷔스트의 사진》
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="summer" style="background-image:url(./image/전시_여름의모양.jpg)">
-                    <a href="https://www.shinsegae.com/culture/gallery/exhibition/view.do?glrySeq=1072" target="_blank" title="페이지 이동">
-                        <em class="blind"> 여름의 모양: Hyper Summer </em>
-                    </a>
+                    <div>
+                        <a href="https://www.shinsegae.com/culture/gallery/exhibition/view.do?glrySeq=1072"
+                            target="_blank" title="페이지 이동">
+                            여름의 모양: Hyper Summer
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="movie" style="background-image:url(./image/전시_영화.jpeg)">
-                    <a href="https://www.busan.go.kr/moca/exhibition01/1561678" target="_blank" title="페이지 이동">
-                        <em class="blind"> 영화의 기후: 섬, 행성, 포스트콘택트존 </em>
-                    </a>
+                    <div>
+                        <a href="https://www.busan.go.kr/moca/exhibition01/1561678" target="_blank" title="페이지 이동">
+                            영화의 기후: 섬, 행성, 포스트콘택트존
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="kerri" style="background-image:url(./image/전시_물결.jpg)">
-                    <a href="https://seojung-art.com/exhibition/view/RNHNSMC" target="_blank" title="페이지 이동">
-                        <em class="blind"> Kerri Lee : Wave on Wave </em>
-                    </a>
+                    <div>
+                        <a href="https://seojung-art.com/exhibition/view/RNHNSMC" target="_blank" title="페이지 이동">
+                            Kerri Lee : Wave on Wave
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="wujing" style="background-image:url(./image/전시_우징.png)">
-                    <a href="https://cafe.naver.com/artandcollect/44273" target="_blank" title="페이지 이동">
-                        <em class="blind"> 우징작가 초대전 </em>
-                    </a>
+                    <div>
+                        <a href="https://cafe.naver.com/artandcollect/44273" target="_blank" title="페이지 이동">
+                            우징작가 초대전
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="larf" style="background-image:url(./image/전시_랄프.png)">
-                    <a href="http://www.gibsongoeunmuseum.com/" target="_blank" title="페이지 이동">
-                        <em class="blind"> 랄프깁슨 《Sacred Land》 </em>
-                    </a>
+                    <div>
+                        <a href="http://www.gibsongoeunmuseum.com/" target="_blank" title="페이지 이동">
+                            랄프깁슨 《Sacred Land》
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="mar" style="background-image:url(./image/전시_M.png)">
-                    <a href="https://blog.naver.com/kafmuseum/223160643416" target="_blank" title="페이지 이동">
-                        <em class="blind"> Mar[b]elous Love </em>
-                    </a>
+                    <div>
+                        <a href="https://blog.naver.com/kafmuseum/223160643416" target="_blank" title="페이지 이동">
+                            Mar[b]elous Love
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="sugar" style="background-image:url(./image/전시_sugar.png)">
-                    <a href="https://www.galleryartsoop.com/" target="_blank" title="페이지 이동">
-                        <em class="blind"> Sugar Free </em>
-                    </a>
+                    <div>
+                        <a href="https://www.galleryartsoop.com/" target="_blank" title="페이지 이동">
+                            Sugar Free
+                        </a>
+                    </div>
                 </div>
                 <div class="slide-cont" id="sad" style="background-image:url(./image/전시_슬픈.png)">
-                    <a href="https://art.busan.go.kr/tblTsite07Display/viewNowClient.nm?id=20230223085230589" target="_blank" title="페이지 이동">
-                        <em class="blind"> 슬픈 나의 젊은 날 </em>
-                    </a>
+                    <div>
+                        <a href="https://art.busan.go.kr/tblTsite07Display/viewNowClient.nm?id=20230223085230589"
+                            target="_blank" title="페이지 이동">
+                            슬픈 나의 젊은 날
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="slide-list-2">
@@ -383,18 +417,18 @@
 
         function prev() {
             document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
-            festival+=1;
-            
-            if(festival==10) {
+            festival += 1;
+
+            if (festival == 10) {
                 festival = 0;
             }
         }
 
         function next2() {
             document.getElementsByClassName("slide-list")[0].prepend(slide_cont[9])
-            festival-=1;
-            
-            if(festival==-1) {
+            festival -= 1;
+
+            if (festival == -1) {
                 festival = 0;
             }
         }
@@ -402,8 +436,10 @@
 
     <footer id="footer"></footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
     <script src="./js/weather.js"></script>
 
@@ -412,9 +448,9 @@
     </script>
 
     <script>
-    $(document).ready(function() {
-        $('img[usemap]').rwdImageMaps();
-    });
+        $(document).ready(function () {
+            $('img[usemap]').rwdImageMaps();
+        });
     </script>
 
     <script>
@@ -437,7 +473,7 @@
             let item_text = document.querySelectorAll(".item_text");
             let area = document.querySelectorAll("area");
 
-            if(pagelang[1]=="en"){
+            if (pagelang[1] == "en") {
                 var eng_temp = document.createElement("style");
 
                 header_href.href = "index.html?en";
@@ -478,9 +514,9 @@
                 area[4].href = "./en/infor_beachTrain.html"
 
             }
-            else if(pagelang[1]=="cn"){
+            else if (pagelang[1] == "cn") {
                 var cn_temp = document.createElement("style");
-                
+
                 header_href.href = "index.html?cn";
                 cn_temp.innerHTML = `.main h2::after {content: ''; animation: name_cn_change 50s infinite;}`
                 main_string.append(cn_temp);
@@ -519,16 +555,16 @@
                 area[4].href = "./cn/infor_beachTrain.html"
             }
         };
-        
+
     </script>
 
     <script>
         let main_map = document.getElementById("busan");
-        function map_on(){
-            if($('input:checkbox[id=main_map]').is(':checked')) {   
+        function map_on() {
+            if ($('input:checkbox[id=main_map]').is(':checked')) {
                 main_map.style.display = "block";
             }
-            else{
+            else {
                 main_map.style.display = "none";
             }
         }
@@ -539,26 +575,27 @@
         showSlides();
 
         function showSlides() {
-            if(document.documentElement.clientWidth>650){
+            if (document.documentElement.clientWidth > 650) {
 
             }
-            else{
-                if(slideCount == 0){
+            else {
+                if (slideCount == 0) {
                     document.getElementsByClassName("mainbox")[0].style.display = "block";
                     document.getElementsByClassName("mainbox")[1].style.display = "none";
                     slideCount++;
                 }
-                else if(slideCount == 1){
+                else if (slideCount == 1) {
                     document.getElementsByClassName("mainbox")[0].style.display = "none";
                     document.getElementsByClassName("mainbox")[1].style.display = "block";
                     slideCount = 0;
                 }
             }
-            
+
             setTimeout(showSlides, 10000);
-            
+
         }
     </script>
 
 </body>
+
 </html>
