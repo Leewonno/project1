@@ -120,8 +120,6 @@ a {
     color: #b3b3b3;
 }
 
-.content {}
-
 .rList .block {
     width: calc(100% - 230px);
     padding: 15px;
@@ -220,74 +218,6 @@ img {
     justify-content: center;
 }
 
-.menu {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    height: 100%;
-    transition: left 0.5s ease-out;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 0;
-}
-
-.menu1 {
-    /* position: absolute; */
-    /* left: 0; */
-    /* top: 0; */
-    /* width: 300%; */
-    /* height: 100%; */
-    /* transition: left 0.5s ease-out; */
-    /* display: flex
-; */
-    /* flex-direction: row; */
-    /* justify-content: center; */
-}
-
-
-.controller span {
-    position: absolute;
-    background-color: transparent;
-    color: black;
-    text-align: center;
-    border-radius: 50%;
-    padding: 10px 20px;
-    top: 40%;
-    font-size: 1.3em;
-    cursor: pointer;
-}
-
-
-
-.prev {
-    left: 5%;
-}
-
-.next {
-    right: 5%;
-}
-
-.prev1 {
-    left: 5%;
-}
-
-.next1 {
-    right: 5%;
-}
-
-.changeBtn {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-content: center;
-}
-
-.gamR_img {
-    width: 90%;
-    height: 90%;
-}
 
 @media screen and (max-width:650px) {
     .rList h2 {
