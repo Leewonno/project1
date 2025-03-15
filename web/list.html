@@ -110,7 +110,7 @@
                 // data setting
                 const url = new URL(window.location.href)
                 const urlParams = url.searchParams;
-                const num = urlParams.get('q');
+                const num = urlParams.get('q') ? urlParams.get('q') : 0;
                 const data = listData[num];
 
                 // title setting
