@@ -227,8 +227,12 @@
             </div>
         </div>
         <div class="mainbox" id="btn">
-            <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">❮</button>
-            <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">❯</button>
+            <button class="back" id="backBtn" style="cursor: pointer;" onclick="back()">
+                <img src="../web/image/left.svg"/>
+            </button>
+            <button class="next" id="nextBtn" style="cursor: pointer;" onclick="next()">
+                <img src="../web/image/right.svg"/>
+            </button>
         </div>
         <!-- <video src="video/ocean.mp4" loop autoplay muted></video> -->
     </div>
@@ -239,12 +243,9 @@
         function back() {
             document.getElementsByClassName("mainbox")[0].style.animationName = "back_main";
             document.getElementsByClassName("mainbox")[1].style.animationName = "back_main";
-            console.log(count)
             let mainbox = document.querySelectorAll(".mainbox");
-            console.log(mainbox)
             if(count==0)  {
-                count+=1 
-                console.log(mainbox[0])
+                count+=1
                 mainbox[count-1].style.display="none"
                 mainbox[count].style.display="block"
                 document.getElementsByClassName("box")[0].style.display = "none";
@@ -262,13 +263,9 @@
         function next() {
             document.getElementsByClassName("mainbox")[0].style.animationName = "next_main";
             document.getElementsByClassName("mainbox")[1].style.animationName = "next_main";
-            console.log(count)
             let mainbox = document.querySelectorAll(".mainbox");
-            console.log(mainbox)
             if(count==0) {
                 count+=1
-                console.log(mainbox[0])
-                console.log(count-1)
                 mainbox[count-1].style.display="none";    
                 mainbox[count].style.display="block";
                 document.getElementsByClassName("box")[0].style.display="none"
@@ -380,13 +377,9 @@
     <script>
         let festival = 0;
         let slide_cont = document.getElementsByClassName("slide-cont")
-        console.log(slide_cont)
 
         function prev() {
-            console.log(festival)
-            console.log(slide_cont[festival])
             document.getElementsByClassName("slide-list")[0].append(slide_cont[0])
-        
             festival+=1;
             
             if(festival==10) {
@@ -395,10 +388,7 @@
         }
 
         function next2() {
-            console.log(festival)
-            console.log(slide_cont[festival])
             document.getElementsByClassName("slide-list")[0].prepend(slide_cont[9])
-        
             festival-=1;
             
             if(festival==-1) {
@@ -416,14 +406,11 @@
 
     <script>
         var pagelang = window.location.search.split("?");
-        // console.log(pagelang[1]);
     </script>
 
     <script>
     $(document).ready(function() {
         $('img[usemap]').rwdImageMaps();
-        console.log(wt_tp);
-        
     });
     </script>
 
@@ -451,7 +438,7 @@
                 var eng_temp = document.createElement("style");
 
                 header_href.href = "index.html?en";
-                eng_temp.innerHTML = `.main h2::after {content: ''; animation: name_eng_change 20s infinite;}`
+                eng_temp.innerHTML = `.main h2::after {content: ''; animation: name_eng_change 50s infinite;}`
                 main_string.append(eng_temp);
                 main_text_span[0].innerText = "Busan sea where you can enjoy the summer 🚢"
                 main_text_span[1].innerText = "The blue sea view on the train 🏝️"
@@ -492,7 +479,7 @@
                 var cn_temp = document.createElement("style");
                 
                 header_href.href = "index.html?cn";
-                cn_temp.innerHTML = `.main h2::after {content: ''; animation: name_cn_change 20s infinite;}`
+                cn_temp.innerHTML = `.main h2::after {content: ''; animation: name_cn_change 50s infinite;}`
                 main_string.append(cn_temp);
                 main_text_span[0].innerText = "可以尽情享受夏天的釜山大海🚢"
                 main_text_span[1].innerText = "蔚蓝的海景在火车上🏝️"
@@ -542,8 +529,6 @@
                 main_map.style.display = "none";
             }
         }
-        
-        
     </script>
 
     <script>

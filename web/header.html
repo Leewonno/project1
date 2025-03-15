@@ -48,7 +48,7 @@
 
     function lang_click(){
         if(checkbox.checked){
-            lang_hd_box[0].style.display = "block"
+            lang_hd_box[0].style.display = "flex"
         }
         else{
             lang_hd_box[0].style.display = "none"
@@ -58,7 +58,7 @@
 
     function gg_click(){
         if(document.getElementById('gg').checked){
-            document.getElementsByClassName("gg_hidden_box")[0].style.display = "block"
+            document.getElementsByClassName("gg_hidden_box")[0].style.display = "flex"
         }
         else{
             document.getElementsByClassName("gg_hidden_box")[0].style.display = "none"
@@ -68,7 +68,7 @@
 
     function mj_click(){
         if(document.getElementById('mj').checked){
-            document.getElementsByClassName("mj_hidden_box")[0].style.display = "block"
+            document.getElementsByClassName("mj_hidden_box")[0].style.display = "flex"
         }
         else{
             document.getElementsByClassName("mj_hidden_box")[0].style.display = "none"
@@ -104,11 +104,6 @@
         document.querySelectorAll(".mj_hidden_box a")[2].innerText = "Songdo Cable Car"
         document.querySelectorAll(".mj_hidden_box a")[3].innerText = "Gwangalli"
         document.querySelectorAll(".mj_hidden_box a")[4].innerText = "Beach Train"
-
-        for(var i = 0; i<10; i++){
-            document.querySelectorAll("header .item_box a")[i].style.fontSize = "10px"
-        }
-        
     }
     else if(cr_href[1]=="cn"){
         document.querySelectorAll(".item_box label")[0].innerText = "景点";
@@ -163,10 +158,6 @@
         document.querySelectorAll(".mj_hidden_box a")[2].innerText = "Songdo Cable Car"
         document.querySelectorAll(".mj_hidden_box a")[3].innerText = "Gwangalli"
         document.querySelectorAll(".mj_hidden_box a")[4].innerText = "Beach Train"
-
-        for(var i = 0; i<10; i++){
-            document.querySelectorAll("header .item_box a")[i].style.fontSize = "10px"
-        }
     }
     else if(path.indexOf("/cn")!=-1){
         document.getElementById("index_id").href = "../index.html?cn";
